@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Phase 2 example: a new Nero move with its own table row and a scripted two-stage routine. Block numbers
+     are placeholders: the animations come from Albam (Add Animation picks a free slot; the compile step then
+     gives that slot a .ctn script, so the game can't hang on it). -->
+<move name="nero_rising_slash" character="pl000" id="0x82" body="lower" version="1">
+  <table attr="command" insert_before="0x0C" start="true" cancel="true" repeat="false"
+         weapon="RedQueen" style="-1" etc="0" air="ground">
+    <input command="CMD_LOCK_BF_LEVER_SHORT"/>      <!-- back-forward + melee -->
+    <follows move="0x1C" window="C_NORM0"/>         <!-- as a string step after Combo A's second hit -->
+    <window category="C_ALL" or="true"/>            <!-- or from any "all cancels" window -->
+  </table>
+
+  <stages>
+    <stage name="windup" motion="1:0x2A" speed="1.0" start="0" interp="3">
+      <next on="contact" byte="free0" value="1" to="slash"/>
+      <next on="motion_end" to="exit"/>
+    </stage>
+    <stage name="slash" motion="1:0x2B" speed="1.2">
+      <physics frame="0" vel="0,6.5,0" gravity="-0.8"/>
+      <next on="motion_end" to="exit"/>
+    </stage>
+  </stages>
+
+  <timeline motion="1:0x2A">
+    <trigger byte="free0" value="1" frame="14"/>
+    <cancel category="C_JUMP" kind="open" from="18"/>
+  </timeline>
+
+  <timeline motion="1:0x2B">
+    <hitbox col_group="4" atk="RED-ComboA_02" from="2" to="9"/>
+    <sound msse="0x3A" frame="2"/>
+    <cancel category="C_ALL" kind="open" from="20"/>
+    <vibrate pad="3" cam="2" frame="3"/>
+  </timeline>
+
+  <timeline motion="1:0x2B" runtime="true">
+    <effect efl="effect\efl\com\ec000_05v0" joint="R_Hand" frame="2"/>
+    <se id="0x1234" frame="2"/>
+  </timeline>
+</move>

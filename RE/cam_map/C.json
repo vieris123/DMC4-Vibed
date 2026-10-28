@@ -1,0 +1,1801 @@
+{
+ "group": "C",
+ "classes": {
+  "uCameraBoss": {
+   "se": {
+    "vtable": "0x115fa58",
+    "nslots": 26,
+    "nfuncs": 71
+   },
+   "dx9": {
+    "dti": "0xe58338",
+    "vtable": "0xbc5fac",
+    "ctor": "0x4c3470",
+    "size": "0x5a0",
+    "parent": "uDevilCamera",
+    "nslots": 15,
+    "code_range": [
+     "0x4c20b0",
+     "0x4cb240"
+    ],
+    "mydti_vtable": "0xbc5fe8"
+   },
+   "slot_shift": "piecewise (cUnit/uCamera base): SE 0-5 -> DX9 0-5 (k=0: dtor, createUI, isEnable, createProperty, getDTI, setup); SE 8 move -> 6, SE 9 moveEx -> 7 (k=2); SE 11 sync -> 8, SE 12 draw -> 9 (k=3); SE 18,19 -> 10,11 (k=8); SE 21 kill -> 12 (k=9); SE 24 getViewMat, 25 getProjMat -> 13,14 (k=11, by inherited uDevilCamera bodies/sizes). SE-only slots: 6,7 (getSystemUnitGroup x2), 10 moveAfter, 13-17 *Profile, 20 applyWorldOffset, 22 getDrawUnitState, 23 getWorldTargetPos. DX9 vtable = 15 slots, SE = 26. Anchors: move 173B/13bb identical at slot 6; sync thunk at slot 8; slot 3/4/5 createProperty/getDTI/setup. Applies unchanged to every uCameraBossEm* subclass (their overrides are 0,3,4,5,6,8); empty move overrides fold into nullsub_2 0x507330.",
+   "vtable_label_fixed": false
+  },
+  "uCameraBossDante": {
+   "se": {
+    "vtable": "0x115fdd0",
+    "nslots": 26,
+    "nfuncs": 22
+   },
+   "dx9": {
+    "dti": "0xe58358",
+    "vtable": "0xbc6178",
+    "ctor": "0x4cba10",
+    "size": "0x630",
+    "parent": "uCameraBoss",
+    "nslots": 15,
+    "code_range": [
+     "0x4cb240",
+     "0x4cd1b0"
+    ],
+    "mydti_vtable": "0xbc61b4"
+   },
+   "slot_shift": "same as uCameraBoss (overrides SE 0,3,4,5,8,11 -> DX9 0,3,4,5,6,8)",
+   "vtable_label_fixed": false
+  },
+  "uCameraBossEm018": {
+   "se": {
+    "vtable": "0x1160020",
+    "nslots": 26,
+    "nfuncs": 40
+   },
+   "dx9": {
+    "dti": "0xe58378",
+    "vtable": "0xbc628c",
+    "ctor": "0x4cd930",
+    "size": "0x650",
+    "parent": "uCameraBoss",
+    "nslots": 15,
+    "code_range": [
+     "0x4cd1b0",
+     "0x4d3030"
+    ],
+    "mydti_vtable": "0xbc62c8"
+   },
+   "slot_shift": "same as uCameraBoss (overrides SE 0,3,4,5,8,11 -> DX9 0,3,4,5,6,8)",
+   "vtable_label_fixed": false
+  }
+ },
+ "methods": [
+  {
+   "se_ea": "0x649d80",
+   "se_name": "uCameraBoss::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649d90",
+   "se_name": "uCameraBoss::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649dc0",
+   "se_name": "uCameraBoss::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649df0",
+   "se_name": "uCameraBoss::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649e10",
+   "se_name": "uCameraBoss::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649e30",
+   "se_name": "uCameraBoss::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649e50",
+   "se_name": "uCameraBoss::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x649e70",
+   "se_name": "uCameraBoss::uCameraBoss(void)",
+   "dx9_ea": "0x4c3470",
+   "old_dx9_name": "uCameraBoss::uCameraBoss",
+   "new_dx9_name": "uCameraBoss::uCameraBoss",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "ctor: stores uCameraBoss::vftable; jmp target of MyDTI::newInstance 0x4C3450 and called by every uCameraBoss* subclass ctor"
+  },
+  {
+   "se_ea": "0x64a4a0",
+   "se_name": "uCameraBoss::~uCameraBoss(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uCameraBoss inlined in DX9 into ~uCameraBossDante (0x4CBE90) and the shared vector deleting dtor 0x4CDCE0"
+  },
+  {
+   "se_ea": "0x64a4d0",
+   "se_name": "uCameraBoss::setup(void)",
+   "dx9_ea": "0x4c39e0",
+   "old_dx9_name": "sub_4C39E0",
+   "new_dx9_name": "uCameraBoss::setup",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 5; SE calls sMediator::setCameraBoss/setCamera, inlined in DX9 (18 bytes)"
+  },
+  {
+   "se_ea": "0x64a4f0",
+   "se_name": "uCameraBoss::sync(void)",
+   "dx9_ea": "0x749630",
+   "old_dx9_name": "j_uDevilCamera::sync",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "SE body = jmp uDevilCamera::sync; DX9 slot 8 is the ICF thunk j_uDevilCamera::sync (0x749630) shared by 10 vtables - not renamed, commented"
+  },
+  {
+   "se_ea": "0x64a500",
+   "se_name": "uCameraBoss::checkLockOn(MtVector3 &)",
+   "dx9_ea": "0x4c3ab0",
+   "old_dx9_name": "sub_4C3AB0",
+   "new_dx9_name": "uCameraBoss::checkLockOn",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "lock-on target query returning 0/1/2; DX9 callers = Em021/Em023 sync, same as SE"
+  },
+  {
+   "se_ea": "0x64a570",
+   "se_name": "uCameraBoss::checkHitSimple(MtVector3 &,MtVector3 &,float)",
+   "dx9_ea": "0x4c48c0",
+   "old_dx9_name": "sub_4C48C0",
+   "new_dx9_name": "uCameraBoss::checkHitSimple",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "sphere adjustPosition; sole caller in Em023 region (SE caller uCameraBossEm023::absorbWeak)"
+  },
+  {
+   "se_ea": "0x64a660",
+   "se_name": "uCameraBoss::checkHitBoss(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 into uCameraBossEm018::wallShrink (leading dmc4_sqrt)"
+  },
+  {
+   "se_ea": "0x64a6d0",
+   "se_name": "uCameraBoss::setBossAndPlayerPos(void)",
+   "dx9_ea": "0x4c51b0",
+   "old_dx9_name": "sub_4C51B0",
+   "new_dx9_name": "uCameraBoss::setBossAndPlayerPos",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers = every subclass sync (SE same); getBossPos/getPlayerPos inlined"
+  },
+  {
+   "se_ea": "0x64a750",
+   "se_name": "uCameraBoss::getBossJointWorldPos(uint)",
+   "dx9_ea": "0x4c5230",
+   "old_dx9_name": "sub_4C5230",
+   "new_dx9_name": "uCameraBoss::getBossJointWorldPos",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "115 bytes / 4 bb identical; called by Em018 throw functions"
+  },
+  {
+   "se_ea": "0x64a7d0",
+   "se_name": "uCameraBoss::initBasePosSet(uint,MtVector3 &)",
+   "dx9_ea": "0x4c5410",
+   "old_dx9_name": "sub_4C5410",
+   "new_dx9_name": "uCameraBoss::initBasePosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers = subclass setup() functions (SE same)"
+  },
+  {
+   "se_ea": "0x64a920",
+   "se_name": "uCameraBoss::getPlBasePos(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 (no getPlayerPos wrapper in class region)"
+  },
+  {
+   "se_ea": "0x64a950",
+   "se_name": "uCameraBoss::setFog(void)",
+   "dx9_ea": "0x4c79b0",
+   "old_dx9_name": "sub_4C79B0",
+   "new_dx9_name": "uCameraBoss::setFog",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "callers = Dante/Em018/Em022/Em023/Em029/Em030 setup (SE same set); DX9 writes fog color/start/end into sCamera viewport[0] instead of sDevil4Effect::setFog"
+  },
+  {
+   "se_ea": "0x64a990",
+   "se_name": "uCameraBoss::upDate(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 commonProccess bodies"
+  },
+  {
+   "se_ea": "0x64a9e0",
+   "se_name": "uCameraBoss::actionMessage(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 (e.g. uEm019::setBossCameraStatus 0x65B540 has no callees)"
+  },
+  {
+   "se_ea": "0x64aa00",
+   "se_name": "uCameraBoss::getActionMessage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 subclass sync bodies"
+  },
+  {
+   "se_ea": "0x64aa20",
+   "se_name": "uCameraBoss::checkAngleYinFan(float,float,float,float &)",
+   "dx9_ea": "0x4c7a10",
+   "old_dx9_name": "sub_4C7A10",
+   "new_dx9_name": "uCameraBoss::checkAngleYinFan",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "decompile identical (fmod 2pi wrap, range*2 test, returns -1/0/1). ICF-folded: also cCameraPlayer::checkAngleYinFan (group A; DX9 callers 0x419130 / 0x4255B0)"
+  },
+  {
+   "se_ea": "0x64aaf0",
+   "se_name": "uCameraBoss::oldPosTarPreservation(void)",
+   "dx9_ea": "0x4c7b10",
+   "old_dx9_name": "sub_4C7B10",
+   "new_dx9_name": "uCameraBoss::oldPosTarPreservation",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "copies pos/tar into old pos/tar; called twice from Em018 sync in SE call order"
+  },
+  {
+   "se_ea": "0x64ab40",
+   "se_name": "uCameraBoss::receiveParamPlayerCamera(void)",
+   "dx9_ea": "0x4c7b50",
+   "old_dx9_name": "sub_4C7B50",
+   "new_dx9_name": "uCameraBoss::receiveParamPlayerCamera",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called from subclass sync right after checkPlayerJumpPoint (SE same order)"
+  },
+  {
+   "se_ea": "0x64ac60",
+   "se_name": "uCameraBoss::giveParamPlayerCamera(void)",
+   "dx9_ea": "0x4c7c50",
+   "old_dx9_name": "sub_4C7C50",
+   "new_dx9_name": "uCameraBoss::giveParamPlayerCamera",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers in Em021/Em022/Em023/Em026/Em029 regions; same field block as receiveParamPlayerCamera"
+  },
+  {
+   "se_ea": "0x64ad90",
+   "se_name": "uCameraBoss::dieCheck(void)",
+   "dx9_ea": "0x4c7d50",
+   "old_dx9_name": "sub_4C7D50",
+   "new_dx9_name": "uCameraBoss::dieCheck",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called by every subclass sync after the throw checks (SE same)"
+  },
+  {
+   "se_ea": "0x64ade0",
+   "se_name": "uCameraBoss::checkHitCircumference(MtVector3 &,float,float,float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x64b000",
+   "se_name": "uCameraBoss::camSphereHitCheck(MtVector3 &,MtVector3 &,float)",
+   "dx9_ea": "0x4c7da0",
+   "old_dx9_name": "sub_4C7DA0",
+   "new_dx9_name": "uCameraBoss::camSphereHitCheck",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "sphere hit check; sole caller 0x4CF390 = uCameraBossEm018::calcOtherCameraPos (SE same)"
+  },
+  {
+   "se_ea": "0x64b140",
+   "se_name": "uCameraBoss::betweenTargetPosSet(int,float,float)",
+   "dx9_ea": "0x4c7f10",
+   "old_dx9_name": "sub_4C7F10",
+   "new_dx9_name": "uCameraBoss::betweenTargetPosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls getBossJointWorldPos; called by Em018 throwCam/throws and Dante groundThrow"
+  },
+  {
+   "se_ea": "0x64b2b0",
+   "se_name": "uCameraBoss::getPlRotYOffsetPos(float,MtVector3 &,MtVector3 &)",
+   "dx9_ea": "0x4c83d0",
+   "old_dx9_name": "sub_4C83D0",
+   "new_dx9_name": "uCameraBoss::getPlRotYOffsetPos",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "player rotY + degree offset, sin/cos; sole caller Em029 groundThrow (SE same)"
+  },
+  {
+   "se_ea": "0x64b380",
+   "se_name": "uCameraBoss::lowLimit(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9"
+  },
+  {
+   "se_ea": "0x64b3a0",
+   "se_name": "uCameraBoss::moveFloatSlowDown(float &,float,float,float)",
+   "dx9_ea": "0x4c8cd0",
+   "old_dx9_name": "sub_4C8CD0",
+   "new_dx9_name": "uCameraBoss::moveFloatSlowDown",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers Dante groundThrow + Em019 (SE: Dante groundThrow, Em019 miniJumpStart/End)"
+  },
+  {
+   "se_ea": "0x64b440",
+   "se_name": "uCameraBoss::setFovAssign(float,float)",
+   "dx9_ea": "0x4c8d90",
+   "old_dx9_name": "sub_4C8D90",
+   "new_dx9_name": "uCameraBoss::setFovAssign",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts",
+    "propagation"
+   ],
+   "action": "renamed",
+   "notes": "84/5 vs 82/5; DX9 callers Em022/Em023/Em029; independently placed by workers D and E via SE callee order (Dante callers inlined it in DX9)"
+  },
+  {
+   "se_ea": "0x64b4a0",
+   "se_name": "uCameraBoss::set1vs1ZoomFov(float)",
+   "dx9_ea": "0x4c8df0",
+   "old_dx9_name": "sub_4C8DF0",
+   "new_dx9_name": "uCameraBoss::set1vs1ZoomFov",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sole caller Dante groundThrowBranch (SE same)"
+  },
+  {
+   "se_ea": "0x64b570",
+   "se_name": "uCameraBoss::checkBox(cCameraRect3D * *,int,int *)",
+   "dx9_ea": "0x4c8ee0",
+   "old_dx9_name": "sub_4C8EE0",
+   "new_dx9_name": "uCameraBoss::checkBox",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "(cCameraRect3D**, int, int*) shape; callers Em026 sync + Em029 (SE Em026::sync, Em029::saviorMain); Vec3NormalCCW inlined -> larger"
+  },
+  {
+   "se_ea": "0x64b6c0",
+   "se_name": "uCameraBoss::resetCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 (SE caller aRoom::demo)"
+  },
+  {
+   "se_ea": "0x64b6d0",
+   "se_name": "uCameraBoss::moveRightStickAxisY(void)",
+   "dx9_ea": "0x4c9350",
+   "old_dx9_name": "sub_4C9350",
+   "new_dx9_name": "uCameraBoss::moveRightStickAxisY",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "sSave/sKeyboard/sDevil4Pad, imm 31/80; called by every commonProccess"
+  },
+  {
+   "se_ea": "0x64bc80",
+   "se_name": "uCameraBoss::moveRightStickAxisY_SixAxis(void)",
+   "dx9_ea": "0x4c9a40",
+   "old_dx9_name": "sub_4C9A40",
+   "new_dx9_name": "uCameraBoss::moveRightStickAxisY_SixAxis",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "SixAxis variant: imms -6/-5; called by every commonProccess"
+  },
+  {
+   "se_ea": "0x64c410",
+   "se_name": "uCameraBoss::initializeCalcLockOnPlCam(kCameraNormalInitParamBC *)",
+   "dx9_ea": "0x4ca250",
+   "old_dx9_name": "sub_4CA250",
+   "new_dx9_name": "uCameraBoss::initializeCalcLockOnPlCam",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "decompile identical (HoseiY, RotX, Len/LenBattle if >= 0); DX9 only remaining caller in Em029 region (inlined into ctors)"
+  },
+  {
+   "se_ea": "0x64c450",
+   "se_name": "uCameraBoss::MyDTI::newInstance(void)",
+   "dx9_ea": "0x4c3450",
+   "old_dx9_name": "sub_4C3450",
+   "new_dx9_name": "uCameraBoss::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable off_BC5FE8 slot 1; alloc 0x5A0 then jmp ctor (was undefined code, defined)"
+  },
+  {
+   "se_ea": "0x64c490",
+   "se_name": "uCameraBoss::move(void)",
+   "dx9_ea": "0x4c3a00",
+   "old_dx9_name": "sub_4C3A00",
+   "new_dx9_name": "uCameraBoss::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6 (SE 8); 173 bytes / 13 bb identical, imms 16/24"
+  },
+  {
+   "se_ea": "0x64c540",
+   "se_name": "uCameraBoss::checkHit(void)",
+   "dx9_ea": "0x4c3b00",
+   "old_dx9_name": "uDevilCamera::resolveMovement",
+   "new_dx9_name": "uCameraBoss::checkHit",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "camera-wall collision check; callers = every subclass commonProccess (SE same). Was misnamed uDevilCamera::resolveMovement"
+  },
+  {
+   "se_ea": "0x64d510",
+   "se_name": "uCameraBoss::adjustHitBoss(float)",
+   "dx9_ea": "0x4c49d0",
+   "old_dx9_name": "sub_4C49D0",
+   "new_dx9_name": "uCameraBoss::adjustHitBoss",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers = 4 commonProccess (Em018/Em019/Em021/Em023), SE same"
+  },
+  {
+   "se_ea": "0x64d600",
+   "se_name": "uCameraBoss::frictionStopReset(MtVector3 &,float)",
+   "dx9_ea": "0x4c4b00",
+   "old_dx9_name": "sub_4C4B00",
+   "new_dx9_name": "uCameraBoss::frictionStopReset",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "line-segment collision; sole caller Em018 commonProccess (SE same)"
+  },
+  {
+   "se_ea": "0x64d950",
+   "se_name": "uCameraBoss::interpPosTar(void)",
+   "dx9_ea": "0x4c4e90",
+   "old_dx9_name": "sub_4C4E90",
+   "new_dx9_name": "uCameraBoss::interpPosTar",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "called by every commonProccess"
+  },
+  {
+   "se_ea": "0x64dbc0",
+   "se_name": "uCameraBoss::calcVirtualBasePos(void)",
+   "dx9_ea": "0x4c5580",
+   "old_dx9_name": "sub_4C5580",
+   "new_dx9_name": "uCameraBoss::calcVirtualBasePos",
+   "confidence": "high",
+   "evidence": [
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "sole caller basePosSet (SE same)"
+  },
+  {
+   "se_ea": "0x64dd30",
+   "se_name": "uCameraBoss::checkInCameraFanSector(MtVector3 &,MtVector3 &,float,float &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9: the SE callers of checkInCameraFanSector call checkAngleYinFan 0x4C7A10 directly"
+  },
+  {
+   "se_ea": "0x64ddd0",
+   "se_name": "uCameraBoss::plOffsetCamPosSet(MtVector3 &)",
+   "dx9_ea": "0x4c8000",
+   "old_dx9_name": "sub_4C8000",
+   "new_dx9_name": "uCameraBoss::plOffsetCamPosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers Dante groundThrow/groundThrowBranch + Em022/Em029/Em030 (SE same classes)"
+  },
+  {
+   "se_ea": "0x64df50",
+   "se_name": "uCameraBoss::plOffsetPosSet(MtVector3 &)",
+   "dx9_ea": "0x4c8150",
+   "old_dx9_name": "sub_4C8150",
+   "new_dx9_name": "uCameraBoss::plOffsetPosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers all in Em030 region (SE same)"
+  },
+  {
+   "se_ea": "0x64e1e0",
+   "se_name": "uCameraBoss::plChestMatOffsetPosSet(MtVector3 &)",
+   "dx9_ea": "0x4c84e0",
+   "old_dx9_name": "sub_4C84E0",
+   "new_dx9_name": "uCameraBoss::plChestMatOffsetPosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers Em021/Em029/Em030 (SE same)"
+  },
+  {
+   "se_ea": "0x64e370",
+   "se_name": "uCameraBoss::emOffsetCamPosSet(MtVector3 &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x64e5d0",
+   "se_name": "uCameraBoss::emOffsetPosSet(MtVector3 &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x64e850",
+   "se_name": "uCameraBoss::setOffsetCamPos(MtVector3 &,MtVector3 &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x64ea30",
+   "se_name": "uCameraBoss::setOffsetPos_rotYOnlyMat(MtVector3 &,MtVector3 &)",
+   "dx9_ea": "0x4c8680",
+   "old_dx9_name": "sub_4C8680",
+   "new_dx9_name": "uCameraBoss::setOffsetPos_rotYOnlyMat",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "sole caller in Em021 region (SE uCameraBossEm021::dragonThrow); 692 vs 688 bytes"
+  },
+  {
+   "se_ea": "0x64ece0",
+   "se_name": "uCameraBoss::rotateVectorXY(MtVector3 &,float,float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x650480",
+   "se_name": "uCameraBoss::rotateVectorY(MtVector3 &,float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6519c0",
+   "se_name": "uCameraBoss::camRotateY(MtVector3 &,MtVector3 &,float)",
+   "dx9_ea": "0x4c8940",
+   "old_dx9_name": "sub_4C8940",
+   "new_dx9_name": "uCameraBoss::camRotateY",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "callers Dante groundThrow + Em029 (SE same); 598 vs 604 bytes"
+  },
+  {
+   "se_ea": "0x651c20",
+   "se_name": "uCameraBoss::movePosSlowDown(MtVector3 &,MtVector3 const &,float,float)",
+   "dx9_ea": "0x4c8ba0",
+   "old_dx9_name": "sub_4C8BA0",
+   "new_dx9_name": "uCameraBoss::movePosSlowDown",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "callers Em030 (SE Em030 groundThrow*); step-limited move toward target"
+  },
+  {
+   "se_ea": "0x651d00",
+   "se_name": "uCameraBoss::calcNormalPlCam(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x651f70",
+   "se_name": "uCameraBoss::checkHitNormalPlCam(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6527c0",
+   "se_name": "uCameraBoss::moveRightStickAxisX(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x652cb0",
+   "se_name": "uCameraBoss::moveRightStickAxisY2(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers (dead code); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x653000",
+   "se_name": "uCameraBoss::cameraAngleYHoseiPlCam(void)",
+   "dx9_ea": "0x4cae50",
+   "old_dx9_name": "sub_4CAE50",
+   "new_dx9_name": "uCameraBoss::cameraAngleYHoseiPlCam",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sole caller calcLockOnPlCam (SE same)"
+  },
+  {
+   "se_ea": "0x653470",
+   "se_name": "uCameraBoss::basePosSet(uint,MtVector3 &)",
+   "dx9_ea": "0x4c52b0",
+   "old_dx9_name": "sub_4C52B0",
+   "new_dx9_name": "uCameraBoss::basePosSet",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "calls calcVirtualBasePos 0x4C5580; called by sync / groundThrowBranch; decompile: boss joint pos by index + rotY offset, tail-calls calcVirtualBasePos (resolves worker E claim that 0x4C52B0 = oldPosTarPreservation: that is 0x4C7B10, a pure pos/tar copy)"
+  },
+  {
+   "se_ea": "0x6535a0",
+   "se_name": "uCameraBoss::correctPlOver(MtVector3 &,MtVector3 &)",
+   "dx9_ea": "0x4c5750",
+   "old_dx9_name": "sub_4C5750",
+   "new_dx9_name": "uCameraBoss::correctPlOver",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "setLookAtRH/setPerspectiveFovRH; called by correctPlOver2 and Em018 normal/wallShrink"
+  },
+  {
+   "se_ea": "0x655550",
+   "se_name": "uCameraBoss::correctPlOver2(void)",
+   "dx9_ea": "0x4c7870",
+   "old_dx9_name": "sub_4C7870",
+   "new_dx9_name": "uCameraBoss::correctPlOver2",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls correctPlOver; sole caller calcLockOnPlCam"
+  },
+  {
+   "se_ea": "0x655680",
+   "se_name": "uCameraBoss::calcLockOnPlCam(void)",
+   "dx9_ea": "0x4ca290",
+   "old_dx9_name": "sub_4CA290",
+   "new_dx9_name": "uCameraBoss::calcLockOnPlCam",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls cameraAngleYHoseiPlCam + correctPlOver2 x2; callers Dante/Em021/Em022/Em023 sync"
+  },
+  {
+   "se_ea": "0x656130",
+   "se_name": "uCameraBoss::getDTI(void)",
+   "dx9_ea": "0x4c20b0",
+   "old_dx9_name": "uCameraBoss::getDTI",
+   "new_dx9_name": "uCameraBoss::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub (already named)"
+  },
+  {
+   "se_ea": "0x656140",
+   "se_name": "uCameraBoss::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4c20c0",
+   "old_dx9_name": "sub_4C20C0",
+   "new_dx9_name": "uCameraBoss::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; 71 property-name strings"
+  },
+  {
+   "se_ea": "0x658840",
+   "se_name": "uCameraBoss::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x4cdce0",
+   "old_dx9_name": "sub_4CDCE0",
+   "new_dx9_name": "??_EuCameraBossEm018@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "commented",
+   "notes": "uCameraBoss::vftable slot 0. ICF-folded with uCameraBossEm018 vector deleting dtor; body lies in the Em018 region and is named for Em018"
+  },
+  {
+   "se_ea": "0x6588c0",
+   "se_name": "uCameraBossDante::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x6588d0",
+   "se_name": "uCameraBossDante::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x658900",
+   "se_name": "uCameraBossDante::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x658930",
+   "se_name": "uCameraBossDante::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x658950",
+   "se_name": "uCameraBossDante::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x658970",
+   "se_name": "uCameraBossDante::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x658990",
+   "se_name": "uCameraBossDante::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x6589b0",
+   "se_name": "uCameraBossDante::uCameraBossDante(void)",
+   "dx9_ea": "0x4cba10",
+   "old_dx9_name": "sub_4CBA10",
+   "new_dx9_name": "uCameraBossDante::uCameraBossDante",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "calls uCameraBoss ctor; flt 12580; jmp target of MyDTI::newInstance; initializeCalcLockOnPlCam inlined"
+  },
+  {
+   "se_ea": "0x658dd0",
+   "se_name": "uCameraBossDante::~uCameraBossDante(void)",
+   "dx9_ea": "0x4cbe90",
+   "old_dx9_name": "sub_4CBE90",
+   "new_dx9_name": "??1uCameraBossDante@@UAE@XZ",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "stores uCameraBossDante / uCameraBoss / cTrans vftables (~uCameraBoss inlined); called by scalar deleting dtor 0x4CBE60"
+  },
+  {
+   "se_ea": "0x658e00",
+   "se_name": "uCameraBossDante::setup(void)",
+   "dx9_ea": "0x4cbee0",
+   "old_dx9_name": "uCameraBossDante::init",
+   "new_dx9_name": "uCameraBossDante::setup",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "vtable slot 5; calls initBasePosSet, setFog. Was uCameraBossDante::init"
+  },
+  {
+   "se_ea": "0x659050",
+   "se_name": "uCameraBossDante::move(void)",
+   "dx9_ea": "0x507330",
+   "old_dx9_name": "nullsub_2",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "empty move; DX9 slot 6 = shared nullsub_2 (ICF, used by many vtables) - not renamed"
+  },
+  {
+   "se_ea": "0x659060",
+   "se_name": "uCameraBossDante::commonProccess(void)",
+   "dx9_ea": "0x4cc350",
+   "old_dx9_name": "uDevilCamera::move_tick",
+   "new_dx9_name": "uCameraBossDante::commonProccess",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "calls interpPosTar, moveRightStickAxisY(_SixAxis), checkHit; called by Dante sync. Was misnamed uDevilCamera::move_tick"
+  },
+  {
+   "se_ea": "0x6591d0",
+   "se_name": "uCameraBossDante::groundThrowBranch(uint)",
+   "dx9_ea": "0x4ccd70",
+   "old_dx9_name": "sub_4CCD70",
+   "new_dx9_name": "uCameraBossDante::groundThrowBranch",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "calls basePosSet, set1vs1ZoomFov, plOffsetCamPosSet; called 3x from sync (SE same)"
+  },
+  {
+   "se_ea": "0x659350",
+   "se_name": "uCameraBossDante::die(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x659370",
+   "se_name": "uCameraBossDante::MyDTI::newInstance(void)",
+   "dx9_ea": "0x4cb9f0",
+   "old_dx9_name": "sub_4CB9F0",
+   "new_dx9_name": "uCameraBossDante::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable off_BC61B4 slot 1; alloc 0x630 then jmp ctor (was undefined code, defined)"
+  },
+  {
+   "se_ea": "0x6593b0",
+   "se_name": "uCameraBossDante::groundThrow(void)",
+   "dx9_ea": "0x4cc540",
+   "old_dx9_name": "sub_4CC540",
+   "new_dx9_name": "uCameraBossDante::groundThrow",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "calls betweenTargetPosSet, plOffsetCamPosSet, moveFloatSlowDown, camRotateY, nrand; called by throwCam"
+  },
+  {
+   "se_ea": "0x659b50",
+   "se_name": "uCameraBossDante::airThrow(void)",
+   "dx9_ea": "0x4ccf00",
+   "old_dx9_name": "sub_4CCF00",
+   "new_dx9_name": "uCameraBossDante::airThrow",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "called by throwCam together with groundThrow"
+  },
+  {
+   "se_ea": "0x659db0",
+   "se_name": "uCameraBossDante::throwCam(void)",
+   "dx9_ea": "0x4cc500",
+   "old_dx9_name": "sub_4CC500",
+   "new_dx9_name": "uCameraBossDante::throwCam",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "calls airThrow + groundThrow; called by sync"
+  },
+  {
+   "se_ea": "0x659df0",
+   "se_name": "uCameraBossDante::sync(void)",
+   "dx9_ea": "0x4cc0c0",
+   "old_dx9_name": "uCameraBossDante::move",
+   "new_dx9_name": "uCameraBossDante::sync",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "vtable slot 8 (SE 11); callee sequence matches SE sync. Was misnamed uCameraBossDante::move"
+  },
+  {
+   "se_ea": "0x65a030",
+   "se_name": "uCameraBossDante::getDTI(void)",
+   "dx9_ea": "0x4cb240",
+   "old_dx9_name": "uCameraBossDante::getDTI",
+   "new_dx9_name": "uCameraBossDante::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub (already named)"
+  },
+  {
+   "se_ea": "0x65a040",
+   "se_name": "uCameraBossDante::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4cb250",
+   "old_dx9_name": "sub_4CB250",
+   "new_dx9_name": "uCameraBossDante::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name strings"
+  },
+  {
+   "se_ea": "0x65af30",
+   "se_name": "uCameraBossDante::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x4cbe60",
+   "old_dx9_name": "sub_4CBE60",
+   "new_dx9_name": "??_GuCameraBossDante@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "uCameraBossDante::vftable slot 0 (was undefined loc_, defined)"
+  },
+  {
+   "se_ea": "0x65afb0",
+   "se_name": "uCameraBossEm018::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65afc0",
+   "se_name": "uCameraBossEm018::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65aff0",
+   "se_name": "uCameraBossEm018::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65b020",
+   "se_name": "uCameraBossEm018::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65b040",
+   "se_name": "uCameraBossEm018::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65b060",
+   "se_name": "uCameraBossEm018::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65b080",
+   "se_name": "uCameraBossEm018::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "allocator boilerplate; DX9 has no per-class operator new/delete/usage"
+  },
+  {
+   "se_ea": "0x65b0a0",
+   "se_name": "uCameraBossEm018::uCameraBossEm018(void)",
+   "dx9_ea": "0x4cd930",
+   "old_dx9_name": "sub_4CD930",
+   "new_dx9_name": "uCameraBossEm018::uCameraBossEm018",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "ctor body was merged into the newInstance function 0x4CD910 (jmp target); split out as its own function. Calls uCameraBoss ctor, flt 8000"
+  },
+  {
+   "se_ea": "0x65b480",
+   "se_name": "uCameraBossEm018::~uCameraBossEm018(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "trivial dtor inlined; Em018 vector deleting dtor is ICF-folded with uCameraBoss (0x4CDCE0)"
+  },
+  {
+   "se_ea": "0x65b490",
+   "se_name": "uCameraBossEm018::setup(void)",
+   "dx9_ea": "0x4cdd30",
+   "old_dx9_name": "sub_4CDD30",
+   "new_dx9_name": "uCameraBossEm018::setup",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 5; calls setFog"
+  },
+  {
+   "se_ea": "0x65b6c0",
+   "se_name": "uCameraBossEm018::move(void)",
+   "dx9_ea": "0x507330",
+   "old_dx9_name": "nullsub_2",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "empty move; DX9 slot 6 = shared nullsub_2 - not renamed"
+  },
+  {
+   "se_ea": "0x65b6d0",
+   "se_name": "uCameraBossEm018::commonProccess(void)",
+   "dx9_ea": "0x4ce210",
+   "old_dx9_name": "uDevilCamera::move_tick_mode0",
+   "new_dx9_name": "uCameraBossEm018::commonProccess",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "calls interpPosTar, stick funcs, adjustHitBoss, checkHit, frictionStopReset (SE same). Was uDevilCamera::move_tick_mode0"
+  },
+  {
+   "se_ea": "0x65b8c0",
+   "se_name": "uCameraBossEm018::calcBesePos(MtVector3 &,MtVector3 &)",
+   "dx9_ea": "0x4cedc0",
+   "old_dx9_name": "sub_4CEDC0",
+   "new_dx9_name": "uCameraBossEm018::calcBesePos",
+   "confidence": "high",
+   "evidence": [
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "called by normal + wallShrink (SE calcBesePos callers: normal, wallShrink)"
+  },
+  {
+   "se_ea": "0x65ba70",
+   "se_name": "uCameraBossEm018::calcOtherCameraPos(MtVector3 &)",
+   "dx9_ea": "0x4cf390",
+   "old_dx9_name": "sub_4CF390",
+   "new_dx9_name": "uCameraBossEm018::calcOtherCameraPos",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "calls camSphereHitCheck; sole caller wallShrink"
+  },
+  {
+   "se_ea": "0x65bcb0",
+   "se_name": "uCameraBossEm018::zoom(void)",
+   "dx9_ea": "0x4cf650",
+   "old_dx9_name": "sub_4CF650",
+   "new_dx9_name": "uCameraBossEm018::zoom",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "sync call order (normal, cameraAngleYHosei, zoom, commonProccess, wallShrink)"
+  },
+  {
+   "se_ea": "0x65be00",
+   "se_name": "uCameraBossEm018::gRoundThrow01MoveOrbitCheckSub(uchar,MtVector3 &,MtVector3 &,kThrowCamParam *)",
+   "dx9_ea": "0x4cff50",
+   "old_dx9_name": "sub_4CFF50",
+   "new_dx9_name": "uCameraBossEm018::gRoundThrow01MoveOrbitCheckSub",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sphere collision; called 2x by gRoundThrow01MoveOrbitCheck (SE same)"
+  },
+  {
+   "se_ea": "0x65c0b0",
+   "se_name": "uCameraBossEm018::gRoundThrow02HitCheck(void)",
+   "dx9_ea": "0x4d03b0",
+   "old_dx9_name": "sub_4D03B0",
+   "new_dx9_name": "uCameraBossEm018::gRoundThrow02HitCheck",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "line collision; position in sync call order"
+  },
+  {
+   "se_ea": "0x65c280",
+   "se_name": "uCameraBossEm018::airThrow01HitCheckSub(MtVector3 &,kThrowCamParam *)",
+   "dx9_ea": "0x4d09d0",
+   "old_dx9_name": "sub_4D09D0",
+   "new_dx9_name": "uCameraBossEm018::airThrow01HitCheckSub",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sphere collision; called 2x by airThrow01HitCheck (SE same)"
+  },
+  {
+   "se_ea": "0x65c3a0",
+   "se_name": "uCameraBossEm018::groundThrow03(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x65c3d0",
+   "se_name": "uCameraBossEm018::groundThrow02Ex(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x65c400",
+   "se_name": "uCameraBossEm018::airThrow01(void)",
+   "dx9_ea": "0x4d1bc0",
+   "old_dx9_name": "sub_4D1BC0",
+   "new_dx9_name": "uCameraBossEm018::airThrow01",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #4 (SE order groundThrow01, 02, 01Ex, airThrow01, 02, 01Ex)"
+  },
+  {
+   "se_ea": "0x65cb90",
+   "se_name": "uCameraBossEm018::airThrow02(void)",
+   "dx9_ea": "0x4d2300",
+   "old_dx9_name": "sub_4D2300",
+   "new_dx9_name": "uCameraBossEm018::airThrow02",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #5"
+  },
+  {
+   "se_ea": "0x65d180",
+   "se_name": "uCameraBossEm018::airThrow03(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x65d1b0",
+   "se_name": "uCameraBossEm018::airThrow01Ex(void)",
+   "dx9_ea": "0x4d28f0",
+   "old_dx9_name": "sub_4D28F0",
+   "new_dx9_name": "uCameraBossEm018::airThrow01Ex",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #6"
+  },
+  {
+   "se_ea": "0x65d940",
+   "se_name": "uCameraBossEm018::airThrow02Ex(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x65d970",
+   "se_name": "uCameraBossEm018::die(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no SE callers; no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x65d990",
+   "se_name": "uCameraBossEm018::MyDTI::newInstance(void)",
+   "dx9_ea": "0x4cd910",
+   "old_dx9_name": "uCameraBossEm018::uCameraBossEm018",
+   "new_dx9_name": "uCameraBossEm018::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "MyDTI vtable off_BC62C8 slot 1; alloc 0x650 (function shrunk to the 0x20-byte stub). Was uCameraBossEm018::uCameraBossEm018"
+  },
+  {
+   "se_ea": "0x65d9d0",
+   "se_name": "uCameraBossEm018::normal(void)",
+   "dx9_ea": "0x4ce410",
+   "old_dx9_name": "sub_4CE410",
+   "new_dx9_name": "uCameraBossEm018::normal",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls calcBesePos + correctPlOver (SE same)"
+  },
+  {
+   "se_ea": "0x65e250",
+   "se_name": "uCameraBossEm018::cameraAngleYHosei(void)",
+   "dx9_ea": "0x4cefa0",
+   "old_dx9_name": "sub_4CEFA0",
+   "new_dx9_name": "uCameraBossEm018::cameraAngleYHosei",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sync call order; calls checkAngleYinFan"
+  },
+  {
+   "se_ea": "0x65e670",
+   "se_name": "uCameraBossEm018::wallShrink(void)",
+   "dx9_ea": "0x4cf7d0",
+   "old_dx9_name": "sub_4CF7D0",
+   "new_dx9_name": "uCameraBossEm018::wallShrink",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "calls calcOtherCameraPos, calcBesePos, correctPlOver (SE same)"
+  },
+  {
+   "se_ea": "0x65e860",
+   "se_name": "uCameraBossEm018::gRoundThrow01MoveOrbitCheck(kThrowCamParam *)",
+   "dx9_ea": "0x4cfa50",
+   "old_dx9_name": "sub_4CFA50",
+   "new_dx9_name": "uCameraBossEm018::gRoundThrow01MoveOrbitCheck",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sync callee #2; calls the Sub twice"
+  },
+  {
+   "se_ea": "0x65ec30",
+   "se_name": "uCameraBossEm018::airThrow01HitCheck(kThrowCamParam *)",
+   "dx9_ea": "0x4d05c0",
+   "old_dx9_name": "sub_4D05C0",
+   "new_dx9_name": "uCameraBossEm018::airThrow01HitCheck",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "sync callee #3; calls the Sub twice"
+  },
+  {
+   "se_ea": "0x65ef20",
+   "se_name": "uCameraBossEm018::groundThrow01(void)",
+   "dx9_ea": "0x4d0bd0",
+   "old_dx9_name": "sub_4D0BD0",
+   "new_dx9_name": "uCameraBossEm018::groundThrow01",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #1"
+  },
+  {
+   "se_ea": "0x65f620",
+   "se_name": "uCameraBossEm018::groundThrow02(void)",
+   "dx9_ea": "0x4d1240",
+   "old_dx9_name": "sub_4D1240",
+   "new_dx9_name": "uCameraBossEm018::groundThrow02",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #2"
+  },
+  {
+   "se_ea": "0x65f950",
+   "se_name": "uCameraBossEm018::groundThrow01Ex(void)",
+   "dx9_ea": "0x4d1560",
+   "old_dx9_name": "sub_4D1560",
+   "new_dx9_name": "uCameraBossEm018::groundThrow01Ex",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "throwCam callee #3"
+  },
+  {
+   "se_ea": "0x660030",
+   "se_name": "uCameraBossEm018::throwCam(void)",
+   "dx9_ea": "0x4d0b10",
+   "old_dx9_name": "sub_4D0B10",
+   "new_dx9_name": "uCameraBossEm018::throwCam",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "jump table to the 6 throw funcs + betweenTargetPosSet"
+  },
+  {
+   "se_ea": "0x6600f0",
+   "se_name": "uCameraBossEm018::sync(void)",
+   "dx9_ea": "0x4cdf10",
+   "old_dx9_name": "sub_4CDF10",
+   "new_dx9_name": "uCameraBossEm018::sync",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 8 (SE 11); full callee sequence matches SE"
+  },
+  {
+   "se_ea": "0x6603d0",
+   "se_name": "uCameraBossEm018::getDTI(void)",
+   "dx9_ea": "0x4cd1b0",
+   "old_dx9_name": "uCameraBossEm018::getDTI",
+   "new_dx9_name": "uCameraBossEm018::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub (already named)"
+  },
+  {
+   "se_ea": "0x6603e0",
+   "se_name": "uCameraBossEm018::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4cd1c0",
+   "old_dx9_name": "sub_4CD1C0",
+   "new_dx9_name": "uCameraBossEm018::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name strings"
+  },
+  {
+   "se_ea": "0x661240",
+   "se_name": "uCameraBossEm018::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x4cdce0",
+   "old_dx9_name": "sub_4CDCE0",
+   "new_dx9_name": "??_EuCameraBossEm018@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "Em018 vftable slot 0; ICF-folded with uCameraBoss vector deleting dtor"
+  }
+ ],
+ "dx9_only": [],
+ "notes": "All three classes present in DX9. Main vtable labels were already correct (verified by ctor vtable stores); MyDTI vtables were unlabelled and are now labelled Class::MyDTI::vftable (0xBC5FE8, 0xBC61B4, 0xBC62C8; slot 0 = shared MtDTI dtor sub_410360, slot 1 = newInstance). DX9 TU order: getDTI, createProperty, MyDTI::newInstance, ctor, (dtor), setup, move/sync, helpers - different from SE but contiguous per class. Structural fixes: defined newInstance stubs 0x4C3450 / 0x4CB9F0 and Dante scalar deleting dtor 0x4CBE60 (were loc_); split 0x4CD910 (old name uCameraBossEm018::uCameraBossEm018) into MyDTI::newInstance 0x4CD910-0x4CD930 and ctor 0x4CD930. ICF folds: 0x4CDCE0 = vector deleting dtor of BOTH uCameraBoss and uCameraBossEm018 (raw vtable slot 0 of 0xBC5FAC and 0xBC628C both point to it; body lies in the Em018 region, so named ??_EuCameraBossEm018@@UAEPAXI@Z, comment lists both); 0x4C7A10 = uCameraBoss::checkAngleYinFan, ICF-identical to cCameraPlayer::checkAngleYinFan (group A, SE 0x54C5D0; DX9 callers cCameraPlayer::main00 / cameraAngleYHosei); uCameraBoss::sync = jmp uDevilCamera::sync -> DX9 slot 8 is the shared thunk j_uDevilCamera::sync 0x749630 (commented, not renamed); empty Dante/Em018 move -> nullsub_2 0x507330. Wrong old names replaced: uDevilCamera::resolveMovement -> uCameraBoss::checkHit; uDevilCamera::move_tick -> uCameraBossDante::commonProccess; uDevilCamera::move_tick_mode0 -> uCameraBossEm018::commonProccess; uCameraBossDante::move -> ::sync (slot 8); uCameraBossDante::init -> ::setup. Inlined in DX9 (no body): ~uCameraBoss, ~uCameraBossEm018, checkHitBoss, getPlBasePos, upDate, actionMessage, getActionMessage, lowLimit, resetCamera, checkInCameraFanSector. Dead in SE (no callers) and absent in DX9: checkHitCircumference, emOffsetCamPosSet, emOffsetPosSet, setOffsetCamPos, rotateVectorXY, rotateVectorY, calcNormalPlCam, checkHitNormalPlCam, moveRightStickAxisX, moveRightStickAxisY2, Dante/Em018 die, Em018 groundThrow03/groundThrow02Ex/airThrow03/airThrow02Ex. Coordinator leads: D/E lists agree with this mapping except (1) D \"0x4C5750 lowLimit\" is wrong - 0x4C5750 is correctPlOver (8474 B, setLookAtRH/setPerspectiveFovRH); lowLimit is inlined; (2) E \"0x4C52B0 = oldPosTarPreservation\" is wrong - decompile shows basePosSet; oldPosTarPreservation is 0x4C7B10. setFovAssign 0x4C8D90 upgraded to high on D/E agreement. No DX9-only functions remain unassigned in the three class regions."
+}

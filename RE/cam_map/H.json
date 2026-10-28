@@ -1,0 +1,1628 @@
+{
+ "group": "H",
+ "classes": {
+  "cDraw": {
+   "se": {
+    "nfuncs": 4
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "cEventScript": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "cPopeCommon": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "nEffect": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sCollision::Param": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sCollision": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sDevil4Sound": {
+   "se": {
+    "nfuncs": 3
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sMediator": {
+   "se": {
+    "nfuncs": 6
+   },
+   "dx9": {
+    "fields": {
+     "mpCamera": "+0xD0 (SE +0x140)",
+     "mpCameraBoss": "+0xD4 (SE +0x144)"
+    }
+   },
+   "vtable_label_fixed": false
+  },
+  "sSave": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sVibration::VibControl": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "sVibration": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "vtable": "0xc0371c",
+    "nslots": 11
+   },
+   "vtable_label_fixed": false,
+   "slot_shift": "SE 9 getCameraVibrationViewMatrix -> DX9 8"
+  },
+  "uDemoIntervene": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uDevil4Model": {
+   "se": {
+    "nfuncs": 5
+   },
+   "dx9": {
+    "vtable": "0xbc8b38"
+   },
+   "vtable_label_fixed": false,
+   "slot_shift": "SE 44..48 (AABB, Sphere, void, update, move) -> one contiguous DX9 run in the same order"
+  },
+  "uEffectEmitter": {
+   "se": {
+    "nfuncs": 3
+   },
+   "dx9": {
+    "vtable": "0xc0c7b0",
+    "createProperty": "0xad39e0",
+    "move": "0xad2fb0"
+   },
+   "vtable_label_fixed": false
+  },
+  "uEm000Base": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm008": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm008_009Base": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm009": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm011": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm012": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm016": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm018": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm019": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm019_00": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm021": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm021_Hand": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm022": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm023": {
+   "se": {
+    "nfuncs": 3
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm025": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm026": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEm031": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEmAngelo": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uEnemy": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryArms_Dante": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryArms_Lady": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryArms_Nero": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryArms_Trish": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryArms_Vergil": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryBase3D": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryCharacter": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryEnemy_Boss": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryEnemy_LesserDemons": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryItem_Item": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryItem_KeyItem": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_LbryItem_Orb": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGUI_OpGameOption": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uGetItem": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uHugeStatue": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uMinimap": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uPlayer": {
+   "se": {
+    "nfuncs": 4
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uPlayerDanteBoss": {
+   "se": {
+    "nfuncs": 3
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  },
+  "uPlayerSE": {
+   "se": {
+    "nfuncs": 2
+   },
+   "dx9": {
+    "present": false
+   },
+   "vtable_label_fixed": false
+  },
+  "uStageSetEm025": {
+   "se": {
+    "nfuncs": 1
+   },
+   "dx9": {},
+   "vtable_label_fixed": false
+  }
+ },
+ "methods": [
+  {
+   "se_ea": "0xbed220",
+   "se_name": "cDraw::getCameraDir(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "cDraw camera accessors (aligned [this+0xD7C] block) absent in DX9: no \"and eax,0FFFFFFF0h\" accessor bodies; their SE callers (uDevil4Model::calcTransparency*, shadow/DOF/bokeh filters) are SE-only renderer code"
+  },
+  {
+   "se_ea": "0xbed240",
+   "se_name": "cDraw::getCameraNearClip(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "cDraw camera accessors (aligned [this+0xD7C] block) absent in DX9: no \"and eax,0FFFFFFF0h\" accessor bodies; their SE callers (uDevil4Model::calcTransparency*, shadow/DOF/bokeh filters) are SE-only renderer code"
+  },
+  {
+   "se_ea": "0xbed210",
+   "se_name": "cDraw::getCameraPos(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "cDraw camera accessors (aligned [this+0xD7C] block) absent in DX9: no \"and eax,0FFFFFFF0h\" accessor bodies; their SE callers (uDevil4Model::calcTransparency*, shadow/DOF/bokeh filters) are SE-only renderer code"
+  },
+  {
+   "se_ea": "0xbed230",
+   "se_name": "cDraw::getCameraTargetDist(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "cDraw camera accessors (aligned [this+0xD7C] block) absent in DX9: no \"and eax,0FFFFFFF0h\" accessor bodies; their SE callers (uDevil4Model::calcTransparency*, shadow/DOF/bokeh filters) are SE-only renderer code"
+  },
+  {
+   "se_ea": "0x592160",
+   "se_name": "cEventScript::killBossCamera(void)",
+   "dx9_ea": "0x44f110",
+   "old_dx9_name": "sub_44F110",
+   "new_dx9_name": "cEventScript::killBossCamera",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "DX9 lacks the SE Vergil/Trish setMiniGameCameraInfo branch. Writes sMediator mpCamera(+0xD0)/mpCameraBoss(+0xD4), gates on mpPlayer(+0x24). Its DX9 caller is named sGameState::player_spawn_state (0x44A910, 13245 B) but corresponds to SE cEventScript::executeCode (16228 B)"
+  },
+  {
+   "se_ea": "0x5a3170",
+   "se_name": "cPopeCommon::setCameraVib(uint)",
+   "dx9_ea": "0x4577d0",
+   "old_dx9_name": "sub_4577D0",
+   "new_dx9_name": "cPopeCommon::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vib-param table index; DX9 callers uEm029/uEm030/uEm033 = SE callers"
+  },
+  {
+   "se_ea": "0xf27f60",
+   "se_name": "nEffect::getCameraPos(cDraw *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "wraps cDraw::getCameraPos (SE-only); no DX9 counterpart found"
+  },
+  {
+   "se_ea": "0xd357e0",
+   "se_name": "sCollision::Param::setAdjustPositionCameraSetting(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: only caller is adjustPosition_camera2 (EPSILON_HI_LOOSELY anti-trembling setup)"
+  },
+  {
+   "se_ea": "0xd692f0",
+   "se_name": "sCollision::adjustPosition_camera2(MtVector3 &,MtVector3 const &,MtSphere const &,sCollision::Param const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only anti-trembling wrapper. DX9 camera checkHit sites call plain sCollision::adjustPosition(Sphere) 0x95CBE0 (callers cCameraPlayer::checkHit/checkHitNormal, 0x4C3B00)"
+  },
+  {
+   "se_ea": "0x5f9090",
+   "se_name": "sDevil4Sound::DefusePauseSeForCameraDemo(void)",
+   "dx9_ea": "0x48a5b0",
+   "old_dx9_name": "sub_48A5B0",
+   "new_dx9_name": "sDevil4Sound::DefusePauseSeForCameraDemo",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "aRoom::demo / aRoom::message mode==1 branch of the Defuse triple (0x48A5B0/0x48A4A0/0x48A7B0)"
+  },
+  {
+   "se_ea": "0x5f8ea0",
+   "se_name": "sDevil4Sound::PauseSeForCameraDemo(void)",
+   "dx9_ea": "0x48a3c0",
+   "old_dx9_name": "sub_48A3C0",
+   "new_dx9_name": "sDevil4Sound::PauseSeForCameraDemo",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "strings",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "aRoom::demo mode==1 branch of the Pause triple (0x48A3C0/0x48A0A0/0x48A680 = CameraDemo/Demo/Demo30)"
+  },
+  {
+   "se_ea": "0x5f69a0",
+   "se_name": "sDevil4Sound::setListeningCam(MtVector3 const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined: DX9 uListen move (sub_76CDD0) writes sDevil4Sound+0x4E0/4E4/4E8 directly (same offsets as SE)"
+  },
+  {
+   "se_ea": "0x603140",
+   "se_name": "sMediator::getCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined everywhere in DX9: [sMediator+0xD0] (SE +0x140) is read in ~99 functions. Single uDevilCamera* slot -> PER-PLAYER for MP (each player needs its own camera)"
+  },
+  {
+   "se_ea": "0x603170",
+   "se_name": "sMediator::getCameraBoss(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined: [sMediator+0xD4] (SE +0x144) read in ~42 functions (uEm018/019/021/022/023 grab/throw, aRoom::demo, uPlayerDanteBoss::setBusterCamera). Boss camera is a per-encounter shared object but it drives a viewport -> per-player view consumer"
+  },
+  {
+   "se_ea": "0x603150",
+   "se_name": "sMediator::outCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined: aRoom::cleanRoom zeroes +0xD0 (0x40DCFA); uCameraBoss vfunc sub_4C39E0 stores ecx to +0xD4 and +0xD0 together"
+  },
+  {
+   "se_ea": "0x603130",
+   "se_name": "sMediator::setCamera(uDevilCamera *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined: writes to [sMediator+0xD0] in aRoom::cleanRoom, cEventScript::killBossCamera 0x44F110, sub_4F7A90, uCameraCtrl::resumeCamera"
+  },
+  {
+   "se_ea": "0x603160",
+   "se_name": "sMediator::setCameraBoss(uCameraBoss *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined: writes to [sMediator+0xD4] in aRoom::init, uEm019/021/022/023/026/029/030::setup, uPlayerDanteBoss::setup, 0x4C39E0/0x4E73B0/0x4E9F80/0x4EC350 (camera-boss classes)"
+  },
+  {
+   "se_ea": "0x55de60",
+   "se_name": "sMediator::setMiniGameCameraInfo(sMediator::ForceCameraInfo *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only (Vergil/Trish-Lady mini-game ForceCameraInfo at SE +0x670); DX9 killBossCamera lacks the call"
+  },
+  {
+   "se_ea": "0x474790",
+   "se_name": "sSave::setCameraTypeX(int)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no standalone critical-section setter in the DX9 sSave region; only SE caller is the SE-only uGUI_OpGameOption"
+  },
+  {
+   "se_ea": "0x474740",
+   "se_name": "sSave::setCameraTypeY(int)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "no standalone critical-section setter in the DX9 sSave region; only SE caller is the SE-only uGUI_OpGameOption"
+  },
+  {
+   "se_ea": "0xb9e430",
+   "se_name": "sVibration::VibControl::moveCamVibSingle(float)",
+   "dx9_ea": "0x90a010",
+   "old_dx9_name": "sub_90A010",
+   "new_dx9_name": "sVibration::VibControl::moveCamVibSingle",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "2nd callee of DX9 VibControl::move (0x909CA0), after movePadVibSingle (0x909EF0)"
+  },
+  {
+   "se_ea": "0xb9df20",
+   "se_name": "sVibration::getCameraVibrationNum(void)",
+   "dx9_ea": "0x908890",
+   "old_dx9_name": "sub_908890",
+   "new_dx9_name": "sVibration::getCameraVibrationNum",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "mCameraVibrationNum property getter in sVibration::createProperty; counts 8 VibControls with flag 0x20000"
+  },
+  {
+   "se_ea": "0xb9e800",
+   "se_name": "sVibration::getCameraVibrationViewMatrix(uint,uCamera *)",
+   "dx9_ea": "0x908c40",
+   "old_dx9_name": "sub_908C40",
+   "new_dx9_name": "sVibration::getCameraVibrationViewMatrix",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "sVibration vtable SE slot 9 -> DX9 slot 8; (MtMatrix*, uint, uCamera*) signature; calls MtMatrix::setLookAtRH"
+  },
+  {
+   "se_ea": "0x6be6d0",
+   "se_name": "uDemoIntervene::getCameraUnit(void)",
+   "dx9_ea": "0x520df0",
+   "old_dx9_name": "sub_520DF0",
+   "new_dx9_name": "uDemoIntervene::getCameraUnit",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "\"uMotionCamera\" DTI-name walk over sUnit moveline +0x8C; uDemoIntervene region"
+  },
+  {
+   "se_ea": "0x6cb420",
+   "se_name": "uDevil4Model::getCameraTransparency(MtAABB const &)",
+   "dx9_ea": "0x524610",
+   "old_dx9_name": "uDevil4Model::getCameraTransparency_3",
+   "new_dx9_name": "uDevil4Model::getCameraTransparency_3",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "MtAABB overload (SE vtable order AABB,Sphere,void,update,move); calls sCamera::isDispAABB. SE body reads sMediator::getCamera + getPlayerPos (per-player). SE comment added"
+  },
+  {
+   "se_ea": "0x6c46a0",
+   "se_name": "uDevil4Model::getCameraTransparency(MtSphere const &)",
+   "dx9_ea": "0x5242a0",
+   "old_dx9_name": "uDevil4Model::getCameraTransparency_2",
+   "new_dx9_name": "uDevil4Model::getCameraTransparency_2",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "MtSphere overload; calls sCamera::isDispSphere. SE body reads sMediator::getCamera + getPlayerPos (per-player). SE comment added"
+  },
+  {
+   "se_ea": "0x6c4430",
+   "se_name": "uDevil4Model::getCameraTransparency(void)",
+   "dx9_ea": "0x524030",
+   "old_dx9_name": "uDevil4Model::getCameraTransparency",
+   "new_dx9_name": "uDevil4Model::getCameraTransparency",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "void overload, 619 B on both sides. SE comment added"
+  },
+  {
+   "se_ea": "0x6c49d0",
+   "se_name": "uDevil4Model::moveCameraTransparency(void)",
+   "dx9_ea": "0x5249d0",
+   "old_dx9_name": "uDevil4Model::moveCameraTransparency",
+   "new_dx9_name": "uDevil4Model::moveCameraTransparency",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "SE 4725 B vs DX9 735 B. SE comment added"
+  },
+  {
+   "se_ea": "0x6c31e0",
+   "se_name": "uDevil4Model::updateCameraTransparency(void)",
+   "dx9_ea": "0x524970",
+   "old_dx9_name": "uDevil4Model::updateCameraTransparency",
+   "new_dx9_name": "uDevil4Model::updateCameraTransparency",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "SE comment added"
+  },
+  {
+   "se_ea": "0xf409f0",
+   "se_name": "uEffectEmitter::calcCameraMatrix(void)",
+   "dx9_ea": "0xad54d0",
+   "old_dx9_name": "sub_AD54D0",
+   "new_dx9_name": "uEffectEmitter::calcCameraMatrix",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "called twice from uEffectEmitter::move (vtable slot 6, 0xAD2FB0) like SE; the only uEffectEmitter function using sine/cosine + sCamera"
+  },
+  {
+   "se_ea": "0xf3f830",
+   "se_name": "uEffectEmitter::getCameraConstType(void)",
+   "dx9_ea": "0xad2b60",
+   "old_dx9_name": "sub_AD2B60",
+   "new_dx9_name": "uEffectEmitter::getCameraConstType",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "getter registered for \"mCameraConstType\" in createProperty; DX9 field +0x3D (SE +0x55)"
+  },
+  {
+   "se_ea": "0xf3f840",
+   "se_name": "uEffectEmitter::setCameraConstType(uint)",
+   "dx9_ea": "0xad2b70",
+   "old_dx9_name": "sub_AD2B70",
+   "new_dx9_name": "uEffectEmitter::setCameraConstType",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "setter registered for \"mCameraConstType\" in createProperty; DX9 field +0x3D (SE +0x55)"
+  },
+  {
+   "se_ea": "0x6e6770",
+   "se_name": "uEm000Base::setCameraVib(uint)",
+   "dx9_ea": "0x54ed10",
+   "old_dx9_name": "uEm000Base::setCameraVib",
+   "new_dx9_name": "uEm000Base::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x7266b0",
+   "se_name": "uEm008::setCameraAlpha(bool)",
+   "dx9_ea": "0x5802e0",
+   "old_dx9_name": "uEm008::setCameraAlpha",
+   "new_dx9_name": "uEm008::setCameraAlpha",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x730670",
+   "se_name": "uEm008_009Base::getCameraPositionLR(MtVector3 &)",
+   "dx9_ea": "0x582810",
+   "old_dx9_name": "sub_582810",
+   "new_dx9_name": "uEm008_009Base::getCameraPositionLR",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "promoted from earlier medium candidate; decompile-verified; caller uEm008_009Base::checkAction"
+  },
+  {
+   "se_ea": "0x73f870",
+   "se_name": "uEm009::setCameraAlpha(bool)",
+   "dx9_ea": "0x597570",
+   "old_dx9_name": "uEm009::setCameraAlpha",
+   "new_dx9_name": "uEm009::setCameraAlpha",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x761490",
+   "se_name": "uEm011::CameraVib_Buster(int,uchar,uchar)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE has no callers (inlined); DX9 uEm011::atkRockBuster calls uDevilCamera::vibReq directly"
+  },
+  {
+   "se_ea": "0x761450",
+   "se_name": "uEm011::CameraVib_Roar(int,uchar)",
+   "dx9_ea": "0x5ce5f0",
+   "old_dx9_name": "uEm011::CameraVib_Roar",
+   "new_dx9_name": "uEm011::CameraVib_Roar",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x7822f0",
+   "se_name": "uEm012::setCameraVib(uint)",
+   "dx9_ea": "0x5d93c0",
+   "old_dx9_name": "uEm012::setCameraVib",
+   "new_dx9_name": "uEm012::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x7c6710",
+   "se_name": "uEm016::reqCamVib(uEm016::CAMERA_VIB_PARAM *)",
+   "dx9_ea": "0x618360",
+   "old_dx9_name": "uEm016::reqCamVib",
+   "new_dx9_name": "uEm016::reqCamVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x7f6420",
+   "se_name": "uEm018::CameraVib(bool,float,uint)",
+   "dx9_ea": "0x6421e0",
+   "old_dx9_name": "uEm018::CameraVib",
+   "new_dx9_name": "uEm018::CameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x812550",
+   "se_name": "uEm019::camera_vib_ctrl(void)",
+   "dx9_ea": "0x64d540",
+   "old_dx9_name": "uEm019::camera_vib_ctrl",
+   "new_dx9_name": "uEm019::camera_vib_ctrl",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x813680",
+   "se_name": "uEm019::setBossCameraStatus(uCameraBoss::BOSS_ACT_STATUS)",
+   "dx9_ea": "0x65b540",
+   "old_dx9_name": "uEm019::setBossCameraStatus",
+   "new_dx9_name": "uEm019::setBossCameraStatus",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x835bc0",
+   "se_name": "uEm019_00::camera_vib_ctrl(void)",
+   "dx9_ea": "0x64d540",
+   "old_dx9_name": "uEm019::camera_vib_ctrl",
+   "new_dx9_name": "uEm019::camera_vib_ctrl",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "commented",
+   "notes": "ICF-folded; DX9 uEm019_00::preMain calls 0x64D540; ICF line prepended"
+  },
+  {
+   "se_ea": "0x857cf0",
+   "se_name": "uEm021::setBossCameraStatus(uCameraBoss::BOSS_ACT_STATUS)",
+   "dx9_ea": "0x65b540",
+   "old_dx9_name": "uEm019::setBossCameraStatus",
+   "new_dx9_name": "uEm019::setBossCameraStatus",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "commented",
+   "notes": "ICF-folded; DX9 uEm021::em021_*_grabbed call 0x65B540; ICF line prepended"
+  },
+  {
+   "se_ea": "0x86ffe0",
+   "se_name": "uEm021_Hand::getCameraTransparency2(MtAABB const &,uint)",
+   "dx9_ea": "0x6a2d50",
+   "old_dx9_name": "uEm021_Hand::getCameraTransparency2",
+   "new_dx9_name": "uEm021_Hand::getCameraTransparency2",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x885a30",
+   "se_name": "uEm022::setBusterCameraEnd(void)",
+   "dx9_ea": "0x6b5720",
+   "old_dx9_name": "uEm022::setBusterCameraEnd",
+   "new_dx9_name": "uEm022::setBusterCameraEnd",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass. Reads sMediator::mpPlayer (+0x24) mPlayerID==1 (Nero) -> per-player"
+  },
+  {
+   "se_ea": "0x885a10",
+   "se_name": "uEm022::setBusterCameraStart(uCameraBoss::BOSS_ACT_STATUS,uCameraBoss::BOSS_THROW_STATUS)",
+   "dx9_ea": "0x6b56e0",
+   "old_dx9_name": "sub_6B56E0",
+   "new_dx9_name": "uEm022::setBusterCameraStart",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "ICF-folded with uEm023::reqBusterCamera; sits right before uEm022::setBusterCameraEnd"
+  },
+  {
+   "se_ea": "0x89beb0",
+   "se_name": "uEm023::reqBusterCamera(uCameraBoss::BOSS_ACT_STATUS,uCameraBoss::BOSS_THROW_STATUS)",
+   "dx9_ea": "0x6b56e0",
+   "old_dx9_name": "sub_6B56E0",
+   "new_dx9_name": "uEm022::setBusterCameraStart",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "commented",
+   "notes": "ICF-folded into uEm022::setBusterCameraStart (identical SE bodies); DX9 callers uEm023::grabNear x2"
+  },
+  {
+   "se_ea": "0x89bed0",
+   "se_name": "uEm023::setBusterCameraEnd(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined (SE also has no callers); DX9 uEm023::grabNear writes uCameraBoss+0x520=4 at 0x6CF9DF"
+  },
+  {
+   "se_ea": "0x89dc40",
+   "se_name": "uEm023::setCameraVib(uint)",
+   "dx9_ea": "0x6d2cb0",
+   "old_dx9_name": "uEm023::setCameraVib",
+   "new_dx9_name": "uEm023::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x8bee50",
+   "se_name": "uEm025::resetCamera(void)",
+   "dx9_ea": "0x6e7570",
+   "old_dx9_name": "sub_6E7570",
+   "new_dx9_name": "uEm025::resetCamera",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "promoted from earlier medium candidate; decompile-verified (getCamera -> uCameraBossEm025 DTI check -> reset inlined); callers in uStageSetEm025Ctrl/ResetPlayer like SE"
+  },
+  {
+   "se_ea": "0x8bedf0",
+   "se_name": "uEm025::setCamera(uCameraBoss::BOSS_ACT_STATUS)",
+   "dx9_ea": "0x6e7510",
+   "old_dx9_name": "uEm025::setCamera",
+   "new_dx9_name": "uEm025::setCamera",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x8d4110",
+   "se_name": "uEm026::ctrlCameraVib(void)",
+   "dx9_ea": "0x6f3bf0",
+   "old_dx9_name": "sub_6F3BF0",
+   "new_dx9_name": "uEm026::ctrlCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "promoted from earlier medium candidate; decompile-verified"
+  },
+  {
+   "se_ea": "0x8d58e0",
+   "se_name": "uEm026::setCamera(uCameraBoss::BOSS_ACT_STATUS)",
+   "dx9_ea": "0x6f38e0",
+   "old_dx9_name": "uEm026::setCamera",
+   "new_dx9_name": "uEm026::setCamera",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x8f70d0",
+   "se_name": "uEm031::CamVibCtrl(uint)",
+   "dx9_ea": "0x713700",
+   "old_dx9_name": "uEm031::CamVibCtrl",
+   "new_dx9_name": "uEm031::CamVibCtrl",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass"
+  },
+  {
+   "se_ea": "0x8f51d0",
+   "se_name": "uEm031::reqCamVib(uEm031::CAMERA_VIB_PARAM *)",
+   "dx9_ea": "0x618360",
+   "old_dx9_name": "uEm016::reqCamVib",
+   "new_dx9_name": "uEm016::reqCamVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uEm pass: ICF-folded into uEm016::reqCamVib (already listed in its comment)"
+  },
+  {
+   "se_ea": "0x911d20",
+   "se_name": "uEmAngelo::setCameraVib(uEmAngelo::CAMERA_VIB_PARAM *)",
+   "dx9_ea": "0x618360",
+   "old_dx9_name": "uEm016::reqCamVib",
+   "new_dx9_name": "uEm016::reqCamVib",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "commented",
+   "notes": "ICF-folded: identical 202-B SE body; DX9 callers uEm005/uEm006/uEm022 are its SE callers; ICF line prepended"
+  },
+  {
+   "se_ea": "0x91ddb0",
+   "se_name": "uEnemy::setCameraTransparencyTbl(uint)",
+   "dx9_ea": "0x736dc0",
+   "old_dx9_name": "uEnemy::setCameraTransparencyTbl",
+   "new_dx9_name": "uEnemy::setCameraTransparencyTbl",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "name pre-existing without SE comment; SE comment added"
+  },
+  {
+   "se_ea": "0x422bf0",
+   "se_name": "uGUI_LbryArms_Dante::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x422df0",
+   "se_name": "uGUI_LbryArms_Dante::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x423490",
+   "se_name": "uGUI_LbryArms_Lady::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x423580",
+   "se_name": "uGUI_LbryArms_Lady::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x423ab0",
+   "se_name": "uGUI_LbryArms_Nero::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x423bd0",
+   "se_name": "uGUI_LbryArms_Nero::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x424180",
+   "se_name": "uGUI_LbryArms_Trish::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x4242a0",
+   "se_name": "uGUI_LbryArms_Trish::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x424810",
+   "se_name": "uGUI_LbryArms_Vergil::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x4249b0",
+   "se_name": "uGUI_LbryArms_Vergil::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x428720",
+   "se_name": "uGUI_LbryBase3D::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x426b10",
+   "se_name": "uGUI_LbryBase3D::updateCamera(uGUI_LbryBase::CAM_SEQ,uGUI_LbryBase::CAM_SEQ,float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x428b70",
+   "se_name": "uGUI_LbryCharacter::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x4291f0",
+   "se_name": "uGUI_LbryCharacter::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42a640",
+   "se_name": "uGUI_LbryEnemy_Boss::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42ad60",
+   "se_name": "uGUI_LbryEnemy_Boss::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42bb60",
+   "se_name": "uGUI_LbryEnemy_LesserDemons::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42c590",
+   "se_name": "uGUI_LbryEnemy_LesserDemons::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42dcd0",
+   "se_name": "uGUI_LbryItem_Item::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42de30",
+   "se_name": "uGUI_LbryItem_Item::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42e470",
+   "se_name": "uGUI_LbryItem_KeyItem::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42e640",
+   "se_name": "uGUI_LbryItem_KeyItem::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42ed40",
+   "se_name": "uGUI_LbryItem_Orb::getCameraPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x42ede0",
+   "se_name": "uGUI_LbryItem_Orb::getCameraTargetPos(uint,uGUI_LbryBase::CAM_SEQ)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_Lbry* (SE library UI) is SE-only: no \"uGUI_Lbry\" string in DX9 (DX9 has the older uLbry* classes)"
+  },
+  {
+   "se_ea": "0x4737c0",
+   "se_name": "uGUI_OpGameOption::isSeqId_Camera(bool,bool)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uGUI_OpGameOption is SE-only (no class-name string in DX9; constants 0xF4263/0xF4264 absent)"
+  },
+  {
+   "se_ea": "0x937680",
+   "se_name": "uGetItem::getCamera(void)",
+   "dx9_ea": "0x744100",
+   "old_dx9_name": "sub_744100",
+   "new_dx9_name": "uGetItem::getCamera",
+   "confidence": "high",
+   "evidence": [
+    "strings",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "getter registered for \"mpCamera\" in uGetItem::createProperty (DX9 +0x74, SE +0x90); right after uGetItem::getDTI. ICF-folded generic getter: also called by sub_469A20 and sub_471120"
+  },
+  {
+   "se_ea": "0x939440",
+   "se_name": "uHugeStatue::setCameraVibration(uDevilCamera::ENUM_VIB_PRESET)",
+   "dx9_ea": "0x749450",
+   "old_dx9_name": "sub_749450",
+   "new_dx9_name": "uHugeStatue::setCameraVibration",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "preset constant-propagated to 0x18 (SE call sites push 18h); last function of the uHugeStatue TU; the other SE call site is inlined into the damageMessage vfunc 0x748C90"
+  },
+  {
+   "se_ea": "0x966d20",
+   "se_name": "uMinimap::getCameraRotY(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE has no xrefs (dead code); no DX9 counterpart found in the uMinimap region"
+  },
+  {
+   "se_ea": "0x9a2050",
+   "se_name": "uPlayer::changeCameraDirectionMessage(void)",
+   "dx9_ea": "0x7ae440",
+   "old_dx9_name": "uPlayer::changeCameraDirectionMessage",
+   "new_dx9_name": "uPlayer::changeCameraDirectionMessage",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uPl pass"
+  },
+  {
+   "se_ea": "0x4c0480",
+   "se_name": "uPlayer::isAtckCameraInterp(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: calls vtbl+0x3A0 (slot 232); DX9 uPlayer vtable has 181 slots; byte pattern not found"
+  },
+  {
+   "se_ea": "0x9a86a0",
+   "se_name": "uPlayer::setCameraAngle(void)",
+   "dx9_ea": "0x7abcb0",
+   "old_dx9_name": "uPlayer::setCameraAngle",
+   "new_dx9_name": "uPlayer::setCameraAngle",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uPl pass"
+  },
+  {
+   "se_ea": "0x9a2190",
+   "se_name": "uPlayer::setCameraVibration(int,short)",
+   "dx9_ea": "0x7c62e0",
+   "old_dx9_name": "uPlayerDanteBoss::setCameraVib",
+   "new_dx9_name": "uPlayerDanteBoss::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uPl pass: ICF-folded into uPlayerDanteBoss::setCameraVib (already in its comment); reads sMediator::mpCamera"
+  },
+  {
+   "se_ea": "0x9be430",
+   "se_name": "uPlayerDanteBoss::setBusterCamera(uint)",
+   "dx9_ea": "0x7c5340",
+   "old_dx9_name": "uPlayerDanteBoss::setBusterCamera",
+   "new_dx9_name": "uPlayerDanteBoss::setBusterCamera",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uPl pass"
+  },
+  {
+   "se_ea": "0x9be450",
+   "se_name": "uPlayerDanteBoss::setBusterCameraEnd(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined (SE has no callers); DX9 uPlayerDanteBoss::checkAfterAction writes uCameraBoss+0x520=4 at 0x7C0E65"
+  },
+  {
+   "se_ea": "0x9be970",
+   "se_name": "uPlayerDanteBoss::setCameraVib(uDevilCamera::ENUM_VIB_PRESET)",
+   "dx9_ea": "0x7c62e0",
+   "old_dx9_name": "uPlayerDanteBoss::setCameraVib",
+   "new_dx9_name": "uPlayerDanteBoss::setCameraVib",
+   "confidence": "high",
+   "evidence": [
+    "existing_comment"
+   ],
+   "action": "confirmed",
+   "notes": "uPl pass"
+  },
+  {
+   "se_ea": "0x4c0210",
+   "se_name": "uPlayerSE::isAtckCameraInterp(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uPlayerSE (Vergil/Lady/Trish) is SE-only"
+  },
+  {
+   "se_ea": "0x4c0240",
+   "se_name": "uPlayerSE::isAutoCameraRear(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uPlayerSE (Vergil/Lady/Trish) is SE-only"
+  },
+  {
+   "se_ea": "0xa890d0",
+   "se_name": "uStageSetEm025::getCameraID(int)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined into the DX9 uCameraBossEm025 sync-equivalent sub_4E7970 (loop over mCameraID[8] at +0x13D0, 0x4E7A74)"
+  }
+ ],
+ "dx9_only": [],
+ "notes": "Group H = 97 SE methods with 'cam' in the method name on non-camera classes. sMediator camera accessors are all inlined in DX9: mpCamera at +0xD0 (SE +0x140), mpCameraBoss at +0xD4 (SE +0x144); setMiniGameCameraInfo is SE-only. MP: mpCamera is one singleton camera slot and must become per-player; every reader (enemy/player vibration requests, uDevil4Model camera transparency, cEventScript::killBossCamera, uEm008_009Base::getCameraPositionLR, uEm025::resetCamera, cPopeCommon::setCameraVib, uHugeStatue::setCameraVibration) assumes one camera. H methods that also read per-player state: uEm022::setBusterCameraEnd (mpPlayer->mPlayerID==1), cEventScript::killBossCamera (mpPlayer gate), uDevil4Model::getCameraTransparency AABB/Sphere (getPlayerPos in SE). DX9 sVibration: the existing placeholder names sVibration::req_simple/req_at_pos/req_with_parent/alloc_slot/rec_* (commented as 'particle_pool') are really SE sVibration::reqVib overloads / openVibControl / VibControl::start / updateFadeParam (0x90A1B0 = 4th callee of VibControl::move 0x909CA0, like SE updateFadeParam 1031 B). Not renamed by H; the coordinator should reconcile. The DX9 caller of killBossCamera is named 'sGameState::player_spawn_state' (0x44A910) but corresponds to SE cEventScript::executeCode. ICF folds: uEm022::setBusterCameraStart == uEm023::reqBusterCamera (0x6B56E0); uEm016::reqCamVib == uEm031::reqCamVib == uEmAngelo::setCameraVib (0x618360); uEm019::camera_vib_ctrl == uEm019_00::camera_vib_ctrl (0x64D540); uEm019::setBossCameraStatus == uEm021::setBossCameraStatus (0x65B540); uPlayerDanteBoss::setCameraVib == uPlayer::setCameraVibration (0x7C62E0); uGetItem::getCamera is a generic getter (0x744100). uDevil4Model overload suffixes: _3 = MtAABB, _2 = MtSphere, base = void (names kept)."
+}

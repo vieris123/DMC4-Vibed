@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The finisher of nero_million_stab.xml: a hand-off-only move (no <table>, so no row and no input of its own; it
+     is reached through the loop's <next to="move:nero_million_stab_finish">). Dante's finish motion is bank 2 block 9
+     (pl006_03.lmt), requested with 10 interpolation frames as the game does; on its end the move leaves through the
+     footwork (setActionFootwork), the vanilla ground exit. Every cancel opens at frame 20 so the usual follow-ups
+     (jump, guns, taunt, the next attack) work out of the recovery. -->
+<move name="nero_million_stab_finish" character="pl000" id="0x51" version="2">
+  <lmt bank="10" path="motion\pl000\million_stab"/>
+  <stage name="finish" motion="10:1" ctn="3:0x15" attr="null_trans_off" interp="10" stop="true" land="none"
+         cancel_frame="20" enemy_step="true" watchdog="90">
+    <kill_effect frame="0" id="4"/>                                       <!-- the stab dust -->
+    <effect frame="0" list="2" index="0xC" material="ground"/>          <!-- the finish burst -->
+    <next on="motion_end" to="exit"/>
+  </stage>
+</move>

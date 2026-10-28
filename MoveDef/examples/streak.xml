@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Phase 1 example: Nero's Streak (atckId 28, uPlayerNero::moveAtckRedQueenStinger 0x7FDA80), as the game
+     plays it today. Blocks are in pl000_04.lmt (bank 3): 0x15 = windup (ends on motion end), 0x16 = the dash
+     (setRedQueenMotion 0x316, attr 1; ends on distance / wall / hit), 0x17 = the finish (0x317, attr 4). The
+     compiled timeline below is the vanilla chartbl\pl000.ctn script of 3:0x17 read back with dmc4xml.ctn
+     (blocks 0x15 and 0x16 have empty scripts). The runtime timeline lists the effects the state function fires;
+     "stage start" means the frame the stage's motion is requested. -->
+<move name="nero_streak" character="pl000" id="28" body="lower" version="1">
+  <routine native="0x7FDA80"/>                     <!-- keep the game's Streak state function -->
+
+  <timeline motion="3:0x17">
+    <vibrate pad="3" frame="5"/>
+    <trigger byte="free0" value="1" frame="6"/>    <!-- stage 3 waits for this before allowing the exit -->
+    <vibrate cam="17" frame="7"/>
+    <vibrate pad="0xFE" frame="7"/>                <!-- hold -->
+    <vibrate cam="0xFF" frame="9"/>                <!-- off -->
+    <trigger byte="free1" value="1" frame="12"/>
+    <trigger byte="free1" value="2" frame="20"/>
+    <cancel category="C_NORM0"     kind="open_alt" from="26"/>
+    <cancel category="C_COMMAND"   kind="open_alt" from="26"/>
+    <cancel category="C_JUMP"      kind="open_alt" from="26"/>
+    <cancel category="C_CHOUHATSU" kind="open_alt" from="26"/>
+    <cancel category="C_GUN"       kind="open_alt" from="26"/>
+    <cancel category="C_JUMP"      kind="open"     from="31"/>
+    <cancel category="C_NORM0"     kind="open"     from="36"/>
+    <cancel category="C_COMMAND"   kind="open"     from="36"/>
+    <cancel category="C_CHOUHATSU" kind="open"     from="36"/>
+    <cancel category="C_GUN"       kind="open"     from="36"/>
+    <cancel category="C_ALL"       kind="open"     from="56"/>
+  </timeline>
+
+  <!-- effects, from the state function (list 1 of the effect table); material mask = the ground under Nero -->
+  <timeline motion="3:0x16" runtime="true">
+    <effect efl="effect\efl\com\ec001_51v4" list="1" index="0x10" material="ground" frame="0" type="0" id="5"/>
+  </timeline>
+  <timeline motion="3:0x17" runtime="true">
+    <effect efl="effect\efl\com\ec001_51v2" list="1" index="0xE" material="ground" frame="0"/>
+    <effect efl="effect\efl\com\ec001_51v3" list="1" index="0xF" joint="weapon" frame="0" if="exceed>=1"/>
+  </timeline>
+</move>

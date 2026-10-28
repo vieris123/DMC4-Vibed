@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- An overlay on Nero's vanilla Streak (atckIds 28 and 29: two rows, one state function): the Stinger -> Million Stab hand-off, Dante's input. While the
+     finish motion (bank 3 block 0x17) plays and its .ctn trigger byte free1 has reached 2 (frame 20, see streak.xml),
+     melee HELD with the stick centred hands off to nero_million_stab.xml the way uPlayerDante::moveAtckRevellionStinger
+     does (setActionAtck + the new move's entry in the same tick; the Streak's own function is skipped that tick).
+     Holding melee through the Streak's end therefore starts the stabs; mashing then extends them (idle="18" in the
+     stab file). The press-in-window route (the stab file's <follows move="28">) still works alongside. -->
+<move name="nero_streak_hold" character="pl000" ids="28 29" overlay="true" version="2">
+  <stage name="finish" motion="3:0x17">
+    <next byte="free1" value="2" button="melee" held="true" stick="neutral" to="move:nero_million_stab"/>
+  </stage>
+</move>

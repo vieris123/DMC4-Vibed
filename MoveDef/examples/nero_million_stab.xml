@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Million Stab for Nero, out of Streak: the string-step example (MoveDef D22). Two files: this one is the stabbing
+     loop, nero_million_stab_finish.xml the finisher it hands off to (the Stinger -> Million Stab way).
+
+     How it reads in the game: this row sits at the front of Nero's table with attr melee and <follows> 28 / 29, so a
+     melee press while Streak (atckId 28 or 29) has its C_NORM0 window open starts it instead of the normal follow-up.
+     Streak's finish motion (bank 3 block 0x17) buffers C_NORM0 from frame 26 (0x30: the press is kept) and opens it at
+     36 (0x10: the move starts); see examples/streak.xml. The motions are Dante's own Million Stab (pl006_03.lmt, the
+     file of motion bank 2: block 8 the loop, 9 the finish), loaded into Nero's free bank 10 (12 is the dodge's on Dante and may be Gerb's on Nero, 13 Gerb's default, 14 the wall run's): the two bodies share
+     joint numbers (design.md D14). Block 8 loops on its own; start frame 9 skips its wind-up, as Dante's move does
+     when it comes out of the Stinger. The effects are Dante's, from his effect table (list 2). -->
+<move name="nero_million_stab" character="pl000" id="0x50" version="2">
+  <table attr="melee" level="7" start="false" cancel="true" repeat="false" weapon="-1" style="-1" etc="0" air="ground">
+    <follows move="28"/>                           <!-- after Streak (either of its two rows, 28 and 29) ... -->
+    <follows move="29"/>
+    <window category="C_NORM0"/>                   <!-- ... once its C_NORM0 window is open (or buffered) -->
+  </table>
+  <lmt bank="10" path="motion\pl000\million_stab"/>   <!-- Dante's pl006_03.lmt blocks 8 / 9 re-exported by Albam as slots 0 / 1 (examples/nativePC/...) -->
+  <stage name="stab" motion="10:0" ctn="3:0x15" attr="null_trans_off" interp="3" start="9" stop="true" land="none"
+         enemy_step="true" eat_press="melee" watchdog="90">
+    <!-- the loop keeps going while melee is mashed; 18 ticks without a press ends it (Dante's move uses the .plp
+         renda timers, 0.3 s at 60 ticks) -->
+    <next frame="12" button="melee" idle="18" to="move:nero_million_stab_finish"/>
+    <!-- a safety net: five seconds of stabbing is enough -->
+    <next frame="300" to="move:nero_million_stab_finish"/>
+    <!-- the jump cancel out of the loop, as Dante has it (the gate opens with this window) -->
+    <cancel frame="12" categories="C_JUMP"/>
+    <!-- Dante's stab dust: effect table list 2 index 0xB on the ground material, registered as id 4 so the finisher
+         can kill it (uPlayerDante::moveAtckRevellionHyaku phase 1) -->
+    <effect frame="9" list="2" index="0xB" material="ground" type="0" id="4"/>
+  </stage>
+</move>

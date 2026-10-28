@@ -1,0 +1,2685 @@
+{
+ "group": "F",
+ "classes": {
+  "sCamera": {
+   "se": {
+    "vtable": "0x11dc6c8",
+    "nslots": 10,
+    "nfuncs": 16
+   },
+   "dx9": {
+    "dti": "0xead580",
+    "vtable": "0xc006c4",
+    "ctor": "0x8ebad0",
+    "size": "0x2cd0",
+    "parent": "cSystem",
+    "nslots": 8,
+    "code_range": [
+     "0x8e5b40",
+     "0x8ee7df"
+    ]
+   },
+   "slot_shift": "cSystem: SE 0-6 -> DX9 0-6 (reset 5, move 6); SE 9 draw -> DX9 7 (not overridden in DX9, nullsub_1). setCamera/setRegion live at 0x404A60/0x404AB0",
+   "vtable_label_fixed": true
+  },
+  "sCamera::Viewport": {
+   "se": {
+    "vtable": "0x11dc6b4",
+    "nslots": 5,
+    "nfuncs": 7
+   },
+   "dx9": {
+    "dti": "0xead560",
+    "vtable": "0xc006e4",
+    "ctor": "0x8e5b90",
+    "size": "0x590",
+    "parent": "MtObject",
+    "nslots": 6,
+    "code_range": [
+     "0x8e5b40",
+     "0x8eba77"
+    ]
+   },
+   "slot_shift": "SE 0-4 -> DX9 0-4; DX9 adds slot 5 (0x8E6830, render/setup; medium match to SE non-virtual setup(cDraw*))",
+   "vtable_label_fixed": true
+  },
+  "uCamera": {
+   "se": {
+    "vtable": "0x1164410",
+    "nslots": 26,
+    "nfuncs": 9
+   },
+   "dx9": {
+    "dti": "0xeadf28",
+    "vtable": "0xbc8c34",
+    "ctor": "0xa52000",
+    "size": "0xc0",
+    "parent": "cUnit",
+    "nslots": 15,
+    "code_range": [
+     "0xa52000",
+     "0xa53b72"
+    ]
+   },
+   "slot_shift": "SE 0-5 -> DX9 0-5 (dtor,createUI,isEnable,createProperty,getDTI,setup); SE 8 move -> 6; SE 9 -> 7; SE 11 sync -> 8; SE 12 draw -> 9; SE 24 getViewMat -> 13, SE 25 getProjMat -> 14 (k=11). No DX9 slot for SE 6/7 getSystemUnitGroup, 10 moveAfter, 13-17 *Profile, 20 applyWorldOffset, 22 getDrawUnitState, 23 getWorldTargetPos. DX9 uCamera overrides slot 6 (uCamera::move 0xA52330 = role of SE moveAfter, called explicitly by derived move)",
+   "vtable_label_fixed": true
+  },
+  "uDevilCamera": {
+   "se": {
+    "vtable": "0x1164480",
+    "nslots": 26,
+    "nfuncs": 29
+   },
+   "dx9": {
+    "dti": "0xe58878",
+    "vtable": "0xbc8c70",
+    "ctor": "0x52df80",
+    "size": "0x3a0",
+    "parent": "uCamera",
+    "nslots": 15,
+    "code_range": [
+     "0x52df60",
+     "0x5324a9"
+    ]
+   },
+   "slot_shift": "same as uCamera: SE 0-5 -> DX9 0-5 (dtor,createUI,isEnable,createProperty,getDTI,setup); SE 8 move -> 6; SE 9 -> 7; SE 11 sync -> 8; SE 12 draw -> 9; SE 24 getViewMat -> 13, SE 25 getProjMat -> 14 (k=11). No DX9 slot for SE 6/7 getSystemUnitGroup, 10 moveAfter, 13-17 *Profile, 20 applyWorldOffset, 22 getDrawUnitState, 23 getWorldTargetPos. uDevilCamera overrides DX9 3 (createProperty 0x4C1E10), 8 (sync), 13/14 (getViewMat/getProjMat); slot 6 move = shared nullsub",
+   "vtable_label_fixed": false
+  },
+  "rDevilCamera": {
+   "se": {
+    "vtable": "0x1130d64",
+    "nslots": 15,
+    "nfuncs": 23
+   },
+   "dx9": {
+    "dti": "0xe57678",
+    "vtable": "0xb9b7e8",
+    "ctor": "0x4697b0",
+    "size": "0x70",
+    "parent": "cResource",
+    "nslots": 13,
+    "code_range": [
+     "0x4696b0",
+     "0x469956"
+    ]
+   },
+   "slot_shift": "cResource: SE 0-6 -> DX9 0-6; SE 10 load -> 8, 11 save -> 9, 12 convert -> 10 (k=2); SE 14 clear -> 11 (k=3); DX9 slot 12 = shared; SE 7-9,13 no clear DX9 counterpart",
+   "vtable_label_fixed": true
+  },
+  "rCameraList": {
+   "se": {
+    "vtable": "0x11ec270",
+    "nslots": 15,
+    "nfuncs": 7
+   },
+   "dx9": {
+    "dti": "0xeaea08",
+    "vtable": "0xc0b3e0",
+    "ctor": null,
+    "size": "0x68",
+    "parent": "cResource",
+    "nslots": 13,
+    "code_range": [
+     "0xaade60",
+     "0xaae685"
+    ]
+   },
+   "slot_shift": "cResource: SE 0-6 -> DX9 0-6; SE 10 load -> 8, 11 save -> 9, 12 convert -> 10 (k=2); SE 14 clear -> 11 (k=3); DX9 slot 12 = shared; SE 7-9,13 no clear DX9 counterpart. DX9 rCameraList overrides slot 9 save (0xAAE070, DX9-only) and does not override clear (11). Ctor inlined into MyDTI::newInstance 0xAADF20",
+   "vtable_label_fixed": true
+  },
+  "rCameraList::CAMERA_INFO": {
+   "se": {
+    "vtable": null,
+    "nslots": 0,
+    "nfuncs": 4
+   },
+   "dx9": null,
+   "slot_shift": "n/a (no vtable, no DX9 DTI; no DX9 counterpart for its key getters)",
+   "vtable_label_fixed": false
+  },
+  "uFreeCamera": {
+   "se": {
+    "vtable": "0x11e51c0",
+    "nslots": 26,
+    "nfuncs": 11
+   },
+   "dx9": {
+    "dti": "0xead8e0",
+    "vtable": "0xc0444c",
+    "ctor": "0x9197c0",
+    "size": "0xf0",
+    "parent": "uCamera",
+    "nslots": 15,
+    "code_range": [
+     "0x919790",
+     "0x91b1ac"
+    ]
+   },
+   "slot_shift": "same as uCamera",
+   "vtable_label_fixed": true
+  },
+  "uMotionCamera": {
+   "se": {
+    "vtable": "0x11e7588",
+    "nslots": 26,
+    "nfuncs": 12
+   },
+   "dx9": {
+    "dti": "0xeae5c8",
+    "vtable": "0xc09abc",
+    "ctor": "0xa7fc60",
+    "size": "0x110",
+    "parent": "uCamera",
+    "nslots": 15,
+    "code_range": [
+     "0xa7fc30",
+     "0xa81580"
+    ]
+   },
+   "slot_shift": "same as uCamera",
+   "vtable_label_fixed": true
+  },
+  "uMotionCameraBoss": {
+   "se": {
+    "vtable": "0x11a3b50",
+    "nslots": 26,
+    "nfuncs": 11
+   },
+   "dx9": {
+    "dti": "0xe5b9b0",
+    "vtable": "0xbf5dcc",
+    "ctor": null,
+    "size": "0x110",
+    "parent": "uMotionCamera",
+    "nslots": 15,
+    "code_range": [
+     "0x8816b0",
+     "0x8818e5"
+    ]
+   },
+   "slot_shift": "same as uCamera; only slot 13 (getViewMat) and 4 (getDTI) are its own; slot 0 ICF with uMotionCamera. No ctor (newInstance 0x8816B0 = uMotionCamera ctor + vtable swap)",
+   "vtable_label_fixed": true
+  },
+  "uIdCamera": {
+   "se": {
+    "vtable": "0x11834d0",
+    "nslots": 26,
+    "nfuncs": 18
+   },
+   "dx9": {
+    "dti": "0xe599a8",
+    "vtable": "0xbdbdd0",
+    "ctor": "0x7494a0",
+    "size": "0x3e0",
+    "parent": "uDevilCamera",
+    "nslots": 15,
+    "code_range": [
+     "0x749470",
+     "0x749871"
+    ]
+   },
+   "slot_shift": "same as uCamera/uDevilCamera: SE 3->3, 5 setup->5, 8 move->6, 11 sync->8, 24/25->13/14 (k=11). createProperty thunk 0x73F870 sits in uGameOver TU",
+   "vtable_label_fixed": true
+  },
+  "uEfctCam": {
+   "se": {
+    "vtable": "0x1164d98",
+    "nslots": 81,
+    "nfuncs": 21
+   },
+   "dx9": {
+    "dti": "0xe588f8",
+    "vtable": "0xbc9348",
+    "ctor": "0x539270",
+    "size": "0x210",
+    "parent": "uDevil4Effect",
+    "nslots": 52,
+    "code_range": [
+     "0x539220",
+     "0x53b16a"
+    ]
+   },
+   "slot_shift": "uDevil4Effect: SE 0-5 -> 0-5; SE 8 move -> 6; SE 11 sync -> 8; SE 12 draw -> 9; SE 25 updateWorldMatrix -> 14 (k=11); further effect slots piecewise",
+   "vtable_label_fixed": true
+  },
+  "uModelCam": {
+   "se": {
+    "vtable": "0x11881c8",
+    "nslots": 53,
+    "nfuncs": 21
+   },
+   "dx9": {
+    "dti": "0xe59f48",
+    "vtable": "0xbe0cc8",
+    "ctor": null,
+    "size": "0xeb0",
+    "parent": "uDevil4Model",
+    "nslots": 30,
+    "code_range": [
+     "0x788f70",
+     "0x789857"
+    ]
+   },
+   "slot_shift": "uDevil4Model: SE 0-5 -> 0-5; 8 move -> 6; 11 sync -> 8; 12 draw -> 9; 18 getBoundary -> 10; 19 getName -> 11; 24-27 (updateLocalMatrix..setModel) -> 13-16 (k=11); 44-48 getCameraTransparency..moveCameraTransparency -> 24-28 (k=20); 50 updateMaterial -> 29. Ctor inlined into MyDTI::newInstance 0x788F80",
+   "vtable_label_fixed": true
+  }
+ },
+ "methods": [
+  {
+   "se_ea": "0x427fa0",
+   "se_name": "sCamera::setCamera(sCamera::VIEWPORT_NO,uCamera *)",
+   "dx9_ea": "0x404a60",
+   "old_dx9_name": "sCamera::setCamera",
+   "new_dx9_name": "sCamera::setCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x428100",
+   "se_name": "uDevilCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4c1e10",
+   "old_dx9_name": "sub_4C1E10",
+   "new_dx9_name": "uDevilCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "uDevilCamera vtable slot 3; mPlayerJump*/mVib* strings (DX9 lacks mTypeStickAxisX); sits in the uCameraBoss TU region (SE also places it in an odd TU)"
+  },
+  {
+   "se_ea": "0x4286a0",
+   "se_name": "uIdCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x73f870",
+   "old_dx9_name": "j_uDevilCamera::createProperty",
+   "new_dx9_name": "uIdCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "uIdCamera vtable slot 3; 5-byte jmp to uDevilCamera::createProperty (same as SE); shared by 7 uIdCamera-derived vtables; sits in the uGameOver TU region"
+  },
+  {
+   "se_ea": "0x52c600",
+   "se_name": "sCamera::setRegion(sCamera::VIEWPORT_NO,sCamera::REGION_MODE)",
+   "dx9_ea": "0x404ab0",
+   "old_dx9_name": "sCamera::setRegion",
+   "new_dx9_name": "sCamera::setRegion",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x5c8710",
+   "se_name": "rDevilCamera::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c8720",
+   "se_name": "rDevilCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c8750",
+   "se_name": "rDevilCamera::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c8780",
+   "se_name": "rDevilCamera::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c87a0",
+   "se_name": "rDevilCamera::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c87c0",
+   "se_name": "rDevilCamera::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c87e0",
+   "se_name": "rDevilCamera::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x5c8800",
+   "se_name": "rDevilCamera::rDevilCamera(void)",
+   "dx9_ea": "0x4697b0",
+   "old_dx9_name": "rDevilCamera::rDevilCamera",
+   "new_dx9_name": "rDevilCamera::rDevilCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x5c8830",
+   "se_name": "rDevilCamera::clear(void)",
+   "dx9_ea": "0x469840",
+   "old_dx9_name": "sub_469840",
+   "new_dx9_name": "rDevilCamera::clear",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 11 (SE 14); frees mppRailCam[] entries then the array, 9 bb like SE"
+  },
+  {
+   "se_ea": "0x5c8890",
+   "se_name": "rDevilCamera::load(MtStream &)",
+   "dx9_ea": "0x4698a0",
+   "old_dx9_name": "sub_4698A0",
+   "new_dx9_name": "rDevilCamera::load",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 8 (SE 10); MtSerializer::deserializeBinary"
+  },
+  {
+   "se_ea": "0x5c88f0",
+   "se_name": "rDevilCamera::save(MtStream &)",
+   "dx9_ea": "0x46d740",
+   "old_dx9_name": "sub_46D740",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "save: DX9 slot 9 is a shared stub (not overridden / ICF); not renamed"
+  },
+  {
+   "se_ea": "0x5c8900",
+   "se_name": "rDevilCamera::convert(MtStream &)",
+   "dx9_ea": "0xa6aa50",
+   "old_dx9_name": "sub_A6AA50",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "convert: DX9 slot 10 is a shared stub (not overridden / ICF); not renamed"
+  },
+  {
+   "se_ea": "0x5c8910",
+   "se_name": "rDevilCamera::getArea(uint)",
+   "dx9_ea": "0x4698d0",
+   "old_dx9_name": "sub_4698D0",
+   "new_dx9_name": "rDevilCamera::getArea",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "13 bytes = SE; returns mppRailCam[i]"
+  },
+  {
+   "se_ea": "0x5c8920",
+   "se_name": "rDevilCamera::getAreaNum(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "getAreaNum: inlined in DX9"
+  },
+  {
+   "se_ea": "0x5c8930",
+   "se_name": "rDevilCamera::setArea(cCameraRailBase *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "setArea: inlined in DX9"
+  },
+  {
+   "se_ea": "0x5c8950",
+   "se_name": "rDevilCamera::setAreaNum(uint)",
+   "dx9_ea": "0x469900",
+   "old_dx9_name": "sub_469900",
+   "new_dx9_name": "rDevilCamera::setAreaNum",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "86 bytes = SE; grows mppRailCam array, decompile identical"
+  },
+  {
+   "se_ea": "0x5c89b0",
+   "se_name": "rDevilCamera::setupDevelop(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "setupDevelop: inlined in DX9 (likely into uCameraCtrl::setupDevelop 0x4F76F0)"
+  },
+  {
+   "se_ea": "0x5c89e0",
+   "se_name": "rDevilCamera::MyDTI::newInstance(void)",
+   "dx9_ea": "0x469790",
+   "old_dx9_name": "sub_469790",
+   "new_dx9_name": "rDevilCamera::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xB9B81C slot 1; alloc 0x70 -> ctor; was undefined"
+  },
+  {
+   "se_ea": "0x5c8a40",
+   "se_name": "rDevilCamera::~rDevilCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~rDevilCamera: inlined into deleting dtor 0x469800"
+  },
+  {
+   "se_ea": "0x5c8a60",
+   "se_name": "rDevilCamera::getDTI(void)",
+   "dx9_ea": "0x4696b0",
+   "old_dx9_name": "rDevilCamera::getDTI",
+   "new_dx9_name": "rDevilCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0x5c8a70",
+   "se_name": "rDevilCamera::getExt(void)",
+   "dx9_ea": "0x4696c0",
+   "old_dx9_name": "sub_4696C0",
+   "new_dx9_name": "rDevilCamera::getExt",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 6, returns \"cam\""
+  },
+  {
+   "se_ea": "0x5c8a80",
+   "se_name": "rDevilCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4696d0",
+   "old_dx9_name": "sub_4696D0",
+   "new_dx9_name": "rDevilCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 3; mDataHeader/mppRailCam"
+  },
+  {
+   "se_ea": "0x5c8bc0",
+   "se_name": "rDevilCamera::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x469800",
+   "old_dx9_name": "sub_469800",
+   "new_dx9_name": "??_ErDevilCamera@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; calls clear; was undefined loc_ code"
+  },
+  {
+   "se_ea": "0x6c0480",
+   "se_name": "rCameraList::getCameraInfo(uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "getCameraInfo: inlined in DX9"
+  },
+  {
+   "se_ea": "0x6cd400",
+   "se_name": "uDevilCamera::MyDTI::newInstance(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uDevilCamera is abstract in DX9: its DTI uses the generic abstract MyDTI vtable 0xB8E3B0 (slot1 0xB2C9A0); no class-specific newInstance"
+  },
+  {
+   "se_ea": "0x6cd410",
+   "se_name": "uDevilCamera::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd420",
+   "se_name": "uDevilCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd450",
+   "se_name": "uDevilCamera::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd480",
+   "se_name": "uDevilCamera::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd4a0",
+   "se_name": "uDevilCamera::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd4c0",
+   "se_name": "uDevilCamera::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd4e0",
+   "se_name": "uDevilCamera::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6cd500",
+   "se_name": "uDevilCamera::~uDevilCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uDevilCamera: inlined into the generic deleting dtor"
+  },
+  {
+   "se_ea": "0x6cd510",
+   "se_name": "uDevilCamera::getViewMat(void)",
+   "dx9_ea": "0x52e980",
+   "old_dx9_name": "sub_52E980",
+   "new_dx9_name": "uDevilCamera::getViewMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "uDevilCamera vtable slot 13 (SE 24); size 150 = SE"
+  },
+  {
+   "se_ea": "0x6cd5b0",
+   "se_name": "uDevilCamera::getProjMat(void)",
+   "dx9_ea": "0x52ea20",
+   "old_dx9_name": "sub_52EA20",
+   "new_dx9_name": "uDevilCamera::getProjMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "uDevilCamera vtable slot 14 (SE 25); size 150 = SE"
+  },
+  {
+   "se_ea": "0x6cd650",
+   "se_name": "uDevilCamera::move(void)",
+   "dx9_ea": "0x507330",
+   "old_dx9_name": "nullsub_2",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "empty move: DX9 slot 6 is the shared nullsub_2 (not overridden); not renamed"
+  },
+  {
+   "se_ea": "0x6cd660",
+   "se_name": "uDevilCamera::checkCulling(MtSphere const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "checkCulling (isDispSphere wrapper): inlined in DX9"
+  },
+  {
+   "se_ea": "0x6cd680",
+   "se_name": "uDevilCamera::checkCulling43(MtSphere const &,uint)",
+   "dx9_ea": "0x5318e0",
+   "old_dx9_name": "sub_5318E0",
+   "new_dx9_name": "uDevilCamera::checkCulling43",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "6-plane sphere test vs mFrustumAppli, same structure as SE; follows calcFrustum43"
+  },
+  {
+   "se_ea": "0x6cd810",
+   "se_name": "uDevilCamera::vibReq(uchar,int,int,uchar,MtVector3 *,uDevilCamera::ENUM_VIB_PRIORITY)",
+   "dx9_ea": "0x531a80",
+   "old_dx9_name": "sub_531A80",
+   "new_dx9_name": "uDevilCamera::vibReq_2",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vibReq(uchar,int,int,uchar,MtVector3*,prio) overload; new uVibScreen + sUnit::addBottom; 15 callers"
+  },
+  {
+   "se_ea": "0x6cd880",
+   "se_name": "uDevilCamera::vib2Req(uDevilCamera::ENUM_VIB2_TYPE,int,int,int,int,int,uDevilCamera::ENUM_VIB_PRIORITY)",
+   "dx9_ea": "0x531af0",
+   "old_dx9_name": "sub_531AF0",
+   "new_dx9_name": "uDevilCamera::vib2Req",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "new uVibScreen(VIB2) + sUnit::addBottom"
+  },
+  {
+   "se_ea": "0x6cd900",
+   "se_name": "uDevilCamera::vibReq(uDevilCamera::ENUM_VIB_PRESET,short)",
+   "dx9_ea": "0x531b60",
+   "old_dx9_name": "uDevilCamera::vibReq",
+   "new_dx9_name": "uDevilCamera::vibReq",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "vibReq(ENUM_VIB_PRESET,short) overload; existing name confirmed"
+  },
+  {
+   "se_ea": "0x6cd9e0",
+   "se_name": "uDevilCamera::vibRequest(uDevilCamera::ENUM_VIB_PRIORITY,MtVector4 &)",
+   "dx9_ea": "0x531c30",
+   "old_dx9_name": "sub_531C30",
+   "new_dx9_name": "uDevilCamera::vibRequest",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "71 vs 75 bytes, 3 bb; between vibReq and calcVibration"
+  },
+  {
+   "se_ea": "0x6cda30",
+   "se_name": "uDevilCamera::calcVibration(void)",
+   "dx9_ea": "0x531c80",
+   "old_dx9_name": "sub_531C80",
+   "new_dx9_name": "uDevilCamera::calcVibration",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only caller is uDevilCamera::sync (as in SE)"
+  },
+  {
+   "se_ea": "0x6ce0a0",
+   "se_name": "uDevilCamera::vibEnd(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "vibEnd: inlined in DX9"
+  },
+  {
+   "se_ea": "0x6ce0b0",
+   "se_name": "uDevilCamera::vibUnitKill(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "vibUnitKill: inlined in DX9"
+  },
+  {
+   "se_ea": "0x6ce0d0",
+   "se_name": "uDevilCamera::checkPlayerJumpPoint(void)",
+   "dx9_ea": "0x532430",
+   "old_dx9_name": "uDevilCamera::checkPlayerJumpPoint",
+   "new_dx9_name": "uDevilCamera::checkPlayerJumpPoint",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x6ce160",
+   "se_name": "uDevilCamera::getPlayerJumpPoint(MtVector3 &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "getPlayerJumpPoint: inlined in DX9 (0x5324B0 after checkPlayerJumpPoint is an unrelated cPrim quad helper)"
+  },
+  {
+   "se_ea": "0x6ce1a0",
+   "se_name": "uDevilCamera::uDevilCamera(void)",
+   "dx9_ea": "0x52df80",
+   "old_dx9_name": "uDevilCamera::uDevilCamera",
+   "new_dx9_name": "uDevilCamera::uDevilCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x6cebe0",
+   "se_name": "uDevilCamera::calcFrustum43(void)",
+   "dx9_ea": "0x52fad0",
+   "old_dx9_name": "uDevilCamera::calcFrustum43",
+   "new_dx9_name": "uDevilCamera::calcFrustum43",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0x6d0690",
+   "se_name": "uDevilCamera::sync(void)",
+   "dx9_ea": "0x52eac0",
+   "old_dx9_name": "uDevilCamera::sync",
+   "new_dx9_name": "uDevilCamera::sync",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed; DX9 slot 8"
+  },
+  {
+   "se_ea": "0x6d1770",
+   "se_name": "uCamera::getDTI(void)",
+   "dx9_ea": "0x52df60",
+   "old_dx9_name": "uCamera::getDTI",
+   "new_dx9_name": "uCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0x6d1780",
+   "se_name": "uCamera::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x49b290",
+   "old_dx9_name": "loc_49B290",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 = generic cTrans-level deleting dtor (undefined loc_) used by 36 vtables incl. uCamera/uDevilCamera/uFreeCamera/uIdCamera (ICF); recorded, not renamed"
+  },
+  {
+   "se_ea": "0x6d17b0",
+   "se_name": "uDevilCamera::getDTI(void)",
+   "dx9_ea": "0x52df70",
+   "old_dx9_name": "uDevilCamera::getDTI",
+   "new_dx9_name": "uDevilCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0x6d17c0",
+   "se_name": "uDevilCamera::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x49b290",
+   "old_dx9_name": "loc_49B290",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 = generic shared deleting dtor 0x49B290 (ICF, 36 vtables); not renamed"
+  },
+  {
+   "se_ea": "0x6dbba0",
+   "se_name": "uEfctCam::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbbb0",
+   "se_name": "uEfctCam::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbbe0",
+   "se_name": "uEfctCam::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbc10",
+   "se_name": "uEfctCam::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbc30",
+   "se_name": "uEfctCam::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbc50",
+   "se_name": "uEfctCam::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbc70",
+   "se_name": "uEfctCam::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x6dbc90",
+   "se_name": "uEfctCam::uEfctCam(void)",
+   "dx9_ea": "0x539270",
+   "old_dx9_name": "sub_539270",
+   "new_dx9_name": "uEfctCam::uEfctCam",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "calls uDevil4Effect ctor, sets uEfctCam vtable; 30 vs 32 bytes"
+  },
+  {
+   "se_ea": "0x6dbcb0",
+   "se_name": "uEfctCam::~uEfctCam(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uEfctCam: inlined"
+  },
+  {
+   "se_ea": "0x6dbcc0",
+   "se_name": "uEfctCam::setup(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "setup stub: DX9 slot 5 not overridden (nullsub_2)"
+  },
+  {
+   "se_ea": "0x6dbcd0",
+   "se_name": "uEfctCam::sync(void)",
+   "dx9_ea": "0x521fc0",
+   "old_dx9_name": "sub_521FC0",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "sync stub: DX9 slot 8 = 0x521FC0, ICF-shared by uDevil4EffectEx/uEfctDoorSeal/uEfctFootPrint/uEfctPlGrab; not renamed"
+  },
+  {
+   "se_ea": "0x6dbce0",
+   "se_name": "uEfctCam::draw(cDraw *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "draw stub: DX9 slot 9 inherited (j_uEffectVFR::renderGenerators)"
+  },
+  {
+   "se_ea": "0x6dbcf0",
+   "se_name": "uEfctCam::createUI(MtProperty &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "createUI stub: DX9 slot 1 shared default"
+  },
+  {
+   "se_ea": "0x6dbd00",
+   "se_name": "uEfctCam::setType(uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "setType: inlined in DX9"
+  },
+  {
+   "se_ea": "0x6dbd20",
+   "se_name": "uEfctCam::MyDTI::newInstance(void)",
+   "dx9_ea": "0x539230",
+   "old_dx9_name": "sub_539230",
+   "new_dx9_name": "uEfctCam::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xBC9418 slot 1; alloc 0x210 + uDevil4Effect ctor + vtable; was undefined"
+  },
+  {
+   "se_ea": "0x6dbd80",
+   "se_name": "uEfctCam::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x539310",
+   "old_dx9_name": "sub_539310",
+   "new_dx9_name": "uEfctCam::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 3; EfCam Parmeter/mRepeatFlag/mType"
+  },
+  {
+   "se_ea": "0x6dbfc0",
+   "se_name": "uEfctCam::updateWorldMatrix(void)",
+   "dx9_ea": "0x539440",
+   "old_dx9_name": "sub_539440",
+   "new_dx9_name": "uEfctCam::updateWorldMatrix",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 14 (SE 25); sin/cos; 3533 vs 3475"
+  },
+  {
+   "se_ea": "0x6dcd60",
+   "se_name": "uEfctCam::repeateParticlePos(void)",
+   "dx9_ea": "0x53a210",
+   "old_dx9_name": "sub_53A210",
+   "new_dx9_name": "uEfctCam::repeateParticlePos",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "consts",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "only caller is uEfctCam::move (as SE); 3930 vs 3805"
+  },
+  {
+   "se_ea": "0x6ddc40",
+   "se_name": "uEfctCam::move(void)",
+   "dx9_ea": "0x5392e0",
+   "old_dx9_name": "sub_5392E0",
+   "new_dx9_name": "uEfctCam::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 6; 37 vs 39 bytes"
+  },
+  {
+   "se_ea": "0x6dddd0",
+   "se_name": "uEfctCam::getDTI(void)",
+   "dx9_ea": "0x539220",
+   "old_dx9_name": "uEfctCam::getDTI",
+   "new_dx9_name": "uEfctCam::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0x6ddde0",
+   "se_name": "uEfctCam::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x539290",
+   "old_dx9_name": "sub_539290",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 0x539290 is ICF-shared by uDevil4Effect/uEffectVFR/uEfctEasyShadow/uEfctFootPrint/uEfctCam; not renamed"
+  },
+  {
+   "se_ea": "0x925940",
+   "se_name": "uCamera::getWorldPos(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "uCamera::getWorldPos: inlined in DX9 (no standalone body found)"
+  },
+  {
+   "se_ea": "0x93c860",
+   "se_name": "uIdCamera::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c870",
+   "se_name": "uIdCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c8a0",
+   "se_name": "uIdCamera::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c8d0",
+   "se_name": "uIdCamera::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c8f0",
+   "se_name": "uIdCamera::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c910",
+   "se_name": "uIdCamera::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c930",
+   "se_name": "uIdCamera::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x93c950",
+   "se_name": "uIdCamera::uIdCamera(void)",
+   "dx9_ea": "0x7494a0",
+   "old_dx9_name": "sub_7494A0",
+   "new_dx9_name": "uIdCamera::uIdCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "calls uDevilCamera ctor, sets uIdCamera vtable; fog defaults 1000/30000"
+  },
+  {
+   "se_ea": "0x93ca80",
+   "se_name": "uIdCamera::~uIdCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uIdCamera: inlined"
+  },
+  {
+   "se_ea": "0x93ca90",
+   "se_name": "uIdCamera::setup(void)",
+   "dx9_ea": "0x7495c0",
+   "old_dx9_name": "sub_7495C0",
+   "new_dx9_name": "uIdCamera::setup",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 5; grabs sMediator camera, mFov=55, sCamera::setCamera(0,this)"
+  },
+  {
+   "se_ea": "0x93cb10",
+   "se_name": "uIdCamera::sync(void)",
+   "dx9_ea": "0x749630",
+   "old_dx9_name": "j_uDevilCamera::sync",
+   "new_dx9_name": "uIdCamera::sync",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "replaced_existing",
+   "notes": "slot 8; 5-byte jmp uDevilCamera::sync (as SE)"
+  },
+  {
+   "se_ea": "0x93cb20",
+   "se_name": "uIdCamera::end(void)",
+   "dx9_ea": "0x749640",
+   "old_dx9_name": "sub_749640",
+   "new_dx9_name": "uIdCamera::end",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "setCamera(0,mpCamera) + inlined setFog into viewport 0; 14 callers"
+  },
+  {
+   "se_ea": "0x93cba0",
+   "se_name": "uIdCamera::setupFog(void)",
+   "dx9_ea": "0x749720",
+   "old_dx9_name": "sub_749720",
+   "new_dx9_name": "uIdCamera::setupFog",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "saves viewport-0 fog into the same fields end() restores (+0x3A4..+0x3DC); DX9 reads sCamera viewport fog instead of sDevil4Effect getters"
+  },
+  {
+   "se_ea": "0x93cc30",
+   "se_name": "uIdCamera::MyDTI::newInstance(void)",
+   "dx9_ea": "0x749480",
+   "old_dx9_name": "sub_749480",
+   "new_dx9_name": "uIdCamera::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xBDBE0C slot 1; alloc 0x3E0; was undefined"
+  },
+  {
+   "se_ea": "0x93cc70",
+   "se_name": "uIdCamera::move(void)",
+   "dx9_ea": "0x749600",
+   "old_dx9_name": "sub_749600",
+   "new_dx9_name": "uIdCamera::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 6; drops mpCamera if unit state not 1/2"
+  },
+  {
+   "se_ea": "0x93cca0",
+   "se_name": "uIdCamera::getDTI(void)",
+   "dx9_ea": "0x749470",
+   "old_dx9_name": "uIdCamera::getDTI",
+   "new_dx9_name": "uIdCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0x93ccb0",
+   "se_name": "uIdCamera::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x49b290",
+   "old_dx9_name": "loc_49B290",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 = generic shared deleting dtor 0x49B290 (ICF); not renamed"
+  },
+  {
+   "se_ea": "0x97e140",
+   "se_name": "uModelCam::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e150",
+   "se_name": "uModelCam::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e180",
+   "se_name": "uModelCam::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e1b0",
+   "se_name": "uModelCam::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e1d0",
+   "se_name": "uModelCam::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e1f0",
+   "se_name": "uModelCam::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e210",
+   "se_name": "uModelCam::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x97e230",
+   "se_name": "uModelCam::initCmn(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "initCmn: inlined"
+  },
+  {
+   "se_ea": "0x97e240",
+   "se_name": "uModelCam::~uModelCam(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uModelCam: inlined into deleting dtor 0x788FD0"
+  },
+  {
+   "se_ea": "0x97e250",
+   "se_name": "uModelCam::setup(void)",
+   "dx9_ea": "0x789000",
+   "old_dx9_name": "sub_789000",
+   "new_dx9_name": "uModelCam::setup",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 5; st212-m50-gas resource"
+  },
+  {
+   "se_ea": "0x97e330",
+   "se_name": "uModelCam::move(void)",
+   "dx9_ea": "0x7890d0",
+   "old_dx9_name": "j_uDevil4Model::move",
+   "new_dx9_name": "uModelCam::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "replaced_existing",
+   "notes": "slot 6; 5-byte jmp uDevil4Model::move (as SE)"
+  },
+  {
+   "se_ea": "0x97e340",
+   "se_name": "uModelCam::sync(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "sync stub: DX9 slot 8 not overridden (nullsub_2)"
+  },
+  {
+   "se_ea": "0x97e350",
+   "se_name": "uModelCam::createUI(MtProperty &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "createUI stub: DX9 slot 1 shared with uDevil4Model"
+  },
+  {
+   "se_ea": "0x97e360",
+   "se_name": "uModelCam::uModelCam(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "ctor inlined into MyDTI::newInstance 0x788F80 in DX9"
+  },
+  {
+   "se_ea": "0x97e390",
+   "se_name": "uModelCam::uModelCam(uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "ctor(uint) inlined / absent in DX9"
+  },
+  {
+   "se_ea": "0x97e3c0",
+   "se_name": "uModelCam::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x789110",
+   "old_dx9_name": "sub_789110",
+   "new_dx9_name": "uModelCam::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 3; mOffsetZ/mType"
+  },
+  {
+   "se_ea": "0x97e500",
+   "se_name": "uModelCam::constCam(void)",
+   "dx9_ea": "0x7891d0",
+   "old_dx9_name": "sub_7891D0",
+   "new_dx9_name": "uModelCam::constCam",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "only caller is uModelCam::draw (as SE); 1671 vs 1655, sin/cos"
+  },
+  {
+   "se_ea": "0x97eb80",
+   "se_name": "uModelCam::MyDTI::newInstance(void)",
+   "dx9_ea": "0x788f80",
+   "old_dx9_name": "sub_788F80",
+   "new_dx9_name": "uModelCam::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xBE0D40 slot 1; alloc 0xEB0; was undefined"
+  },
+  {
+   "se_ea": "0x97ebe0",
+   "se_name": "uModelCam::draw(cDraw *)",
+   "dx9_ea": "0x7890e0",
+   "old_dx9_name": "sub_7890E0",
+   "new_dx9_name": "uModelCam::draw",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 9; calls constCam + uDevil4Model::draw"
+  },
+  {
+   "se_ea": "0x97ec00",
+   "se_name": "uModelCam::getDTI(void)",
+   "dx9_ea": "0x788f70",
+   "old_dx9_name": "sub_788F70",
+   "new_dx9_name": "uModelCam::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "getDTI stub (slot 4)"
+  },
+  {
+   "se_ea": "0x97ec10",
+   "se_name": "uModelCam::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x788fd0",
+   "old_dx9_name": "sub_788FD0",
+   "new_dx9_name": "??_GuModelCam@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; ~uDevil4Model + free; was undefined"
+  },
+  {
+   "se_ea": "0xa9b660",
+   "se_name": "uMotionCameraBoss::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b670",
+   "se_name": "uMotionCameraBoss::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b6a0",
+   "se_name": "uMotionCameraBoss::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b6d0",
+   "se_name": "uMotionCameraBoss::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b6f0",
+   "se_name": "uMotionCameraBoss::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b710",
+   "se_name": "uMotionCameraBoss::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9b730",
+   "se_name": "uMotionCameraBoss::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xa9bd90",
+   "se_name": "uMotionCameraBoss::MyDTI::newInstance(void)",
+   "dx9_ea": "0x8816b0",
+   "old_dx9_name": "sub_8816B0",
+   "new_dx9_name": "uMotionCameraBoss::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xBF5E08 slot 1; uMotionCamera ctor + vtable swap; was undefined"
+  },
+  {
+   "se_ea": "0xa9bdd0",
+   "se_name": "uMotionCameraBoss::getViewMat(void)",
+   "dx9_ea": "0x8816e0",
+   "old_dx9_name": "sub_8816E0",
+   "new_dx9_name": "uMotionCameraBoss::getViewMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 13; sMediator (boss) + setLookAtRH"
+  },
+  {
+   "se_ea": "0xa9c0b0",
+   "se_name": "uMotionCameraBoss::getDTI(void)",
+   "dx9_ea": "0x8809b0",
+   "old_dx9_name": "uMotionCameraBoss::getDTI",
+   "new_dx9_name": "uMotionCameraBoss::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xa9c0d0",
+   "se_name": "uMotionCameraBoss::`vector deleting destructor'(uint)",
+   "dx9_ea": "0xa7fd60",
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "ICF: DX9 uMotionCameraBoss slot 0 reuses the uMotionCamera deleting dtor 0xA7FD60 (named for uMotionCamera)"
+  },
+  {
+   "se_ea": "0xc071d0",
+   "se_name": "sCamera::Viewport::getDTI(void)",
+   "dx9_ea": "0x8e5b40",
+   "old_dx9_name": "sCamera::Viewport::getDTI",
+   "new_dx9_name": "sCamera::Viewport::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xc071e0",
+   "se_name": "sCamera::Viewport::updateRegion(void)",
+   "dx9_ea": "0x8eb870",
+   "old_dx9_name": "sub_8EB870",
+   "new_dx9_name": "sCamera::Viewport::updateRegion",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "switch on region mode over sCamera ScreenRect; only caller is sCamera::move (as in SE)"
+  },
+  {
+   "se_ea": "0xc07390",
+   "se_name": "sCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xc073c0",
+   "se_name": "sCamera::~sCamera(void)",
+   "dx9_ea": "0x8ebc00",
+   "old_dx9_name": "sub_8EBC00",
+   "new_dx9_name": "sCamera::_sCamera",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "body of DX9 scalar deleting dtor 0x8EBBD0; resets 8 Viewport vtables, releases, DeleteCriticalSection"
+  },
+  {
+   "se_ea": "0xc07420",
+   "se_name": "sCamera::getDTI(void)",
+   "dx9_ea": "0x8e5b50",
+   "old_dx9_name": "sCamera::getDTI",
+   "new_dx9_name": "sCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xc07430",
+   "se_name": "sCamera::reset(void)",
+   "dx9_ea": "0x8ebd10",
+   "old_dx9_name": "sub_8EBD10",
+   "new_dx9_name": "sCamera::reset",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 5; loops 8 viewports (stride 0x590) clearing state"
+  },
+  {
+   "se_ea": "0xc074a0",
+   "se_name": "sCamera::isDispSphere(sCamera::VIEWPORT_NO,MtSphere const &)",
+   "dx9_ea": "0x8ee300",
+   "old_dx9_name": "sCamera::isDispSphere",
+   "new_dx9_name": "sCamera::isDispSphere",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0xc07630",
+   "se_name": "sCamera::isDispAABB(sCamera::VIEWPORT_NO,MtAABB const &)",
+   "dx9_ea": "0x8ee480",
+   "old_dx9_name": "sCamera::isDispAABB",
+   "new_dx9_name": "sCamera::isDispAABB",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0xc07760",
+   "se_name": "sCamera::Viewport::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x8e5dc0",
+   "old_dx9_name": "sub_8E5DC0",
+   "new_dx9_name": "??_GViewport@sCamera@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Viewport vtable slot 0; was undefined loc_ code; calls ~Viewport 0x8E5DF0"
+  },
+  {
+   "se_ea": "0xc077b0",
+   "se_name": "sCamera::Viewport::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x8e6240",
+   "old_dx9_name": "sub_8E6240",
+   "new_dx9_name": "sCamera::Viewport::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "Viewport vtable slot 3; DX9 property set differs (LinearFog/mClearColor...) but shares the Debug group"
+  },
+  {
+   "se_ea": "0xc07d40",
+   "se_name": "sCamera::Viewport::setup(cDraw *)",
+   "dx9_ea": "0x8e6830",
+   "old_dx9_name": "sub_8E6830",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "callees"
+   ],
+   "action": "commented",
+   "notes": "DX9 Viewport vtable slot 5 (20 KB, cTrans::setupScene, 6x MtPlane::fromPoints); SE setup(cDraw*) is non-virtual and DX9 render path differs (no sCamera::draw override), so role-only match"
+  },
+  {
+   "se_ea": "0xc09610",
+   "se_name": "sCamera::Viewport::updateFrustum(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "Viewport::updateFrustum: no standalone DX9 body; frustum math inlined (sCamera::move 0x8EBD40 / Viewport slot5 0x8E6830 / uCamera::move 0xA52330)"
+  },
+  {
+   "se_ea": "0xc0a300",
+   "se_name": "sCamera::sCamera(void)",
+   "dx9_ea": "0x8ebad0",
+   "old_dx9_name": "sub_8EBAD0",
+   "new_dx9_name": "sCamera::sCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "InitializeCriticalSection, cSystem vtable, builds 8 Viewports via 0x8E5B90; called from sDevil4Main ctor and MyDTI::newInstance 0x8EBAA0 (alloc 0x2CD0)"
+  },
+  {
+   "se_ea": "0xc0a500",
+   "se_name": "sCamera::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x8ebbd0",
+   "old_dx9_name": "sub_8EBBD0",
+   "new_dx9_name": "??_GsCamera@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "sCamera vtable slot 0; was undefined loc_ code"
+  },
+  {
+   "se_ea": "0xc0a530",
+   "se_name": "sCamera::draw(cDraw *,nDraw::Scene *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "sCamera::draw: DX9 sCamera vtable slot 7 (draw) is not overridden (nullsub_1); DX9 renders through Viewport slot 5 (0x8E6830)"
+  },
+  {
+   "se_ea": "0xc0a820",
+   "se_name": "sCamera::move(void)",
+   "dx9_ea": "0x8ebd40",
+   "old_dx9_name": "sub_8EBD40",
+   "new_dx9_name": "sCamera::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6; calls Viewport::updateRegion 0x8EB870; updateFrustum inlined (larger body)"
+  },
+  {
+   "se_ea": "0xc0b3c0",
+   "se_name": "sCamera::updateViewportFrustum(uCamera *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "sCamera::updateViewportFrustum: inlined in DX9 (uCamera::move 0xA52330 computes the frustum directly)"
+  },
+  {
+   "se_ea": "0xc0b440",
+   "se_name": "sCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x8ee5a0",
+   "old_dx9_name": "sub_8EE5A0",
+   "new_dx9_name": "sCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; mViewport/mPause/Viewport strings"
+  },
+  {
+   "se_ea": "0xc0b930",
+   "se_name": "sCamera::Viewport::MyDTI::newInstance(void)",
+   "dx9_ea": "0x8e5b60",
+   "old_dx9_name": "sub_8E5B60",
+   "new_dx9_name": "sCamera::Viewport::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Viewport MyDTI vtable 0xC006FC slot 1; allocs 0x590 -> Viewport ctor; was undefined"
+  },
+  {
+   "se_ea": "0xc0b990",
+   "se_name": "sCamera::MyDTI::newInstance(void)",
+   "dx9_ea": "0x8ebaa0",
+   "old_dx9_name": "sub_8EBAA0",
+   "new_dx9_name": "sCamera::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "sCamera MyDTI vtable 0xC00704 slot 1; allocs 0x2CD0 -> sCamera ctor; was undefined"
+  },
+  {
+   "se_ea": "0xc0b9d0",
+   "se_name": "sCamera::clearBlank(cDraw *,MtRect const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "sCamera::clearBlank: no DX9 counterpart found (DX9 render path differs)"
+  },
+  {
+   "se_ea": "0xc0bba0",
+   "se_name": "uCamera::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xc0bbc0",
+   "se_name": "uCamera::uCamera(void)",
+   "dx9_ea": "0xa52000",
+   "old_dx9_name": "uCamera::uCamera",
+   "new_dx9_name": "uCamera::uCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed; called by uDevilCamera/uFreeCamera/uMotionCamera ctors"
+  },
+  {
+   "se_ea": "0xc0bca0",
+   "se_name": "uCamera::applyWorldOffset(MtVector3 const &,MtVector3 const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "applyWorldOffset is an SE-only virtual (SE slot 20 has no DX9 slot)"
+  },
+  {
+   "se_ea": "0xc0bd00",
+   "se_name": "uCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0xa520b0",
+   "old_dx9_name": "sub_A520B0",
+   "new_dx9_name": "uCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; Camera/mAspect/mCameraPos/mFov strings identical"
+  },
+  {
+   "se_ea": "0xc0c1f0",
+   "se_name": "uCamera::moveAfter(void)",
+   "dx9_ea": "0xa52330",
+   "old_dx9_name": "uCamera::move",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "DX9 has no moveAfter slot; DX9 uCamera::move (slot 6) is called at the end of uFreeCamera::move/uMotionCamera::move and does the post-move view*proj inverse + frustum update that SE moveAfter (via sCamera::updateViewportFrustum) does. Existing name kept"
+  },
+  {
+   "se_ea": "0xc0c320",
+   "se_name": "uCamera::getWorldTargetPos(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "getWorldTargetPos is an SE-only virtual (SE slot 23 has no DX9 slot)"
+  },
+  {
+   "se_ea": "0xd51570",
+   "se_name": "uFreeCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xd515a0",
+   "se_name": "uFreeCamera::uFreeCamera(void)",
+   "dx9_ea": "0x9197c0",
+   "old_dx9_name": "uFreeCamera::uFreeCamera",
+   "new_dx9_name": "uFreeCamera::uFreeCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed"
+  },
+  {
+   "se_ea": "0xd51620",
+   "se_name": "uFreeCamera::getDTI(void)",
+   "dx9_ea": "0x919790",
+   "old_dx9_name": "uFreeCamera::getDTI",
+   "new_dx9_name": "uFreeCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xd51630",
+   "se_name": "uFreeCamera::applyWorldOffset(MtVector3 const &,MtVector3 const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "applyWorldOffset: SE-only virtual"
+  },
+  {
+   "se_ea": "0xd516b0",
+   "se_name": "uFreeCamera::getWorldTargetPos(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "getWorldTargetPos: SE-only virtual"
+  },
+  {
+   "se_ea": "0xd51840",
+   "se_name": "uFreeCamera::MyDTI::newInstance(void)",
+   "dx9_ea": "0x9197a0",
+   "old_dx9_name": "sub_9197A0",
+   "new_dx9_name": "uFreeCamera::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xC04488 slot 1; alloc 0xF0 -> ctor"
+  },
+  {
+   "se_ea": "0xd51880",
+   "se_name": "uFreeCamera::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x49b290",
+   "old_dx9_name": "loc_49B290",
+   "new_dx9_name": null,
+   "confidence": "medium",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 = generic shared deleting dtor 0x49B290 (ICF); not renamed"
+  },
+  {
+   "se_ea": "0xd518c0",
+   "se_name": "uFreeCamera::getViewMat(void)",
+   "dx9_ea": "0x919820",
+   "old_dx9_name": "uFreeCamera::getViewMat",
+   "new_dx9_name": "uFreeCamera::getViewMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed (slot 13)"
+  },
+  {
+   "se_ea": "0xd51c40",
+   "se_name": "uFreeCamera::getProjMat(void)",
+   "dx9_ea": "0x919b70",
+   "old_dx9_name": "sub_919B70",
+   "new_dx9_name": "uFreeCamera::getProjMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 14; setPerspectiveFovRH"
+  },
+  {
+   "se_ea": "0xd51c90",
+   "se_name": "uFreeCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x919bc0",
+   "old_dx9_name": "sub_919BC0",
+   "new_dx9_name": "uFreeCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 3; Control/Coord/mControlPad strings"
+  },
+  {
+   "se_ea": "0xd52210",
+   "se_name": "uFreeCamera::move(void)",
+   "dx9_ea": "0x919e50",
+   "old_dx9_name": "uFreeCamera::move",
+   "new_dx9_name": "uFreeCamera::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "existing name confirmed (slot 6)"
+  },
+  {
+   "se_ea": "0xd8e430",
+   "se_name": "uMotionCamera::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator boilerplate (usage/operator new/delete); no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xd8e460",
+   "se_name": "uMotionCamera::uMotionCamera(void)",
+   "dx9_ea": "0xa7fc60",
+   "old_dx9_name": "sub_A7FC60",
+   "new_dx9_name": "uMotionCamera::uMotionCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "calls uCamera ctor, sets uMotionCamera vtable; also used by uMotionCameraBoss newInstance"
+  },
+  {
+   "se_ea": "0xd8e5a0",
+   "se_name": "uMotionCamera::getDTI(void)",
+   "dx9_ea": "0xa7fc30",
+   "old_dx9_name": "uMotionCamera::getDTI",
+   "new_dx9_name": "uMotionCamera::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xd8e5b0",
+   "se_name": "uMotionCamera::~uMotionCamera(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~uMotionCamera: inlined into deleting dtor 0xA7FD60"
+  },
+  {
+   "se_ea": "0xd8e5e0",
+   "se_name": "uMotionCamera::applyWorldOffset(MtVector3 const &,MtVector3 const &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "applyWorldOffset: SE-only virtual"
+  },
+  {
+   "se_ea": "0xd8e650",
+   "se_name": "uMotionCamera::setCameraList(rCameraList *)",
+   "dx9_ea": "0xa7fdb0",
+   "old_dx9_name": "sub_A7FDB0",
+   "new_dx9_name": "uMotionCamera::setCameraList",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "release/addRef of +0x10C resource; 58 vs 61 bytes"
+  },
+  {
+   "se_ea": "0xd8e6a0",
+   "se_name": "uMotionCamera::MyDTI::newInstance(void)",
+   "dx9_ea": "0xa7fc40",
+   "old_dx9_name": "sub_A7FC40",
+   "new_dx9_name": "uMotionCamera::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xC09AF8 slot 1; alloc 0x110; was undefined"
+  },
+  {
+   "se_ea": "0xd8e6e0",
+   "se_name": "uMotionCamera::`vector deleting destructor'(uint)",
+   "dx9_ea": "0xa7fd60",
+   "old_dx9_name": "sub_A7FD60",
+   "new_dx9_name": "??_EuMotionCamera@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; releases camera list (inlined ~uMotionCamera); ICF-shared with uMotionCameraBoss slot 0; was undefined"
+  },
+  {
+   "se_ea": "0xd8e740",
+   "se_name": "uMotionCamera::getViewMat(void)",
+   "dx9_ea": "0xa7fdf0",
+   "old_dx9_name": "sub_A7FDF0",
+   "new_dx9_name": "uMotionCamera::getViewMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 13; setLookAtRH x2"
+  },
+  {
+   "se_ea": "0xd8f520",
+   "se_name": "uMotionCamera::getProjMat(void)",
+   "dx9_ea": "0xa80950",
+   "old_dx9_name": "sub_A80950",
+   "new_dx9_name": "uMotionCamera::getProjMat",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 14; setPerspectiveFovRH"
+  },
+  {
+   "se_ea": "0xd8f5d0",
+   "se_name": "uMotionCamera::createProperty(MtPropertyList &)",
+   "dx9_ea": "0xa809f0",
+   "old_dx9_name": "sub_A809F0",
+   "new_dx9_name": "uMotionCamera::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 3; Motion/Offset/Resource/mCut strings"
+  },
+  {
+   "se_ea": "0xd90170",
+   "se_name": "uMotionCamera::move(void)",
+   "dx9_ea": "0xa80e90",
+   "old_dx9_name": "sub_A80E90",
+   "new_dx9_name": "uMotionCamera::move",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "slot 6; ends calling uCamera::move. DX9 does not call CAMERA_INFO key getters"
+  },
+  {
+   "se_ea": "0xe0ecd0",
+   "se_name": "rCameraList::CAMERA_INFO::getPos(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "rCameraList::CAMERA_INFO::getPos: no DX9 counterpart (DX9 uMotionCamera::move has no nMotion key calls; CAMERA_INFO has no DX9 DTI)"
+  },
+  {
+   "se_ea": "0xe0ed20",
+   "se_name": "rCameraList::CAMERA_INFO::getTarget(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "rCameraList::CAMERA_INFO::getTarget: no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xe0ed70",
+   "se_name": "rCameraList::CAMERA_INFO::getQuat(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "rCameraList::CAMERA_INFO::getQuat: no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xe0edc0",
+   "se_name": "rCameraList::CAMERA_INFO::getFov(float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "rCameraList::CAMERA_INFO::getFov: no DX9 counterpart"
+  },
+  {
+   "se_ea": "0xe0ee00",
+   "se_name": "rCameraList::getDTI(void)",
+   "dx9_ea": "0xaadec0",
+   "old_dx9_name": "rCameraList::getDTI",
+   "new_dx9_name": "rCameraList::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "confirmed",
+   "notes": "getDTI stub"
+  },
+  {
+   "se_ea": "0xe0ee10",
+   "se_name": "rCameraList::getExt(void)",
+   "dx9_ea": "0xaaded0",
+   "old_dx9_name": "sub_AADED0",
+   "new_dx9_name": "rCameraList::getExt",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "slot 6, returns \"lcm\""
+  },
+  {
+   "se_ea": "0xe0ee20",
+   "se_name": "rCameraList::clear(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "clear: DX9 rCameraList does not override the clear slot (slot 11 = shared 0xA69B70); header free inlined into deleting dtor 0xAADF70"
+  },
+  {
+   "se_ea": "0xe0ee50",
+   "se_name": "rCameraList::load(MtStream &)",
+   "dx9_ea": "0xaadfc0",
+   "old_dx9_name": "sub_AADFC0",
+   "new_dx9_name": "rCameraList::load",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DX9 slot 8 (SE 10); reads stream, checks magic \"LCM\" version 1, relocates pointers"
+  },
+  {
+   "se_ea": "0xe0efe0",
+   "se_name": "rCameraList::MyDTI::newInstance(void)",
+   "dx9_ea": "0xaadf20",
+   "old_dx9_name": "sub_AADF20",
+   "new_dx9_name": "rCameraList::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable 0xC0B414 slot 1; alloc 0x68; was undefined"
+  },
+  {
+   "se_ea": "0xe0f030",
+   "se_name": "rCameraList::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0xaadf70",
+   "old_dx9_name": "sub_AADF70",
+   "new_dx9_name": "??_GrCameraList@@UAEPAXI@Z",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "slot 0; frees header (inlined clear); was undefined loc_ code"
+  }
+ ],
+ "dx9_only": [
+  {
+   "dx9_ea": "0x8e5b90",
+   "name": "sub_8E5B90",
+   "notes": "sCamera::Viewport constructor (SE inlines it into sCamera ctor vector iterator); sets Viewport vtable, fog defaults 30000"
+  },
+  {
+   "dx9_ea": "0x8e5df0",
+   "name": "sub_8E5DF0",
+   "notes": "sCamera::Viewport::~Viewport body (non-deleting); called from Viewport deleting dtor 0x8E5DC0"
+  },
+  {
+   "dx9_ea": "0x8e5e50",
+   "name": "sub_8E5E50",
+   "notes": "Viewport helper in sCamera TU: swaps a SceneZBuffer resource (release/addRef); no SE counterpart"
+  },
+  {
+   "dx9_ea": "0x8e5f00",
+   "name": "sub_8E5F00",
+   "notes": "Viewport helper in sCamera TU (cTrans::newMaterial, memcpy); called by Viewport slot 5"
+  },
+  {
+   "dx9_ea": "0x8e6200",
+   "name": "sub_8E6200",
+   "notes": "small sCamera/Viewport accessor (60 bytes, 5 callers incl. uEm019::ctrlFog)"
+  },
+  {
+   "dx9_ea": "0xaae070",
+   "name": "sub_AAE070",
+   "notes": "rCameraList vtable slot 9 = save (MtDataWriter); SE rCameraList does not override save"
+  },
+  {
+   "dx9_ea": "0xaade60",
+   "name": "sub_AADE60",
+   "notes": "rCameraList header (re)alloc helper (+0x60/+0x64), 1 caller"
+  }
+ ],
+ "notes": "Group F, 189 SE methods. DX9 renames apply only to group-F classes. VTABLE LABELS: labelled off_C006C4 = sCamera::vftable and off_BC8C34 = uCamera::vftable (from getDTI stubs and DTI registration), plus every class's MyDTI vtable (set at DTI registration `mov X::DTI, offset ...`): sCamera 0xC00704, sCamera::Viewport 0xC006FC, rDevilCamera 0xB9B81C, rCameraList 0xC0B414, uFreeCamera 0xC04488, uMotionCamera 0xC09AF8, uMotionCameraBoss 0xBF5E08, uIdCamera 0xBDBE0C, uEfctCam 0xBC9418, uModelCam 0xBE0D40. uCamera and uDevilCamera are abstract in DX9: their DTIs use the generic abstract-DTI vtable 0xB8E3B0 (labelled sDevil4Pad::vftable_0, which is wrong, but left as is because it is shared). DEFINED 15 functions from undefined loc_ code (deleting dtors + MyDTI::newInstance): 0x8E5DC0 0x8EBBD0 0x8E5B60 0x8EBAA0 0x469790 0x469800 0xAADF20 0xAADF70 0xA7FC40 0xA7FD60 0x8816B0 0x749480 0x539230 0x788F80 0x788FD0. ICF / SHARED: 0x49B290 is the generic cTrans-level deleting dtor (slot 0 of about 36 vtables, including uCamera/uDevilCamera/uFreeCamera/uIdCamera). It is recorded but not renamed or defined. 0x749630 (5-byte jmp uDevilCamera::sync) is slot 8 of uCameraBoss and every uIdCamera-derived vtable. Group C had commented it as uCameraBoss::sync without renaming it. I renamed it uIdCamera::sync because it sits in the uIdCamera TU, and prepended an ICF comment that lists both. 0x73F870 (jmp uDevilCamera::createProperty) is slot 3 of uIdCamera and 6 derived vtables; renamed uIdCamera::createProperty, matching SE, where the derived classes reuse uIdCamera::createProperty. 0xA7FD60 is the deleting dtor of both uMotionCamera and uMotionCameraBoss (ICF comment). 0x539290 (uEfctCam slot 0) is shared by uDevil4Effect/uEffectVFR/uEfctEasyShadow/uEfctFootPrint, so it was not renamed. SE-ONLY: rCameraList::CAMERA_INFO (4 getters; no DX9 DTI, and DX9 uMotionCamera::move has no nMotion key calls). The SE-only virtuals applyWorldOffset, getWorldTargetPos and moveAfter have no DX9 slots; DX9 uCamera::move 0xA52330 does the frustum update that SE does in moveAfter + sCamera::updateViewportFrustum (medium, comment only). sCamera::draw and sCamera::clearBlank have no DX9 counterpart. Viewport::updateFrustum and many small accessors are inlined. rCameraListXml (DX9-only, not in SE scope): DTI rCameraListXml::DTI parent rCameraList, size 0xC68, vtable 0xC0B41C (13 slots, getExt 'lcm.xml'), MyDTI vtable off_C0B46C; nested rCameraListXml::CameraInfo (size 0xC, MtObject, vtable 0xC0B450, MyDTI off_C0B464). Its code is at 0xAADEE0-0xAAF2DC (e.g. createProperty 0xAAEAC0 'CameraMotion'/'mCameraList', CameraInfo createProperty 0xAAE820). It is not renamed. Note: 0xAAE9B0 (references rCameraList::vftable) is in the rCameraListXml code. PRE-EXISTING NAMES FOR THE COORDINATOR: 0x404CA0 'uFreeCamera::newInstance' is not a MyDTI::newInstance (real one is 0x9197A0). It is a spawn helper that creates a free camera and calls setRegion/setCamera/addBottom; left untouched. The names uDevilCamera::resolveMovement (0x4C3B00) and uDevilCamera::move_tick* (0x4CC350, 0x4CE210, 0x4D49A0, 0x4DB710, 0x4E0E40, 0x4E4EF0, 0x4ED310, 0x4F1570) in the uCameraBoss* TUs do not correspond to any SE uDevilCamera method. They are probably uCameraBoss*/uCameraCtrl code and should be reconciled by groups C/D/E. uDevilCamera::createProperty 0x4C1E10 sits inside the uCameraBoss TU region, but uDevilCamera vtable slot 3 and the strings confirm it."
+}

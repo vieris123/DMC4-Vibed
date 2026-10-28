@@ -1,0 +1,2685 @@
+{
+ "group": "B",
+ "classes": {
+  "cCamAreaConnect": {
+   "se": {
+    "vtable": "0x112d9e0",
+    "nslots": 5,
+    "nfuncs": 11
+   },
+   "dx9": {
+    "dti": "0xe56d48",
+    "vtable": "0xb98a78",
+    "mydti_vtable": "0xb98a8c",
+    "ctor": null,
+    "size": "0x8",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x425f00",
+     "0x427e00"
+    ],
+    "ctor_note": "ctor inlined into MyDTI::newInstance 0x427E00 (as in SE)"
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": true
+  },
+  "cCamAreaData": {
+   "se": {
+    "vtable": "0x112d9fc",
+    "nslots": 5,
+    "nfuncs": 12
+   },
+   "dx9": {
+    "dti": "0xe56de8",
+    "vtable": "0xb98a94",
+    "mydti_vtable": "0xb98aa8",
+    "ctor": "0x425fd0",
+    "size": "0x90",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x425fc0",
+     "0x427e30"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": false
+  },
+  "cCamPanData": {
+   "se": {
+    "vtable": "0x112da34",
+    "nslots": 5,
+    "nfuncs": 11
+   },
+   "dx9": {
+    "dti": "0xe56da8",
+    "vtable": "0xb98acc",
+    "mydti_vtable": "0xb98ae0",
+    "ctor": null,
+    "size": "0x80",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x4263e0",
+     "0x427ef0"
+    ],
+    "ctor_note": "ctor inlined into MyDTI::newInstance 0x427EF0 (as in SE)"
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": true
+  },
+  "cCamRailData": {
+   "se": {
+    "vtable": "0x112da6c",
+    "nslots": 5,
+    "nfuncs": 12
+   },
+   "dx9": {
+    "dti": "0xe56d88",
+    "vtable": "0xb98b04",
+    "mydti_vtable": "0xb98b18",
+    "ctor": "0x426b00",
+    "size": "0x5b0",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x426af0",
+     "0x427ff0"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": true
+  },
+  "cCamRailDataCmn": {
+   "se": {
+    "vtable": "0x112da50",
+    "nslots": 5,
+    "nfuncs": 11
+   },
+   "dx9": {
+    "dti": "0xe56dc8",
+    "vtable": "0xb98ae8",
+    "mydti_vtable": "0xb98afc",
+    "ctor": "0x426830",
+    "size": "0x550",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x426820",
+     "0x427fc0"
+    ],
+    "ctor_note": "0x426830 is the ctor; SE inlines it (no SE symbol) - commented only"
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": true
+  },
+  "cCameraNormal": {
+   "se": {
+    "vtable": "0x112de8c",
+    "nslots": 14,
+    "nfuncs": 12
+   },
+   "dx9": {
+    "dti": "0xe56d08",
+    "vtable": "0xb98c60",
+    "mydti_vtable": "0xb98c98",
+    "ctor": null,
+    "size": "0x290",
+    "parent": "cCameraRailBase",
+    "nslots": 14,
+    "code_range": [
+     "0x427d00",
+     "0x4280d0"
+    ],
+    "ctor_note": "no standalone ctor: inlined into cCameraNormal::MyDTI::newInstance 0x4280D0 (RailBase ctor + cCameraNormalInitParam ctor at +0x170)"
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": true
+  },
+  "cCameraPan": {
+   "se": {
+    "vtable": "0x112dd6c",
+    "nslots": 14,
+    "nfuncs": 23
+   },
+   "dx9": {
+    "dti": "0xe56ce8",
+    "vtable": "0xb98b60",
+    "mydti_vtable": "0xb98b98",
+    "ctor": "0x427480",
+    "size": "0x1f0",
+    "parent": "cCameraRailBase",
+    "nslots": 14,
+    "code_range": [
+     "0x427470",
+     "0x42b190"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": true
+  },
+  "cCameraRail": {
+   "se": {
+    "vtable": "0x112ddcc",
+    "nslots": 14,
+    "nfuncs": 21
+   },
+   "dx9": {
+    "dti": "0xe56cc8",
+    "vtable": "0xb98ba0",
+    "mydti_vtable": "0xb98bd8",
+    "ctor": "0x427770",
+    "size": "0x21b0",
+    "parent": "cCameraRailBase",
+    "nslots": 14,
+    "code_range": [
+     "0x427760",
+     "0x42b580"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": true
+  },
+  "cCameraRailBase": {
+   "se": {
+    "vtable": "0x112dab0",
+    "nslots": 14,
+    "nfuncs": 21
+   },
+   "dx9": {
+    "dti": "0xe56e08",
+    "vtable": "0xb98b20",
+    "mydti_vtable": "0xb98b58",
+    "ctor": "0x428110",
+    "size": "0x160",
+    "parent": "cCameraBase",
+    "nslots": 14,
+    "code_range": [
+     "0x426f60",
+     "0x428400"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": false
+  },
+  "cCameraRailEm025": {
+   "se": {
+    "vtable": "0x112de1c",
+    "nslots": 14,
+    "nfuncs": 20
+   },
+   "dx9": {
+    "dti": "0xe56d68",
+    "vtable": "0xb98be0",
+    "mydti_vtable": "0xb98c18",
+    "ctor": "0x427880",
+    "size": "0x21c0",
+    "parent": "cCameraRailBase",
+    "nslots": 14,
+    "code_range": [
+     "0x427870",
+     "0x429df0"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": true
+  },
+  "cCameraRailEm026": {
+   "se": {
+    "vtable": "0x112de54",
+    "nslots": 14,
+    "nfuncs": 23
+   },
+   "dx9": {
+    "dti": "0xe56ca8",
+    "vtable": "0xb98c20",
+    "mydti_vtable": "0xb98c58",
+    "ctor": "0x427b90",
+    "size": "0x21b0",
+    "parent": "cCameraRailBase",
+    "nslots": 14,
+    "code_range": [
+     "0x427b80",
+     "0x42b6d0"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI,5 Main,6 Set,7 calcTarPos,8 calcLockOn,9 calcFov,10 calcRoll,11 calcZoomRate,12 getZoomType,13 getBattleZoomRate)",
+   "vtable_label_fixed": true
+  },
+  "cCameraRect3D": {
+   "se": {
+    "vtable": "0x112da18",
+    "nslots": 5,
+    "nfuncs": 12
+   },
+   "dx9": {
+    "dti": "0xe56d28",
+    "vtable": "0xb98ab0",
+    "mydti_vtable": "0xb98ac4",
+    "ctor": "0x426270",
+    "size": "0x80",
+    "parent": "MtObject",
+    "nslots": 5,
+    "code_range": [
+     "0x426260",
+     "0x427e50"
+    ]
+   },
+   "slot_shift": "none: SE slot n == DX9 slot n (0 dtor,1 createUI,2,3 createProperty,4 getDTI)",
+   "vtable_label_fixed": false
+  }
+ },
+ "methods": [
+  {
+   "se_ea": "0x55df30",
+   "se_name": "cCamAreaConnect::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55df40",
+   "se_name": "cCamAreaConnect::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55df70",
+   "se_name": "cCamAreaConnect::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55dfa0",
+   "se_name": "cCamAreaConnect::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55dfc0",
+   "se_name": "cCamAreaConnect::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55dfe0",
+   "se_name": "cCamAreaConnect::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e000",
+   "se_name": "cCamAreaConnect::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e020",
+   "se_name": "cCamAreaData::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e030",
+   "se_name": "cCamAreaData::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e060",
+   "se_name": "cCamAreaData::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e090",
+   "se_name": "cCamAreaData::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e0b0",
+   "se_name": "cCamAreaData::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e0d0",
+   "se_name": "cCamAreaData::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e0f0",
+   "se_name": "cCamAreaData::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e110",
+   "se_name": "cCameraRect3D::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e120",
+   "se_name": "cCameraRect3D::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e150",
+   "se_name": "cCameraRect3D::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e180",
+   "se_name": "cCameraRect3D::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e1a0",
+   "se_name": "cCameraRect3D::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e1c0",
+   "se_name": "cCameraRect3D::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e1e0",
+   "se_name": "cCameraRect3D::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e200",
+   "se_name": "cCamPanData::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e210",
+   "se_name": "cCamPanData::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e240",
+   "se_name": "cCamPanData::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e270",
+   "se_name": "cCamPanData::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e290",
+   "se_name": "cCamPanData::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e2b0",
+   "se_name": "cCamPanData::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e2d0",
+   "se_name": "cCamPanData::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e2f0",
+   "se_name": "cCamRailDataCmn::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e300",
+   "se_name": "cCamRailDataCmn::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e330",
+   "se_name": "cCamRailDataCmn::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e360",
+   "se_name": "cCamRailDataCmn::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e380",
+   "se_name": "cCamRailDataCmn::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e3a0",
+   "se_name": "cCamRailDataCmn::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e3c0",
+   "se_name": "cCamRailDataCmn::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e3e0",
+   "se_name": "cCamRailData::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e3f0",
+   "se_name": "cCamRailData::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e420",
+   "se_name": "cCamRailData::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e450",
+   "se_name": "cCamRailData::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e470",
+   "se_name": "cCamRailData::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e490",
+   "se_name": "cCamRailData::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e4b0",
+   "se_name": "cCamRailData::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e4d0",
+   "se_name": "cCameraRailBase::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e4e0",
+   "se_name": "cCameraRailBase::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e510",
+   "se_name": "cCameraRailBase::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e540",
+   "se_name": "cCameraRailBase::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e560",
+   "se_name": "cCameraRailBase::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e580",
+   "se_name": "cCameraRailBase::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e5a0",
+   "se_name": "cCameraRailBase::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e5c0",
+   "se_name": "cCameraPan::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e5d0",
+   "se_name": "cCameraPan::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e600",
+   "se_name": "cCameraPan::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e630",
+   "se_name": "cCameraPan::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e650",
+   "se_name": "cCameraPan::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e670",
+   "se_name": "cCameraPan::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e690",
+   "se_name": "cCameraPan::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e6b0",
+   "se_name": "cCameraRail::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e6c0",
+   "se_name": "cCameraRail::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e6f0",
+   "se_name": "cCameraRail::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e720",
+   "se_name": "cCameraRail::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e740",
+   "se_name": "cCameraRail::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e760",
+   "se_name": "cCameraRail::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e780",
+   "se_name": "cCameraRail::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e7a0",
+   "se_name": "cCameraRailEm025::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e7b0",
+   "se_name": "cCameraRailEm025::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e7e0",
+   "se_name": "cCameraRailEm025::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e810",
+   "se_name": "cCameraRailEm025::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e830",
+   "se_name": "cCameraRailEm025::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e850",
+   "se_name": "cCameraRailEm025::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e870",
+   "se_name": "cCameraRailEm025::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e890",
+   "se_name": "cCameraRailEm026::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e8a0",
+   "se_name": "cCameraRailEm026::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e8d0",
+   "se_name": "cCameraRailEm026::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e900",
+   "se_name": "cCameraRailEm026::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e920",
+   "se_name": "cCameraRailEm026::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e940",
+   "se_name": "cCameraRailEm026::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e960",
+   "se_name": "cCameraRailEm026::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e980",
+   "se_name": "cCameraNormal::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class usage() stub has no DX9 counterpart"
+  },
+  {
+   "se_ea": "0x55e990",
+   "se_name": "cCameraNormal::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e9c0",
+   "se_name": "cCameraNormal::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55e9f0",
+   "se_name": "cCameraNormal::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55ea10",
+   "se_name": "cCameraNormal::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55ea30",
+   "se_name": "cCameraNormal::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55ea50",
+   "se_name": "cCameraNormal::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: per-class operator new/delete helper; DX9 calls GlobalAllocator inline (MyDTI::newInstance / deleting dtors)"
+  },
+  {
+   "se_ea": "0x55ea70",
+   "se_name": "cCameraRailBase::cCameraRailBase(void)",
+   "dx9_ea": "0x428110",
+   "old_dx9_name": "cCameraRailBase::cCameraRailBase",
+   "new_dx9_name": "cCameraRailBase::cCameraRailBase",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by Rail/Em025/Em026 ctors, cCameraNormal + RailBase newInstance"
+  },
+  {
+   "se_ea": "0x55ebd0",
+   "se_name": "cCameraRailBase::~cCameraRailBase(void)",
+   "dx9_ea": "0x4282b0",
+   "old_dx9_name": "sub_4282B0",
+   "new_dx9_name": "??1cCameraRailBase@@UAE@XZ",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called from RailBase vdd 0x428280, Pan/Normal sdd and the derived rail dtors; mppBox free loop + embedded cCamAreaData teardown match SE"
+  },
+  {
+   "se_ea": "0x55ec70",
+   "se_name": "cCameraRailBase::getBox(uint)",
+   "dx9_ea": "0x428350",
+   "old_dx9_name": "sub_428350",
+   "new_dx9_name": "cCameraRailBase::getBox",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "mppBox[idx] getter; TU order ctor,dtor,getBox,getBoxNum,setBox,setBoxNum identical to SE"
+  },
+  {
+   "se_ea": "0x55ec80",
+   "se_name": "cCameraRailBase::getBoxNum(void)",
+   "dx9_ea": "0x428360",
+   "old_dx9_name": "?GetIScheduler@SchedulerBase@details@Concurrency@@QAEPAUIScheduler@3@XZ",
+   "new_dx9_name": "cCameraRailBase::getBoxNum",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "replaced_existing",
+   "notes": "mov eax,[ecx+0F0h] (mBoxNum); previous name was a FLIRT/library false positive"
+  },
+  {
+   "se_ea": "0x55ec90",
+   "se_name": "cCameraRailBase::setBox(cCameraRect3D *,uint)",
+   "dx9_ea": "0x428370",
+   "old_dx9_name": "sub_428370",
+   "new_dx9_name": "cCameraRailBase::setBox",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "bounds-checked mppBox[idx]=p"
+  },
+  {
+   "se_ea": "0x55ecb0",
+   "se_name": "cCameraRailBase::setBoxNum(uint)",
+   "dx9_ea": "0x428390",
+   "old_dx9_name": "sub_428390",
+   "new_dx9_name": "cCameraRailBase::setBoxNum",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "memset callee, 110 bytes/7bb == SE"
+  },
+  {
+   "se_ea": "0x55ed20",
+   "se_name": "cCameraRailBase::createUI(MtProperty &)",
+   "dx9_ea": "0x8fc2f0",
+   "old_dx9_name": "sub_8FC2F0",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "slot 1 of every RailBase-derived vtable -> DX9 generic 0x8FC2F0 (same stub as slot 1 of the plain MtObject classes); SE createUI is itself a jmp to a generic stub. Shared ICF code, not renamed"
+  },
+  {
+   "se_ea": "0x55ed30",
+   "se_name": "cCameraPan::Set(void)",
+   "dx9_ea": "0x4289b0",
+   "old_dx9_name": "sub_4289B0",
+   "new_dx9_name": "cCameraPan::Set",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x55ede0",
+   "se_name": "cCameraPan::calcTarPos(MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x429350",
+   "old_dx9_name": "sub_429350",
+   "new_dx9_name": "cCameraPan::calcTarPos",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 7 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x55f210",
+   "se_name": "cCameraRail::calcTarPos(MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x429750",
+   "old_dx9_name": "sub_429750",
+   "new_dx9_name": "cCameraRail::calcTarPos",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 7 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x55f870",
+   "se_name": "cCameraRailEm025::calcTarPos(MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x429df0",
+   "old_dx9_name": "sub_429DF0",
+   "new_dx9_name": "cCameraRailEm025::calcTarPos",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 7 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x55fd90",
+   "se_name": "cCameraRailEm026::calcTarPos(MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x42a330",
+   "old_dx9_name": "sub_42A330",
+   "new_dx9_name": "cCameraRailEm026::calcTarPos",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 7 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x5603f0",
+   "se_name": "cCameraRailEm026::calcTarPosVirtualPlPos(MtVector3 *,MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x42a9d0",
+   "old_dx9_name": "sub_42A9D0",
+   "new_dx9_name": "cCameraRailEm026::calcTarPosVirtualPlPos",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called only from cCameraRailEm026::Set (0x429000) as in SE; directly follows Em026 calcTarPos; getPlayerMat callee"
+  },
+  {
+   "se_ea": "0x560880",
+   "se_name": "cCameraPan::calcFov(void)",
+   "dx9_ea": "0x42af20",
+   "old_dx9_name": "sub_42AF20",
+   "new_dx9_name": "cCameraPan::calcFov",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 9 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x560890",
+   "se_name": "cCameraRail::calcFov(void)",
+   "dx9_ea": "0x42af30",
+   "old_dx9_name": "sub_42AF30",
+   "new_dx9_name": "cCameraRail::calcFov",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 9 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcFov, cCameraRailEm025::calcFov, cCameraRailEm026::calcFov), named for the owning class"
+  },
+  {
+   "se_ea": "0x5608c0",
+   "se_name": "cCameraRailEm025::calcFov(void)",
+   "dx9_ea": "0x42af30",
+   "old_dx9_name": "sub_42AF30",
+   "new_dx9_name": "cCameraRail::calcFov",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 9 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcFov, cCameraRailEm025::calcFov, cCameraRailEm026::calcFov), named for the owning class"
+  },
+  {
+   "se_ea": "0x5608f0",
+   "se_name": "cCameraRailEm026::calcFov(void)",
+   "dx9_ea": "0x42af30",
+   "old_dx9_name": "sub_42AF30",
+   "new_dx9_name": "cCameraRail::calcFov",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 9 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcFov, cCameraRailEm025::calcFov, cCameraRailEm026::calcFov), named for the owning class"
+  },
+  {
+   "se_ea": "0x560920",
+   "se_name": "cCameraPan::calcRoll(void)",
+   "dx9_ea": "0x42af60",
+   "old_dx9_name": "sub_42AF60",
+   "new_dx9_name": "cCameraPan::calcRoll",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 10 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x560930",
+   "se_name": "cCameraRail::calcRoll(void)",
+   "dx9_ea": "0x42af70",
+   "old_dx9_name": "sub_42AF70",
+   "new_dx9_name": "cCameraRail::calcRoll",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 10 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcRoll, cCameraRailEm025::calcRoll, cCameraRailEm026::calcRoll), named for the owning class"
+  },
+  {
+   "se_ea": "0x560980",
+   "se_name": "cCameraRailEm025::calcRoll(void)",
+   "dx9_ea": "0x42af70",
+   "old_dx9_name": "sub_42AF70",
+   "new_dx9_name": "cCameraRail::calcRoll",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 10 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcRoll, cCameraRailEm025::calcRoll, cCameraRailEm026::calcRoll), named for the owning class"
+  },
+  {
+   "se_ea": "0x5609d0",
+   "se_name": "cCameraRailEm026::calcRoll(void)",
+   "dx9_ea": "0x42af70",
+   "old_dx9_name": "sub_42AF70",
+   "new_dx9_name": "cCameraRail::calcRoll",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 10 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcRoll, cCameraRailEm025::calcRoll, cCameraRailEm026::calcRoll), named for the owning class"
+  },
+  {
+   "se_ea": "0x560a90",
+   "se_name": "cCameraPan::calcZoomRate(float)",
+   "dx9_ea": "0x42b010",
+   "old_dx9_name": "sub_42B010",
+   "new_dx9_name": "cCameraPan::calcZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 11 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x560b50",
+   "se_name": "cCameraRail::calcZoomRate(float)",
+   "dx9_ea": "0x42b0d0",
+   "old_dx9_name": "sub_42B0D0",
+   "new_dx9_name": "cCameraRail::calcZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 11 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcZoomRate, cCameraRailEm025::calcZoomRate, cCameraRailEm026::calcZoomRate), named for the owning class"
+  },
+  {
+   "se_ea": "0x560c10",
+   "se_name": "cCameraRailEm025::calcZoomRate(float)",
+   "dx9_ea": "0x42b0d0",
+   "old_dx9_name": "sub_42B0D0",
+   "new_dx9_name": "cCameraRail::calcZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 11 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcZoomRate, cCameraRailEm025::calcZoomRate, cCameraRailEm026::calcZoomRate), named for the owning class"
+  },
+  {
+   "se_ea": "0x560cd0",
+   "se_name": "cCameraRailEm026::calcZoomRate(float)",
+   "dx9_ea": "0x42b0d0",
+   "old_dx9_name": "sub_42B0D0",
+   "new_dx9_name": "cCameraRail::calcZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 11 (SE slot == DX9 slot); ICF-folded: one DX9 body for 3 SE methods (cCameraRail::calcZoomRate, cCameraRailEm025::calcZoomRate, cCameraRailEm026::calcZoomRate), named for the owning class"
+  },
+  {
+   "se_ea": "0x560d90",
+   "se_name": "cCameraPan::calcTargetLockOn(MtVector3 *)",
+   "dx9_ea": "0x42b190",
+   "old_dx9_name": "sub_42B190",
+   "new_dx9_name": "cCameraPan::calcTargetLockOn",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "sole callee of cCameraPan::calcLockOn (modes 3/4), as SE jmp"
+  },
+  {
+   "se_ea": "0x560f10",
+   "se_name": "cCameraRail::calcTargetLockOn(MtVector3 *)",
+   "dx9_ea": "0x42b2e0",
+   "old_dx9_name": "sub_42B2E0",
+   "new_dx9_name": "cCameraRail::calcTargetLockOn",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Rail/Em025 calcLockOn (0x42AEA0) mode-3 target; ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcTargetLockOn, cCameraRailEm025::calcTargetLockOn), named for the owning class"
+  },
+  {
+   "se_ea": "0x561090",
+   "se_name": "cCameraRailEm025::calcTargetLockOn(MtVector3 *)",
+   "dx9_ea": "0x42b2e0",
+   "old_dx9_name": "sub_42B2E0",
+   "new_dx9_name": "cCameraRail::calcTargetLockOn",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "Em025 shares Rail calcLockOn 0x42AEA0 -> mode-3 target (ICF); ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcTargetLockOn, cCameraRailEm025::calcTargetLockOn), named for the owning class"
+  },
+  {
+   "se_ea": "0x561210",
+   "se_name": "cCameraRailEm026::calcTargetLockOn(MtVector3 *)",
+   "dx9_ea": "0x42b430",
+   "old_dx9_name": "sub_42B430",
+   "new_dx9_name": "cCameraRailEm026::calcTargetLockOn",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Em026 calcLockOn mode-3 target; calls the uEm026 hand-pos getters like SE"
+  },
+  {
+   "se_ea": "0x561390",
+   "se_name": "cCameraPan::calcTargetLockOnYOnly(MtVector3 *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: unreferenced in SE (Pan calcLockOn only jmps to calcTargetLockOn); no DX9 body"
+  },
+  {
+   "se_ea": "0x561510",
+   "se_name": "cCameraRail::calcTargetLockOnYOnly(MtVector3 *)",
+   "dx9_ea": "0x42b580",
+   "old_dx9_name": "sub_42B580",
+   "new_dx9_name": "cCameraRail::calcTargetLockOnYOnly",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Rail/Em025 calcLockOn mode-4 target; ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcTargetLockOnYOnly, cCameraRailEm025::calcTargetLockOnYOnly), named for the owning class"
+  },
+  {
+   "se_ea": "0x561690",
+   "se_name": "cCameraRailEm025::calcTargetLockOnYOnly(MtVector3 *)",
+   "dx9_ea": "0x42b580",
+   "old_dx9_name": "sub_42B580",
+   "new_dx9_name": "cCameraRail::calcTargetLockOnYOnly",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "Em025 shares Rail calcLockOn -> mode-4 target (ICF); ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcTargetLockOnYOnly, cCameraRailEm025::calcTargetLockOnYOnly), named for the owning class"
+  },
+  {
+   "se_ea": "0x561810",
+   "se_name": "cCameraRailEm026::calcTargetLockOnYOnly(MtVector3 *)",
+   "dx9_ea": "0x42b6d0",
+   "old_dx9_name": "sub_42B6D0",
+   "new_dx9_name": "cCameraRailEm026::calcTargetLockOnYOnly",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "Em026 calcLockOn mode-4 target"
+  },
+  {
+   "se_ea": "0x561990",
+   "se_name": "cCameraRailBase::copyArea(cCameraRailBase *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x561c30",
+   "se_name": "cCameraPan::copyArea(cCameraPan *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x561dc0",
+   "se_name": "cCameraRail::copyArea(cCameraRail *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x562190",
+   "se_name": "cCameraRailEm025::copyArea(cCameraRailEm025 *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x562560",
+   "se_name": "cCameraRailEm026::copyArea(cCameraRailEm026 *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x562930",
+   "se_name": "cCameraNormal::copyArea(cCameraNormal *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only/dead: copyArea family has no callers in SE outside itself (editor helper); absent from DX9 (OPT:REF)"
+  },
+  {
+   "se_ea": "0x562a90",
+   "se_name": "cCamAreaConnect::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427e00",
+   "old_dx9_name": "loc_427E00",
+   "new_dx9_name": "cCamAreaConnect::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562ad0",
+   "se_name": "cCamAreaData::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427e30",
+   "old_dx9_name": "loc_427E30",
+   "new_dx9_name": "cCamAreaData::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562b10",
+   "se_name": "cCameraRect3D::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427e50",
+   "old_dx9_name": "sub_427E50",
+   "new_dx9_name": "cCameraRect3D::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562bd0",
+   "se_name": "cCamPanData::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427ef0",
+   "old_dx9_name": "sub_427EF0",
+   "new_dx9_name": "cCamPanData::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562cb0",
+   "se_name": "cCamRailDataCmn::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427fc0",
+   "old_dx9_name": "loc_427FC0",
+   "new_dx9_name": "cCamRailDataCmn::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562d30",
+   "se_name": "cCamRailData::MyDTI::newInstance(void)",
+   "dx9_ea": "0x427ff0",
+   "old_dx9_name": "loc_427FF0",
+   "new_dx9_name": "cCamRailData::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562d70",
+   "se_name": "cCameraRailBase::MyDTI::newInstance(void)",
+   "dx9_ea": "0x428020",
+   "old_dx9_name": "loc_428020",
+   "new_dx9_name": "cCameraRailBase::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562db0",
+   "se_name": "cCameraPan::MyDTI::newInstance(void)",
+   "dx9_ea": "0x428050",
+   "old_dx9_name": "loc_428050",
+   "new_dx9_name": "cCameraPan::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562df0",
+   "se_name": "cCameraRail::MyDTI::newInstance(void)",
+   "dx9_ea": "0x428070",
+   "old_dx9_name": "sub_428070",
+   "new_dx9_name": "cCameraRail::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562e30",
+   "se_name": "cCameraRailEm025::MyDTI::newInstance(void)",
+   "dx9_ea": "0x428090",
+   "old_dx9_name": "sub_428090",
+   "new_dx9_name": "cCameraRailEm025::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562e70",
+   "se_name": "cCameraRailEm026::MyDTI::newInstance(void)",
+   "dx9_ea": "0x4280b0",
+   "old_dx9_name": "sub_4280B0",
+   "new_dx9_name": "cCameraRailEm026::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562eb0",
+   "se_name": "cCameraNormal::MyDTI::newInstance(void)",
+   "dx9_ea": "0x4280d0",
+   "old_dx9_name": "sub_4280D0",
+   "new_dx9_name": "cCameraNormal::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "MyDTI vtable slot 1 (vtable stored into the DTI at registration); allocation size == registered DTI size"
+  },
+  {
+   "se_ea": "0x562f10",
+   "se_name": "cCameraRailBase::Main(void)",
+   "dx9_ea": "0x428400",
+   "old_dx9_name": "cCameraRailBase::Main",
+   "new_dx9_name": "cCameraRailBase::Main",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "slot 5 of all derived vtables; callees sWorkRate::calc + sMediator::isBattle as SE"
+  },
+  {
+   "se_ea": "0x5634c0",
+   "se_name": "cCameraRailBase::MainEm026(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE-only: no xrefs in SE (dead code); DX9 has a single Main-like body (0x428400 = Main, slot 5) and no other fn calling sWorkRate::calc+isBattle besides cCameraPlayer::main. Dead-stripped."
+  },
+  {
+   "se_ea": "0x563a70",
+   "se_name": "cCameraRail::Set(void)",
+   "dx9_ea": "0x428a70",
+   "old_dx9_name": "sub_428A70",
+   "new_dx9_name": "cCameraRail::Set",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x563d10",
+   "se_name": "cCameraRailEm025::Set(void)",
+   "dx9_ea": "0x428d40",
+   "old_dx9_name": "sub_428D40",
+   "new_dx9_name": "cCameraRailEm025::Set",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x563fd0",
+   "se_name": "cCameraRailEm026::Set(void)",
+   "dx9_ea": "0x429000",
+   "old_dx9_name": "sub_429000",
+   "new_dx9_name": "cCameraRailEm026::Set",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 6 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x5642e0",
+   "se_name": "cCameraPan::calcLockOn(MtVector3 *)",
+   "dx9_ea": "0x42ae80",
+   "old_dx9_name": "sub_42AE80",
+   "new_dx9_name": "cCameraPan::calcLockOn",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 8 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x564300",
+   "se_name": "cCameraRail::calcLockOn(MtVector3 *)",
+   "dx9_ea": "0x42aea0",
+   "old_dx9_name": "sub_42AEA0",
+   "new_dx9_name": "cCameraRail::calcLockOn",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 8 (SE slot == DX9 slot); ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcLockOn, cCameraRailEm025::calcLockOn), named for the owning class"
+  },
+  {
+   "se_ea": "0x564320",
+   "se_name": "cCameraRailEm025::calcLockOn(MtVector3 *)",
+   "dx9_ea": "0x42aea0",
+   "old_dx9_name": "sub_42AEA0",
+   "new_dx9_name": "cCameraRail::calcLockOn",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "commented",
+   "notes": "vtable slot 8 (SE slot == DX9 slot); ICF-folded: one DX9 body for 2 SE methods (cCameraRail::calcLockOn, cCameraRailEm025::calcLockOn), named for the owning class"
+  },
+  {
+   "se_ea": "0x564340",
+   "se_name": "cCameraRailEm026::calcLockOn(MtVector3 *)",
+   "dx9_ea": "0x42aee0",
+   "old_dx9_name": "sub_42AEE0",
+   "new_dx9_name": "cCameraRailEm026::calcLockOn",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 8 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x564650",
+   "se_name": "cCamAreaConnect::getDTI(void)",
+   "dx9_ea": "0x425f00",
+   "old_dx9_name": "sub_425F00",
+   "new_dx9_name": "cCamAreaConnect::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x564660",
+   "se_name": "cCamAreaData::cCamAreaData(void)",
+   "dx9_ea": "0x425fd0",
+   "old_dx9_name": "cCamAreaData::cCamAreaData",
+   "new_dx9_name": "cCamAreaData::cCamAreaData",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "called by cCamAreaData newInstance and cCameraRailBase ctor"
+  },
+  {
+   "se_ea": "0x5646a0",
+   "se_name": "cCamAreaData::getDTI(void)",
+   "dx9_ea": "0x425fc0",
+   "old_dx9_name": "sub_425FC0",
+   "new_dx9_name": "cCamAreaData::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x5646b0",
+   "se_name": "cCameraRect3D::cCameraRect3D(void)",
+   "dx9_ea": "0x426270",
+   "old_dx9_name": "cCameraRect3D::cCameraRect3D",
+   "new_dx9_name": "cCameraRect3D::cCameraRect3D",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "same zero-init as SE; follows Rect3D getDTI"
+  },
+  {
+   "se_ea": "0x564740",
+   "se_name": "cCameraRect3D::getDTI(void)",
+   "dx9_ea": "0x426260",
+   "old_dx9_name": "sub_426260",
+   "new_dx9_name": "cCameraRect3D::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x564750",
+   "se_name": "cCamPanData::getDTI(void)",
+   "dx9_ea": "0x4263e0",
+   "old_dx9_name": "sub_4263E0",
+   "new_dx9_name": "cCamPanData::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x564760",
+   "se_name": "cCamRailDataCmn::getDTI(void)",
+   "dx9_ea": "0x426820",
+   "old_dx9_name": "sub_426820",
+   "new_dx9_name": "cCamRailDataCmn::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x564770",
+   "se_name": "cCamRailData::cCamRailData(void)",
+   "dx9_ea": "0x426b00",
+   "old_dx9_name": "sub_426B00",
+   "new_dx9_name": "cCamRailData::cCamRailData",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "called from cCamRailData newInstance 0x427FF0 and the rail ctors; calls the (SE-inlined) cCamRailDataCmn ctor 0x426830"
+  },
+  {
+   "se_ea": "0x564840",
+   "se_name": "cCamRailData::getDTI(void)",
+   "dx9_ea": "0x426af0",
+   "old_dx9_name": "sub_426AF0",
+   "new_dx9_name": "cCamRailData::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x564850",
+   "se_name": "cCameraRailBase::getDTI(void)",
+   "dx9_ea": "0x426f60",
+   "old_dx9_name": "sub_426F60",
+   "new_dx9_name": "cCameraRailBase::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x565020",
+   "se_name": "cCamAreaConnect::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x425f10",
+   "old_dx9_name": "sub_425F10",
+   "new_dx9_name": "cCamAreaConnect::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x565150",
+   "se_name": "cCamAreaConnect::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 is the generic ICF-folded scalar-deleting dtor 0x455B10 (sets base vtable + GlobalAllocator free; shared by many classes outside this TU); recorded, not renamed"
+  },
+  {
+   "se_ea": "0x565180",
+   "se_name": "cCamAreaData::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x426010",
+   "old_dx9_name": "sub_426010",
+   "new_dx9_name": "cCamAreaData::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x565570",
+   "se_name": "cCamAreaData::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x426210",
+   "old_dx9_name": "loc_426210",
+   "new_dx9_name": "cCamAreaData::scalar_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x5655c0",
+   "se_name": "cCameraRect3D::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4262f0",
+   "old_dx9_name": "sub_4262F0",
+   "new_dx9_name": "cCameraRect3D::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x565780",
+   "se_name": "cCameraRect3D::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 is the generic ICF-folded scalar-deleting dtor 0x455B10 (sets base vtable + GlobalAllocator free; shared by many classes outside this TU); recorded, not renamed"
+  },
+  {
+   "se_ea": "0x5657b0",
+   "se_name": "cCamPanData::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4263f0",
+   "old_dx9_name": "sub_4263F0",
+   "new_dx9_name": "cCamPanData::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x565fe0",
+   "se_name": "cCamPanData::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "DX9 slot 0 is the generic ICF-folded scalar-deleting dtor 0x455B10 (sets base vtable + GlobalAllocator free; shared by many classes outside this TU); recorded, not renamed"
+  },
+  {
+   "se_ea": "0x566010",
+   "se_name": "cCamRailDataCmn::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x426880",
+   "old_dx9_name": "sub_426880",
+   "new_dx9_name": "cCamRailDataCmn::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x566470",
+   "se_name": "cCamRailDataCmn::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x426ac0",
+   "old_dx9_name": "loc_426AC0",
+   "new_dx9_name": "cCamRailDataCmn::scalar_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x5664b0",
+   "se_name": "cCamRailData::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x426b80",
+   "old_dx9_name": "sub_426B80",
+   "new_dx9_name": "cCamRailData::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x566bd0",
+   "se_name": "cCamRailData::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x426f20",
+   "old_dx9_name": "loc_426F20",
+   "new_dx9_name": "cCamRailData::vector_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x566c10",
+   "se_name": "cCameraRailBase::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x426f70",
+   "old_dx9_name": "sub_426F70",
+   "new_dx9_name": "cCameraRailBase::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x5675a0",
+   "se_name": "cCameraPan::cCameraPan(void)",
+   "dx9_ea": "0x427480",
+   "old_dx9_name": "loc_427480",
+   "new_dx9_name": "cCameraPan::cCameraPan",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "tail-jumped from cCameraPan newInstance 0x428050; was undefined code, defined this pass"
+  },
+  {
+   "se_ea": "0x5676d0",
+   "se_name": "cCameraPan::getDTI(void)",
+   "dx9_ea": "0x427470",
+   "old_dx9_name": "sub_427470",
+   "new_dx9_name": "cCameraPan::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x5676e0",
+   "se_name": "cCameraPan::getZoomType(void)",
+   "dx9_ea": "0x4276e0",
+   "old_dx9_name": "sub_4276E0",
+   "new_dx9_name": "cCameraPan::getZoomType",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 12 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x5676f0",
+   "se_name": "cCameraPan::getBattleZoomRate(void)",
+   "dx9_ea": "0x4276f0",
+   "old_dx9_name": "sub_4276F0",
+   "new_dx9_name": "cCameraPan::getBattleZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 13 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x567720",
+   "se_name": "cCameraPan::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4275a0",
+   "old_dx9_name": "sub_4275A0",
+   "new_dx9_name": "cCameraPan::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x567980",
+   "se_name": "cCameraPan::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x427720",
+   "old_dx9_name": "loc_427720",
+   "new_dx9_name": "cCameraPan::vector_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x5679c0",
+   "se_name": "cCameraRail::cCameraRail(void)",
+   "dx9_ea": "0x427770",
+   "old_dx9_name": "sub_427770",
+   "new_dx9_name": "cCameraRail::cCameraRail",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "tail-jumped from cCameraRail newInstance 0x428070; calls RailBase ctor + cCamRailData ctor"
+  },
+  {
+   "se_ea": "0x567a30",
+   "se_name": "cCameraRail::getDTI(void)",
+   "dx9_ea": "0x427760",
+   "old_dx9_name": "sub_427760",
+   "new_dx9_name": "cCameraRail::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x567a40",
+   "se_name": "cCameraRailEm026::getBattleZoomRate(void)",
+   "dx9_ea": "0x427ca0",
+   "old_dx9_name": "sub_427CA0",
+   "new_dx9_name": "cCameraRailEm026::getBattleZoomRate",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 13 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x567a70",
+   "se_name": "cCameraRail::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x427840",
+   "old_dx9_name": "loc_427840",
+   "new_dx9_name": "cCameraRail::vector_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x567ae0",
+   "se_name": "cCameraRailEm025::cCameraRailEm025(void)",
+   "dx9_ea": "0x427880",
+   "old_dx9_name": "sub_427880",
+   "new_dx9_name": "cCameraRailEm025::cCameraRailEm025",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "tail-jumped from Em025 newInstance 0x428090"
+  },
+  {
+   "se_ea": "0x567b90",
+   "se_name": "cCameraRailEm025::getDTI(void)",
+   "dx9_ea": "0x427870",
+   "old_dx9_name": "sub_427870",
+   "new_dx9_name": "cCameraRailEm025::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x567ba0",
+   "se_name": "cCameraRailEm026::getZoomType(void)",
+   "dx9_ea": "0x427c90",
+   "old_dx9_name": "sub_427C90",
+   "new_dx9_name": "cCameraRailEm026::getZoomType",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 12 (SE slot == DX9 slot)"
+  },
+  {
+   "se_ea": "0x567bb0",
+   "se_name": "cCameraRailEm025::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x427b50",
+   "old_dx9_name": "loc_427B50",
+   "new_dx9_name": "cCameraRailEm025::vector_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x567c20",
+   "se_name": "cCameraRailEm026::cCameraRailEm026(void)",
+   "dx9_ea": "0x427b90",
+   "old_dx9_name": "sub_427B90",
+   "new_dx9_name": "cCameraRailEm026::cCameraRailEm026",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "tail-jumped from Em026 newInstance 0x4280B0"
+  },
+  {
+   "se_ea": "0x567cc0",
+   "se_name": "cCameraRailEm026::getDTI(void)",
+   "dx9_ea": "0x427b80",
+   "old_dx9_name": "cCameraRailEm026::getDTI",
+   "new_dx9_name": "cCameraRailEm026::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x567cd0",
+   "se_name": "cCameraRail::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x427980",
+   "old_dx9_name": "sub_427980",
+   "new_dx9_name": "cCameraRail::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x568040",
+   "se_name": "cCameraRailEm026::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x427cd0",
+   "old_dx9_name": "loc_427CD0",
+   "new_dx9_name": "cCameraRailEm026::scalar_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x5680b0",
+   "se_name": "cCameraNormal::getDTI(void)",
+   "dx9_ea": "0x427d00",
+   "old_dx9_name": "sub_427D00",
+   "new_dx9_name": "cCameraNormal::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 4; B8 <DTI> C3 stub returns this class DTI"
+  },
+  {
+   "se_ea": "0x5680c0",
+   "se_name": "cCameraNormal::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x427d10",
+   "old_dx9_name": "sub_427D10",
+   "new_dx9_name": "cCameraNormal::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 3; property-name string set identical to SE"
+  },
+  {
+   "se_ea": "0x568200",
+   "se_name": "cCameraNormal::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x427dc0",
+   "old_dx9_name": "loc_427DC0",
+   "new_dx9_name": "cCameraNormal::scalar_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  },
+  {
+   "se_ea": "0x568240",
+   "se_name": "cCameraRailBase::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x428280",
+   "old_dx9_name": "loc_428280",
+   "new_dx9_name": "cCameraRailBase::vector_deleting_dtor",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "decompile"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot 0; was undefined loc_ code, defined this pass"
+  }
+ ],
+ "dx9_only": [
+  {
+   "dx9_ea": "0x426830",
+   "name": "sub_426830",
+   "notes": "cCamRailDataCmn ctor (sets 0xB98AE8); SE inlines it into MyDTI::newInstance. Commented, not renamed."
+  },
+  {
+   "dx9_ea": "0x4277f0",
+   "name": "sub_4277F0",
+   "notes": "~cCameraRail (non-deleting dtor, tail-jumps ??1cCameraRailBase); SE inlined into the vector deleting dtor. Commented."
+  },
+  {
+   "dx9_ea": "0x427930",
+   "name": "sub_427930",
+   "notes": "~cCameraRailEm025 (non-deleting dtor); SE inlined. Commented."
+  },
+  {
+   "dx9_ea": "0x427c40",
+   "name": "sub_427C40",
+   "notes": "~cCameraRailEm026 (non-deleting dtor); SE inlined. Commented."
+  },
+  {
+   "dx9_ea": "0x427460",
+   "name": "sub_427460",
+   "notes": "\"fldz; ret\" default for RailBase/Normal slots 9,10,13 (base calcFov/calcRoll/getBattleZoomRate); SE folds these into generic nMotion::getFrame_Dummy. Also referenced by non-camera vtables at 0xBE328C.. - shared, left unnamed."
+  },
+  {
+   "dx9_ea": "0x42b820",
+   "name": "sub_42B820",
+   "notes": "movzx eax,word [ecx+4]; ret - between camera TU end and cCharTblMgr; owner uncertain (probably not group B)"
+  },
+  {
+   "dx9_ea": "0x42b830",
+   "name": "sub_42B830",
+   "notes": "fld [ecx+18h]; ret - same as above, owner uncertain"
+  }
+ ],
+ "notes": "All 12 group-B classes exist in DX9 (registered 0xB6E1F0..0xB6E4E6). DX9 code for the TU is contiguous 0x425F00..0x42B6D0+ and follows the SE per-class order (getDTI/ctor/createProperty/dtor per class, then all MyDTI::newInstance, then RailBase ctor/dtor/box accessors/Main, then Set x4, calcTarPos x4 + calcTarPosVirtualPlPos, calcLockOn, calcFov, calcRoll, calcZoomRate, calcTargetLockOn*). Vtable slot numbering is identical between SE and DX9 (no shift). DX9 parent of cCameraNormal and the cCameraRail* / cCameraPan classes is cCameraRailBase (DTI 0xE56E08), whose parent is cCameraBase (DTI 0xE56C28, group A). ICF in DX9: Rail/Em025/Em026 share calcFov 0x42AF30, calcRoll 0x42AF70, calcZoomRate 0x42B0D0, getZoomType 0x427C90, getBattleZoomRate 0x427CA0, createProperty 0x427980 (SE also shares the last three); Rail/Em025 share calcLockOn 0x42AEA0, calcTargetLockOn 0x42B2E0, calcTargetLockOnYOnly 0x42B580. Folded bodies are named for cCameraRail (cCameraRailEm026 where SE already named the shared body so). Undefined code defined this pass: 16 bodies (9 deleting dtors, 6 MyDTI::newInstance, cCameraPan ctor 0x427480). Vtable labels added for 9 class vtables + 12 MyDTI vtables (0xB98C58 was mislabeled MtDTI_vtbl42_). 0x428360 carried a FLIRT false-positive name (Concurrency::...::GetIScheduler, FUNC_LIB) - replaced by cCameraRailBase::getBoxNum and LIB flag cleared. SE-only / dead-stripped in DX9: usage/operator new/delete helpers (84), copyArea x6, cCameraRailBase::MainEm026, cCameraPan::calcTargetLockOnYOnly (all unreferenced in SE). Shared generic bodies recorded without renaming: 0x455B10 (sdd for cCamAreaConnect/cCamPanData/cCameraRect3D) and 0x8FC2F0 (cCameraRailBase::createUI slot 1, 981 refs)."
+}

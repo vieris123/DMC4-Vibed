@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DanteAirDodge as a MoveDef file (schema v0.2). The same move as mods/DanteAirDodge.cpp with its current defaults,
+     on its own id so both can be loaded; for the parity test turn the C++ "Dante air dodge" off and this on.
+     Goes in nativePC\movedef\. -->
+<move name="dante_air_dodge" character="pl006" id="0x6F" version="2">
+  <!-- the row: a COMMAND row, air only, level 7, start only (the hand-coded row's words) -->
+  <table attr="command" level="7" start="true" cancel="false" repeat="false" weapon="-1" style="-1" etc="0" air="air">
+    <input command="dodge"/>
+  </table>
+  <!-- lock-on held + jump pressed, while the stick leans left or right of the facing (within side_angle below) -->
+  <command name="dodge" condition="lockon" predicate="stick_sideways">
+    <btn id="jump" mode="trg"/>
+  </command>
+  <lmt bank="12" path="motion\pl006\airdodge"/>
+  <stage name="dodge" ctn="0:5" attr="null_trans_off" interp="4" status="jump" land="exit" cancel_frame="10"
+         enemy_step="true" eat_press="jump" watchdog="60">
+    <slot dir="right" block="1"/>
+    <slot dir="left" block="0"/>
+    <launch frame="0" direction="stick" speed="20" rise="8" gravity="-1.1" max_fall="30" side_angle="50" face="false">
+      <effect list="2" index="0x14" tilt="45"/>   <!-- Dante's air hike effect, leaned toward the dodge -->
+      <se id="40"/>
+    </launch>
+    <!-- the dodge is the air jump: costs one, needs one left, and the air hike steps aside for its press -->
+    <air_jump cost="1" required="true" suppress_air_hike="true" per_air="0"/>
+  </stage>
+</move>

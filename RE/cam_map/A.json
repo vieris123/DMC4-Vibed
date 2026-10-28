@@ -1,0 +1,1478 @@
+{
+ "group": "A",
+ "classes": {
+  "cCameraBase": {
+   "se": {
+    "vtable": "0x112d184",
+    "nslots": 6,
+    "nfuncs": 15,
+    "mydti_vtable": "0x112d178"
+   },
+   "dx9": {
+    "dti": "0xe56c28",
+    "vtable": "0xb97fbc",
+    "ctor": null,
+    "size": "0x60",
+    "parent": "MtObject",
+    "nslots": 6,
+    "mydti_vtable": "0xb97fd4",
+    "code_range": [
+     "0x4146c0",
+     "0x4149a4"
+    ]
+   },
+   "slot_shift": "none: SE n -> DX9 n (k=0); slots 0-2 shared base (0 = shared ICF deleting dtor 0x455b10), 3 createProperty, 4 getDTI, 5 Main (cCameraPlayer) / empty stub (cCameraBase)",
+   "vtable_label_fixed": true,
+   "notes": "labelled cCameraBase::MyDTI::vftable at 0xb97fd4; labelled cCameraBase::vftable at 0xb97fbc"
+  },
+  "cCamDataHeader": {
+   "se": {
+    "vtable": "0x112d208",
+    "nslots": 5,
+    "nfuncs": 11,
+    "mydti_vtable": "0x112d200"
+   },
+   "dx9": {
+    "dti": "0xe56c48",
+    "vtable": "0xb98064",
+    "ctor": null,
+    "size": "0x8",
+    "parent": "MtObject",
+    "nslots": 5,
+    "mydti_vtable": "0xb98078",
+    "code_range": [
+     "0x4149b0",
+     "0x414d89"
+    ]
+   },
+   "slot_shift": "none: SE n -> DX9 n (k=0); slots 0-2 shared base (0 = shared ICF deleting dtor 0x455b10), 3 createProperty, 4 getDTI, 5 Main (cCameraPlayer) / empty stub (cCameraBase)",
+   "vtable_label_fixed": true,
+   "notes": "labelled cCamDataHeader::MyDTI::vftable at 0xb98078; labelled cCamDataHeader::vftable at 0xb98064"
+  },
+  "cCameraNormalInitParam": {
+   "se": {
+    "vtable": "0x112d228",
+    "nslots": 5,
+    "nfuncs": 12,
+    "mydti_vtable": "0x112d21c"
+   },
+   "dx9": {
+    "dti": "0xe56c68",
+    "vtable": "0xb98080",
+    "ctor": "0x414a80",
+    "size": "0x120",
+    "parent": "MtObject",
+    "nslots": 5,
+    "mydti_vtable": "0xb98094",
+    "code_range": [
+     "0x414a70",
+     "0x414db0"
+    ]
+   },
+   "slot_shift": "none: SE n -> DX9 n (k=0); slots 0-2 shared base (0 = shared ICF deleting dtor 0x455b10), 3 createProperty, 4 getDTI, 5 Main (cCameraPlayer) / empty stub (cCameraBase)",
+   "vtable_label_fixed": true,
+   "notes": "labelled cCameraNormalInitParam::MyDTI::vftable at 0xb98094"
+  },
+  "cCameraPlayer": {
+   "se": {
+    "vtable": "0x112d328",
+    "nslots": 6,
+    "nfuncs": 67,
+    "mydti_vtable": "0x112d320"
+   },
+   "dx9": {
+    "dti": "0xe56c88",
+    "vtable": "0xb9869c",
+    "ctor": "0x416b10",
+    "size": "0x420",
+    "parent": "cCameraBase",
+    "nslots": 6,
+    "mydti_vtable": "0xb986b4",
+    "code_range": [
+     "0x414ee0",
+     "0x4258b6"
+    ]
+   },
+   "slot_shift": "none: SE n -> DX9 n (k=0); slots 0-2 shared base (0 = shared ICF deleting dtor 0x455b10), 3 createProperty, 4 getDTI, 5 Main (cCameraPlayer) / empty stub (cCameraBase)",
+   "vtable_label_fixed": true,
+   "notes": "labelled cCameraPlayer::MyDTI::vftable at 0xb986b4"
+  }
+ },
+ "methods": [
+  {
+   "se_ea": "0x54a360",
+   "se_name": "cCameraBase::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "empty MT_CLASS usage() stub; no DX9 counterpart (DX9 engine has no per-class usage/allocator statics)"
+  },
+  {
+   "se_ea": "0x54a370",
+   "se_name": "cCameraBase::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a3a0",
+   "se_name": "cCameraBase::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a3d0",
+   "se_name": "cCameraBase::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a3f0",
+   "se_name": "cCameraBase::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a410",
+   "se_name": "cCameraBase::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a430",
+   "se_name": "cCameraBase::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54a450",
+   "se_name": "cCameraBase::~cCameraBase(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~cCameraBase only resets vftable; no out-of-line DX9 copy (folded into the shared deleting dtor sub_455B10)"
+  },
+  {
+   "se_ea": "0x54a460",
+   "se_name": "cCameraBase::setDefault(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [
+    "consts"
+   ],
+   "action": "none",
+   "notes": "inlined in DX9: cCameraBase::MyDTI::newInstance 0x414910 and cCameraPlayer::setDefault 0x416d40 carry the same constants (1.0, 12.0, 40.0, 1e6)"
+  },
+  {
+   "se_ea": "0x54a4e0",
+   "se_name": "cCameraBase::getCameraAngle(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not emitted in DX9"
+  },
+  {
+   "se_ea": "0x54a510",
+   "se_name": "cCameraBase::cCameraBase(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "inlined in DX9 (MyDTI::newInstance 0x414910, cCameraPlayer ctor 0x416b10)"
+  },
+  {
+   "se_ea": "0x54a5a0",
+   "se_name": "cCameraBase::MyDTI::newInstance(void)",
+   "dx9_ea": "0x414910",
+   "old_dx9_name": "sub_414910",
+   "new_dx9_name": "cCameraBase::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DTI vtable 0xb97fd4 slot1 (cCameraBase::DTI.__vftable set in ctor_registerDTI); allocs 0x60 = registered size, stores vftable 0xb97fbc, base ctor+setDefault inlined"
+  },
+  {
+   "se_ea": "0x54a650",
+   "se_name": "cCameraBase::getDTI(void)",
+   "dx9_ea": "0x4146c0",
+   "old_dx9_name": "sub_4146C0",
+   "new_dx9_name": "cCameraBase::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "instance vtable slot4 stub returning DTI 0xe56c28"
+  },
+  {
+   "se_ea": "0x54a660",
+   "se_name": "cCameraBase::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4146d0",
+   "old_dx9_name": "sub_4146D0",
+   "new_dx9_name": "cCameraBase::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot3; property-name strings 8/8 identical"
+  },
+  {
+   "se_ea": "0x54aad0",
+   "se_name": "cCameraBase::`scalar deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "slot0 of DX9 vtable is the shared ICF deleting destructor sub_455B10 (92 data refs, resets to base vftable + GlobalAllocator free); not renamed (shared, outside class region)"
+  },
+  {
+   "se_ea": "0x54ab30",
+   "se_name": "cCamDataHeader::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "empty MT_CLASS usage() stub; no DX9 counterpart (DX9 engine has no per-class usage/allocator statics)"
+  },
+  {
+   "se_ea": "0x54ab40",
+   "se_name": "cCamDataHeader::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ab70",
+   "se_name": "cCamDataHeader::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54aba0",
+   "se_name": "cCamDataHeader::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54abc0",
+   "se_name": "cCamDataHeader::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54abe0",
+   "se_name": "cCamDataHeader::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ac00",
+   "se_name": "cCamDataHeader::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ac20",
+   "se_name": "cCameraNormalInitParam::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "empty MT_CLASS usage() stub; no DX9 counterpart (DX9 engine has no per-class usage/allocator statics)"
+  },
+  {
+   "se_ea": "0x54ac30",
+   "se_name": "cCameraNormalInitParam::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ac60",
+   "se_name": "cCameraNormalInitParam::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ac90",
+   "se_name": "cCameraNormalInitParam::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54acb0",
+   "se_name": "cCameraNormalInitParam::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54acd0",
+   "se_name": "cCameraNormalInitParam::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54acf0",
+   "se_name": "cCameraNormalInitParam::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54ad10",
+   "se_name": "cCamDataHeader::MyDTI::newInstance(void)",
+   "dx9_ea": "0x414d60",
+   "old_dx9_name": "sub_414D60",
+   "new_dx9_name": "cCamDataHeader::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DTI vtable 0xb98078 slot1; allocs 8 = registered size, stores vftable 0xb98064"
+  },
+  {
+   "se_ea": "0x54ad50",
+   "se_name": "cCameraNormalInitParam::MyDTI::newInstance(void)",
+   "dx9_ea": "0x414d90",
+   "old_dx9_name": "loc_414D90",
+   "new_dx9_name": "cCameraNormalInitParam::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DTI vtable 0xb98094 slot1 (was undefined loc_414D90; function defined); allocs 0x120 = registered size then tail-jumps to the ctor"
+  },
+  {
+   "se_ea": "0x54ad90",
+   "se_name": "cCamDataHeader::getDTI(void)",
+   "dx9_ea": "0x4149b0",
+   "old_dx9_name": "sub_4149B0",
+   "new_dx9_name": "cCamDataHeader::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot4 getDTI stub (DTI 0xe56c48)"
+  },
+  {
+   "se_ea": "0x54ada0",
+   "se_name": "cCameraNormalInitParam::cCameraNormalInitParam(void)",
+   "dx9_ea": "0x414a80",
+   "old_dx9_name": "cCameraNormalInitParam::cCameraNormalInitParam",
+   "new_dx9_name": "cCameraNormalInitParam::cCameraNormalInitParam",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "stores cCameraNormalInitParam::vftable, MtVector3::Zero, 55.0/500.0 constants; tail-called by MyDTI::newInstance"
+  },
+  {
+   "se_ea": "0x54ae60",
+   "se_name": "cCameraNormalInitParam::getDTI(void)",
+   "dx9_ea": "0x414a70",
+   "old_dx9_name": "sub_414A70",
+   "new_dx9_name": "cCameraNormalInitParam::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot4 getDTI stub (DTI 0xe56c68)"
+  },
+  {
+   "se_ea": "0x54ae70",
+   "se_name": "cCamDataHeader::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x4149c0",
+   "old_dx9_name": "sub_4149C0",
+   "new_dx9_name": "cCamDataHeader::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot3; strings mAllBoxNum/mDataNum identical"
+  },
+  {
+   "se_ea": "0x54afa0",
+   "se_name": "cCamDataHeader::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "slot0 = shared ICF deleting dtor sub_455B10; not renamed"
+  },
+  {
+   "se_ea": "0x54afd0",
+   "se_name": "cCameraNormalInitParam::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x414b20",
+   "old_dx9_name": "sub_414B20",
+   "new_dx9_name": "cCameraNormalInitParam::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot3; property strings 8/8 identical"
+  },
+  {
+   "se_ea": "0x54b440",
+   "se_name": "cCameraNormalInitParam::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "slot0 = shared ICF deleting dtor sub_455B10; not renamed"
+  },
+  {
+   "se_ea": "0x54b4a0",
+   "se_name": "cCameraPlayer::usage(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "empty MT_CLASS usage() stub; no DX9 counterpart (DX9 engine has no per-class usage/allocator statics)"
+  },
+  {
+   "se_ea": "0x54b4b0",
+   "se_name": "cCameraPlayer::operator new(uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b4e0",
+   "se_name": "cCameraPlayer::operator new[](uint,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b510",
+   "se_name": "cCameraPlayer::operator delete(void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b530",
+   "se_name": "cCameraPlayer::operator delete[](void *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b550",
+   "se_name": "cCameraPlayer::operator delete(void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b570",
+   "se_name": "cCameraPlayer::operator delete[](void *,uint)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "SE per-class allocator operator (getAllocator(&DTI)); DX9 allocates via GlobalAllocator directly (see MyDTI::newInstance) - not present in DX9"
+  },
+  {
+   "se_ea": "0x54b590",
+   "se_name": "cCameraPlayer::~cCameraPlayer(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "~cCameraPlayer only resets vftable + base dtor; no out-of-line DX9 copy (slot0 is the shared sub_455B10)"
+  },
+  {
+   "se_ea": "0x54b5a0",
+   "se_name": "cCameraPlayer::setNormalCameraParam(cCameraNormal *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "19-byte setter (mPassWallFlag) called only from uCameraCtrl::changeCamera in SE; inlined in DX9"
+  },
+  {
+   "se_ea": "0x54b5c0",
+   "se_name": "cCameraPlayer::setup(cCameraNormalInitParam *)",
+   "dx9_ea": "0x416c70",
+   "old_dx9_name": "cCameraPlayer::setup",
+   "new_dx9_name": "cCameraPlayer::setup",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "size 198/208, nbb 15/15, 2 callers each; existing name matched"
+  },
+  {
+   "se_ea": "0x54b690",
+   "se_name": "cCameraPlayer::setDefault(void)",
+   "dx9_ea": "0x416d40",
+   "old_dx9_name": "cCameraPlayer::setDefault",
+   "new_dx9_name": "cCameraPlayer::setDefault",
+   "confidence": "high",
+   "evidence": [
+    "consts",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "size 1613/1600, 1 bb, called by ctor; base setDefault inlined"
+  },
+  {
+   "se_ea": "0x54bcd0",
+   "se_name": "cCameraPlayer::searchInitialPos(MtVector3 *,MtVector3 *)",
+   "dx9_ea": "0x4178d0",
+   "old_dx9_name": "cCameraPlayer::searchInitialPos",
+   "new_dx9_name": "cCameraPlayer::searchInitialPos",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": "called by both initialize overloads in both builds"
+  },
+  {
+   "se_ea": "0x54bda0",
+   "se_name": "cCameraPlayer::checkThrow(void)",
+   "dx9_ea": "0x418770",
+   "old_dx9_name": "cCameraPlayer::checkThrow",
+   "new_dx9_name": "cCameraPlayer::checkThrow",
+   "confidence": "high",
+   "evidence": [
+    "order",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "called from Main before checkMode; nbb 26/26"
+  },
+  {
+   "se_ea": "0x54bf00",
+   "se_name": "cCameraPlayer::checkBusterType(void)",
+   "dx9_ea": "0x419110",
+   "old_dx9_name": "cCameraPlayer::checkBusterType",
+   "new_dx9_name": "cCameraPlayer::checkBusterType",
+   "confidence": "high",
+   "evidence": [
+    "propagation",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "thin wrapper mpPlayer->vtbl[134] (isDevilTrigger); called from checkMode"
+  },
+  {
+   "se_ea": "0x54bf20",
+   "se_name": "cCameraPlayer::calcPosFromTar(MtVector3 *,MtVector3 *,float)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not found in DX9"
+  },
+  {
+   "se_ea": "0x54bfc0",
+   "se_name": "cCameraPlayer::setupBossCamera(kCameraNormalInitParamBC *)",
+   "dx9_ea": "0x421400",
+   "old_dx9_name": "sub_421400",
+   "new_dx9_name": "cCameraPlayer::setupBossCamera",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "decompile: mHoseiY copy + 5 guarded (>=0) param copies, mType=0, lock-off timers cleared; 16 callers (uCameraBoss* init) in both builds"
+  },
+  {
+   "se_ea": "0x54c060",
+   "se_name": "cCameraPlayer::lockOffSlowInterpSet(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "44-byte setter (mLockOffTimer=20, mZoom1vs1*) called from uCameraBossEm021/023/029/030 in SE; no standalone DX9 body found - inlined into callers"
+  },
+  {
+   "se_ea": "0x54c090",
+   "se_name": "cCameraPlayer::initializeBossCamera(void)",
+   "dx9_ea": "0x421490",
+   "old_dx9_name": "sub_421490",
+   "new_dx9_name": "cCameraPlayer::initializeBossCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "getPlayerAngle -> uCoord::getAngle + atan2 + sin/cos; 7 callers (uCameraBoss* init) in both builds"
+  },
+  {
+   "se_ea": "0x54c2b0",
+   "se_name": "cCameraPlayer::reInitializeBossCamera(float,MtVector3 &,MtVector3 &)",
+   "dx9_ea": "0x4216d0",
+   "old_dx9_name": "sub_4216D0",
+   "new_dx9_name": "cCameraPlayer::reInitializeBossCamera",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "sin/cos, 10 callers (uCameraBoss* move/sync incl. uCameraBossDante::move) in both builds; TU order after initializeBossCamera"
+  },
+  {
+   "se_ea": "0x54c480",
+   "se_name": "cCameraPlayer::posSetInitializeBossCamera(MtVector3 &)",
+   "dx9_ea": "0x4218c0",
+   "old_dx9_name": "sub_4218C0",
+   "new_dx9_name": "cCameraPlayer::posSetInitializeBossCamera",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "decompile: player pos + mHoseiY -> mOldTar/mTargetPos/mEndTar, arg -> mOldPos/mCameraPos/mEndPos, atan2 -> mRotY; 1 caller"
+  },
+  {
+   "se_ea": "0x54c5d0",
+   "se_name": "cCameraPlayer::checkAngleYinFan(float,float,float,float &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "only called from the two (dead) fan-sector checks in SE; not emitted in DX9"
+  },
+  {
+   "se_ea": "0x54c6a0",
+   "se_name": "cCameraPlayer::getPosGrabedEnemy(MtVector3 &)",
+   "dx9_ea": "0x4219d0",
+   "old_dx9_name": "sub_4219D0",
+   "new_dx9_name": "cCameraPlayer::getPosGrabedEnemy",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "decompile: Nero + mActionNo==12 + mAtckId 5/6 grab check; callers are the airThrow* modes"
+  },
+  {
+   "se_ea": "0x54c710",
+   "se_name": "cCameraPlayer::getJointPosGrabedEnemy(int,MtVector3 &)",
+   "dx9_ea": "0x421a30",
+   "old_dx9_name": "cCameraPlayer::getJointPosGrabedEnemy",
+   "new_dx9_name": "cCameraPlayer::getJointPosGrabedEnemy",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "order"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; called by throwEm006/006Ex/012 and airThrowEm006/006Ex (5 DX9 callers vs 6 SE - throwEm012Ex folded)"
+  },
+  {
+   "se_ea": "0x54c7a0",
+   "se_name": "cCameraPlayer::getLockOnPosGrabedEnemy(MtVector3 &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not emitted in DX9"
+  },
+  {
+   "se_ea": "0x54c880",
+   "se_name": "cCameraPlayer::moveRightStickAxisY(void)",
+   "dx9_ea": "0x4223b0",
+   "old_dx9_name": "cCameraPlayer::moveRightStickAxisY",
+   "new_dx9_name": "cCameraPlayer::moveRightStickAxisY",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "called from Main + normalOnlyMain; sSave/sDevil4Pad/sKeyboard globals"
+  },
+  {
+   "se_ea": "0x54ce10",
+   "se_name": "cCameraPlayer::moveRightStickAxisY_SixAxis(void)",
+   "dx9_ea": "0x422ac0",
+   "old_dx9_name": "cCameraPlayer::moveRightStickAxisY_SixAxis",
+   "new_dx9_name": "cCameraPlayer::moveRightStickAxisY_SixAxis",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "called from Main + normalOnlyMain; SixAxis variant"
+  },
+  {
+   "se_ea": "0x54d5a0",
+   "se_name": "cCameraPlayer::lockOnCheckInCameraFanSector(MtVector3 &,MtVector3 &,float,float &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not emitted in DX9"
+  },
+  {
+   "se_ea": "0x54d640",
+   "se_name": "cCameraPlayer::cCameraPlayer(void)",
+   "dx9_ea": "0x416b10",
+   "old_dx9_name": "cCameraPlayer::cCameraPlayer",
+   "new_dx9_name": "cCameraPlayer::cCameraPlayer",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": "stores cCameraPlayer::vftable, calls setDefault; 11 callers both builds"
+  },
+  {
+   "se_ea": "0x54d8c0",
+   "se_name": "cCameraPlayer::throwEm006(void)",
+   "dx9_ea": "0x41a850",
+   "old_dx9_name": "cCameraPlayer::throwEm006",
+   "new_dx9_name": "cCameraPlayer::throwEm006",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "main02 case 6 !mBusterType; 4x sWorkRate::calc + getJointPosGrabedEnemy"
+  },
+  {
+   "se_ea": "0x54de60",
+   "se_name": "cCameraPlayer::throwEm006Ex(void)",
+   "dx9_ea": "0x41adf0",
+   "old_dx9_name": "cCameraPlayer::throwEm006Ex",
+   "new_dx9_name": "cCameraPlayer::throwEm006Ex",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "main02 case 6 mBusterType"
+  },
+  {
+   "se_ea": "0x54e1f0",
+   "se_name": "cCameraPlayer::throwEm012(void)",
+   "dx9_ea": "0x41b190",
+   "old_dx9_name": "cCameraPlayer::throwEm012",
+   "new_dx9_name": "cCameraPlayer::throwEm012",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "main02 case 0xC; ICF-folded: one DX9 body for 2 SE methods: throwEm012, throwEm012Ex (SE bodies identical, 910 B each)"
+  },
+  {
+   "se_ea": "0x54e580",
+   "se_name": "cCameraPlayer::throwEm012Ex(void)",
+   "dx9_ea": "0x41b190",
+   "old_dx9_name": "cCameraPlayer::throwEm012",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "decompile"
+   ],
+   "action": "commented",
+   "notes": "ICF-folded into cCameraPlayer::throwEm012: DX9 main02 case 0xC calls 0x41b190 for both mBusterType branches; not renamed"
+  },
+  {
+   "se_ea": "0x54e910",
+   "se_name": "cCameraPlayer::airThrowDefault(void)",
+   "dx9_ea": "0x41b5f0",
+   "old_dx9_name": "sub_41B5F0",
+   "new_dx9_name": "cCameraPlayer::airThrowDefault",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 default cases (switch on mpThrowTarget->mEnemyID identical to SE)"
+  },
+  {
+   "se_ea": "0x54ebb0",
+   "se_name": "cCameraPlayer::airThrowEm006(void)",
+   "dx9_ea": "0x41b8b0",
+   "old_dx9_name": "sub_41B8B0",
+   "new_dx9_name": "cCameraPlayer::airThrowEm006",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 6 !mBusterType; uCameraCtrl::getActionMessage(sub_4F9F00) + 4x sWorkRate::calc"
+  },
+  {
+   "se_ea": "0x54f150",
+   "se_name": "cCameraPlayer::airThrowEm006Ex(void)",
+   "dx9_ea": "0x41be40",
+   "old_dx9_name": "sub_41BE40",
+   "new_dx9_name": "cCameraPlayer::airThrowEm006Ex",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 6 mBusterType"
+  },
+  {
+   "se_ea": "0x54f4a0",
+   "se_name": "cCameraPlayer::airThrowEm012(void)",
+   "dx9_ea": "0x41c860",
+   "old_dx9_name": "sub_41C860",
+   "new_dx9_name": "cCameraPlayer::airThrowEm012",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 0xC; calls getPosGrabedEnemy"
+  },
+  {
+   "se_ea": "0x54f750",
+   "se_name": "cCameraPlayer::airThrowEm016(void)",
+   "dx9_ea": "0x41cb30",
+   "old_dx9_name": "sub_41CB30",
+   "new_dx9_name": "cCameraPlayer::airThrowEm016",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 0x10"
+  },
+  {
+   "se_ea": "0x54f980",
+   "se_name": "cCameraPlayer::airThrowEm017(void)",
+   "dx9_ea": "0x41cd80",
+   "old_dx9_name": "sub_41CD80",
+   "new_dx9_name": "cCameraPlayer::airThrowEm017",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 0x11; calls cUtil::checkGround (0x80800 flags)"
+  },
+  {
+   "se_ea": "0x54fcf0",
+   "se_name": "cCameraPlayer::calcPosTarNormal(float)",
+   "dx9_ea": "0x41d4e0",
+   "old_dx9_name": "sub_41D4E0",
+   "new_dx9_name": "cCameraPlayer::calcPosTarNormal",
+   "confidence": "high",
+   "evidence": [
+    "callers",
+    "propagation"
+   ],
+   "action": "renamed",
+   "notes": "called by electriggerEm012 and electriggerEm012Sub only (both builds)"
+  },
+  {
+   "se_ea": "0x54ff20",
+   "se_name": "cCameraPlayer::checkHit(void)",
+   "dx9_ea": "0x41d730",
+   "old_dx9_name": "cCameraPlayer::checkHit",
+   "new_dx9_name": "cCameraPlayer::checkHit",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "sCollision findIntersection/adjustPosition/multi_obb; existing name"
+  },
+  {
+   "se_ea": "0x550d60",
+   "se_name": "cCameraPlayer::checkHitNormal(void)",
+   "dx9_ea": "0x41e550",
+   "old_dx9_name": "cCameraPlayer::checkHitNormal",
+   "new_dx9_name": "cCameraPlayer::checkHitNormal",
+   "confidence": "high",
+   "evidence": [
+    "callees"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; collision checks"
+  },
+  {
+   "se_ea": "0x551a50",
+   "se_name": "cCameraPlayer::checkInCameraFanSector(MtVector3 &,float,float,float &)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not emitted in DX9"
+  },
+  {
+   "se_ea": "0x551ab0",
+   "se_name": "cCameraPlayer::calcLockOnPosition(void)",
+   "dx9_ea": "0x421ab0",
+   "old_dx9_name": "cCameraPlayer::calcLockOnPosition",
+   "new_dx9_name": "cCameraPlayer::calcLockOnPosition",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; called by checkMode"
+  },
+  {
+   "se_ea": "0x551bd0",
+   "se_name": "cCameraPlayer::calcLockOnPositionAirThrow(int)",
+   "dx9_ea": "0x421c30",
+   "old_dx9_name": "sub_421C30",
+   "new_dx9_name": "cCameraPlayer::calcLockOnPositionAirThrow",
+   "confidence": "high",
+   "evidence": [
+    "decompile",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "same clamp-toward-base-pos body on mThrowTargetPos; only caller airThrowEm010. DX9 uses a scalar (dword_DEE1C8) where SE indexes AirThrow_lockOnEnemy_Allowance_tbl[emId]"
+  },
+  {
+   "se_ea": "0x551d10",
+   "se_name": "cCameraPlayer::moveRightStickAxisX(void)",
+   "dx9_ea": "0x421dd0",
+   "old_dx9_name": "cCameraPlayer::moveRightStickAxisX",
+   "new_dx9_name": "cCameraPlayer::moveRightStickAxisX",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; called from Main + normalOnlyMain"
+  },
+  {
+   "se_ea": "0x552230",
+   "se_name": "cCameraPlayer::cameraAngleYHosei(void)",
+   "dx9_ea": "0x4255b0",
+   "old_dx9_name": "cCameraPlayer::cameraAngleYHosei",
+   "new_dx9_name": "cCameraPlayer::cameraAngleYHosei",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; called from main01"
+  },
+  {
+   "se_ea": "0x552620",
+   "se_name": "cCameraPlayer::MyDTI::newInstance(void)",
+   "dx9_ea": "0x416af0",
+   "old_dx9_name": "sub_416AF0",
+   "new_dx9_name": "cCameraPlayer::MyDTI::newInstance",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "DTI vtable 0xb986b4 slot1; allocs 0x420 (1056) then calls cCameraPlayer ctor"
+  },
+  {
+   "se_ea": "0x552660",
+   "se_name": "cCameraPlayer::initialize(void)",
+   "dx9_ea": "0x417390",
+   "old_dx9_name": "cCameraPlayer::initialize",
+   "new_dx9_name": "cCameraPlayer::initialize",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "confirmed",
+   "notes": "initialize(void): atan2 + MtVector3::Zero + checkHit, 1 caller, imm 68"
+  },
+  {
+   "se_ea": "0x5529a0",
+   "se_name": "cCameraPlayer::initialize(float)",
+   "dx9_ea": "0x417690",
+   "old_dx9_name": "cCameraPlayer::initialize_0",
+   "new_dx9_name": "cCameraPlayer::initialize_2",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "replaced_existing",
+   "notes": "was: cCameraPlayer::initialize_0; initialize(float): RadianClamp inlined (2pi const), no atan2; overload -> _2"
+  },
+  {
+   "se_ea": "0x552bf0",
+   "se_name": "cCameraPlayer::checkMode(void)",
+   "dx9_ea": "0x4188e0",
+   "old_dx9_name": "cCameraPlayer::checkMode",
+   "new_dx9_name": "cCameraPlayer::checkMode",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; calls checkBusterType, isKindOf(uEnemy), calcLockOnPosition, isBattleStateEnemyNum, isBattle"
+  },
+  {
+   "se_ea": "0x553450",
+   "se_name": "cCameraPlayer::main00(void)",
+   "dx9_ea": "0x419130",
+   "old_dx9_name": "cCameraPlayer::main00",
+   "new_dx9_name": "cCameraPlayer::main00",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; Main case 0"
+  },
+  {
+   "se_ea": "0x553cc0",
+   "se_name": "cCameraPlayer::electriggerEm012Sub(void)",
+   "dx9_ea": "0x41d3a0",
+   "old_dx9_name": "sub_41D3A0",
+   "new_dx9_name": "cCameraPlayer::electriggerEm012Sub",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "consts"
+   ],
+   "action": "renamed",
+   "notes": "1 bb, calls calcPosTarNormal; called by electriggerEm012 case 4"
+  },
+  {
+   "se_ea": "0x553e40",
+   "se_name": "cCameraPlayer::correctPlOver(void)",
+   "dx9_ea": "0x41f120",
+   "old_dx9_name": "cCameraPlayer::correctPlOver",
+   "new_dx9_name": "cCameraPlayer::correctPlOver",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "confirmed",
+   "notes": "setLookAtRH/setPerspectiveFovRH; called (x2) from main01 as in SE"
+  },
+  {
+   "se_ea": "0x555ed0",
+   "se_name": "cCameraPlayer::correctPlOverAirThrow(MtVector3 &)",
+   "dx9_ea": "0x4232e0",
+   "old_dx9_name": "sub_4232E0",
+   "new_dx9_name": "cCameraPlayer::correctPlOverAirThrow",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "callers"
+   ],
+   "action": "renamed",
+   "notes": "twin of correctPlOver (8909 B); only caller is airThrowEm010 as in SE"
+  },
+  {
+   "se_ea": "0x557ee0",
+   "se_name": "cCameraPlayer::initialize(MtVector3 *)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [],
+   "action": "none",
+   "notes": "0 callers in SE (dead); not emitted in DX9"
+  },
+  {
+   "se_ea": "0x557f40",
+   "se_name": "cCameraPlayer::normalOnlyMain(void)",
+   "dx9_ea": "0x418230",
+   "old_dx9_name": "sub_418230",
+   "new_dx9_name": "cCameraPlayer::normalOnlyMain",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "order"
+   ],
+   "action": "renamed",
+   "notes": "callee sequence identical: main00, moveRightStickAxisX, sWorkRate::calc, moveRightStickAxisY, _SixAxis, checkHitNormal; follows Main in TU"
+  },
+  {
+   "se_ea": "0x558470",
+   "se_name": "cCameraPlayer::main01(void)",
+   "dx9_ea": "0x419840",
+   "old_dx9_name": "cCameraPlayer::main01",
+   "new_dx9_name": "cCameraPlayer::main01",
+   "confidence": "high",
+   "evidence": [
+    "callees",
+    "propagation"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; Main cases 1/2; calls cameraAngleYHosei, correctPlOver"
+  },
+  {
+   "se_ea": "0x559190",
+   "se_name": "cCameraPlayer::throwDefault(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "none",
+   "notes": "0 callers in SE; body inlined into main02 in both builds"
+  },
+  {
+   "se_ea": "0x5591f0",
+   "se_name": "cCameraPlayer::airThrowEm010(void)",
+   "dx9_ea": "0x41c1a0",
+   "old_dx9_name": "sub_41C1A0",
+   "new_dx9_name": "cCameraPlayer::airThrowEm010",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "main03 case 0xA; calls getPosGrabedEnemy x2, calcLockOnPositionAirThrow, correctPlOverAirThrow"
+  },
+  {
+   "se_ea": "0x559820",
+   "se_name": "cCameraPlayer::electriggerEm012(void)",
+   "dx9_ea": "0x41d100",
+   "old_dx9_name": "sub_41D100",
+   "new_dx9_name": "cCameraPlayer::electriggerEm012",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "consts",
+    "callees"
+   ],
+   "action": "renamed",
+   "notes": "Main case 5; rno switch with +160/-170/-140 offsets as SE; calls calcPosTarNormal/electriggerEm012Sub"
+  },
+  {
+   "se_ea": "0x559ae0",
+   "se_name": "cCameraPlayer::main02(void)",
+   "dx9_ea": "0x41a740",
+   "old_dx9_name": "cCameraPlayer::main02",
+   "new_dx9_name": "cCameraPlayer::main02",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; Main case 3; enemyID switch -> throwEm006/Ex, throwEm012/Ex, inlined throwDefault"
+  },
+  {
+   "se_ea": "0x559bc0",
+   "se_name": "cCameraPlayer::main03(void)",
+   "dx9_ea": "0x41b540",
+   "old_dx9_name": "cCameraPlayer::main03",
+   "new_dx9_name": "cCameraPlayer::main03",
+   "confidence": "high",
+   "evidence": [
+    "table",
+    "decompile"
+   ],
+   "action": "confirmed",
+   "notes": "existing name; Main case 4; enemyID switch identical to SE"
+  },
+  {
+   "se_ea": "0x559c60",
+   "se_name": "cCameraPlayer::main04(void)",
+   "dx9_ea": null,
+   "old_dx9_name": null,
+   "new_dx9_name": null,
+   "confidence": "none",
+   "evidence": [
+    "decompile"
+   ],
+   "action": "none",
+   "notes": "inlined into DX9 Main case 5 (if !mRno -> electriggerEm012)"
+  },
+  {
+   "se_ea": "0x559c70",
+   "se_name": "cCameraPlayer::Main(void)",
+   "dx9_ea": "0x417a10",
+   "old_dx9_name": "cCameraPlayer::main",
+   "new_dx9_name": "cCameraPlayer::Main",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "callees"
+   ],
+   "action": "replaced_existing",
+   "notes": "was: cCameraPlayer::main; instance vtable slot5 in both builds; mode switch main00..main03/electrigger"
+  },
+  {
+   "se_ea": "0x55a660",
+   "se_name": "cCameraPlayer::getDTI(void)",
+   "dx9_ea": "0x414ee0",
+   "old_dx9_name": "sub_414EE0",
+   "new_dx9_name": "cCameraPlayer::getDTI",
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot4 getDTI stub (DTI 0xe56c88)"
+  },
+  {
+   "se_ea": "0x55a670",
+   "se_name": "cCameraPlayer::createProperty(MtPropertyList &)",
+   "dx9_ea": "0x414ef0",
+   "old_dx9_name": "sub_414EF0",
+   "new_dx9_name": "cCameraPlayer::createProperty",
+   "confidence": "high",
+   "evidence": [
+    "vtable",
+    "strings"
+   ],
+   "action": "renamed",
+   "notes": "vtable slot3; 100/102 property strings shared (SE adds mDiffPlusY, mRotXlockOn)"
+  },
+  {
+   "se_ea": "0x55dec0",
+   "se_name": "cCameraPlayer::`vector deleting destructor'(uint)",
+   "dx9_ea": "0x455b10",
+   "old_dx9_name": "sub_455B10",
+   "new_dx9_name": null,
+   "confidence": "high",
+   "evidence": [
+    "vtable"
+   ],
+   "action": "none",
+   "notes": "slot0 = shared ICF deleting dtor sub_455B10; not renamed"
+  }
+ ],
+ "dx9_only": [
+  {
+   "dx9_ea": "0x414e00",
+   "name": "sub_414E00",
+   "notes": "in group-A TU region (between cCameraNormalInitParam and cCameraPlayer getDTI): 2*pi fmod angle-wrap helper (7 callers) - inlined sMath helper emitted as COMDAT, no SE counterpart in group"
+  },
+  {
+   "dx9_ea": "0x414e40",
+   "name": "sub_414E40",
+   "notes": "return this; trivial COMDAT stub referenced from data (many tables) - not a group-A method"
+  },
+  {
+   "dx9_ea": "0x414e50",
+   "name": "sCollision::Param",
+   "notes": "already named; COMDAT emitted in this TU"
+  },
+  {
+   "dx9_ea": "0x414ec0",
+   "name": "sub_414EC0",
+   "notes": "19-byte accessor (this[0x2E4] + 0x90*i), called from sub_43B720 - not a camera method"
+  },
+  {
+   "dx9_ea": "0x416ad0",
+   "name": "uPlayer::isActAtck",
+   "notes": "already named; inline uPlayer helper emitted in this TU"
+  },
+  {
+   "dx9_ea": "0x41e520",
+   "name": "sub_41E520",
+   "notes": "struct copy helper (sphere/capsule-like 0x24 bytes) between checkHit and checkHitNormal; callers uDevilCamera::resolveMovement, uEm023::atkAbsorbWeakSuccess - COMDAT, not a cCameraPlayer method"
+  }
+ ],
+ "notes": "All four group-A classes exist in DX9 (registered in ctor_registerDTI 0xb6e0f0/0xb6e130/0xb6e170/0xb6e1b0; sizes 0x60/0x8/0x120/0x420). No slot shift: these MtObject-derived non-unit classes have 5-6 slots in both builds. Instance vtable slot 0 in DX9 is the shared ICF deleting destructor sub_455B10 (92 vtable refs) - recorded for the 4 SE deleting dtors but not renamed. SE per-class MT allocator statics (usage, operator new/new[]/delete x4) have no DX9 counterpart: DX9 MyDTI::newInstance calls GlobalAllocator directly (28 SE methods -> none). cCameraBase ctor/setDefault/dtor and cCameraPlayer dtor are inlined; cCameraBase::getCameraAngle, cCameraPlayer::calcPosFromTar/getLockOnPosGrabedEnemy/checkAngleYinFan/checkInCameraFanSector/lockOnCheckInCameraFanSector/initialize(MtVector3*)/throwDefault are dead (0 SE callers) and not emitted. main04 is inlined into Main case 5; setNormalCameraParam and lockOffSlowInterpSet are small setters inlined into uCameraCtrl/uCameraBoss* callers. ICF: throwEm012 and throwEm012Ex share DX9 body 0x41b190 (main02 calls it for both mBusterType branches). Defined cCameraNormalInitParam::MyDTI::newInstance at 0x414d90 (was undefined loc_). Replaced cCameraPlayer::main -> cCameraPlayer::Main (vtable slot 5, SE name) and cCameraPlayer::initialize_0 -> cCameraPlayer::initialize_2 (= initialize(float)). All pre-existing [MP/camera] comments preserved (SE line prepended). Cross-group: cCameraPlayer::setupBossCamera 0x421400 / initializeBossCamera 0x421490 / reInitializeBossCamera 0x4216d0 / posSetInitializeBossCamera 0x4218c0 / normalOnlyMain 0x418230 are called from the unnamed uCameraBoss* subclasses at 0x4CDD30-0x4F10A0 (groups C/D/E) - useful anchors; airThrowEm006 calls sub_4F9F00 = uCameraCtrl::getActionMessage (group E). Per-player relevance: newly named boss-camera initializers and airThrow*/electrigger modes all read sMediator::mpInstance->mpPlayer (getPosGrabedEnemy also gates on mPlayerID==NERO) - same per-player refactor class as the existing [MP/camera] sites."
+}

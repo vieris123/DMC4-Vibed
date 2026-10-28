@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ida-pro-mcp": {
+      "command": "uv",
+      "args": ["run", "--directory", "E:/DMC mod stuffs/Vibed/RE/mcp/ida-pro-mcp", "ida-pro-mcp"]
+    }
+  }
+}
